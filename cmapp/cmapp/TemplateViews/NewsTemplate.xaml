@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cmapp.TemplateViews.NewsTemplate">
+
+        <Frame IsClippedToBounds="True"
+         CornerRadius = "12"
+         HasShadow="True"
+         BackgroundColor="White" 
+         OutlineColor="Gray">
+        <Frame.Margin>
+            <OnPlatform x:TypeArguments="Thickness"
+                  Android="10" iOS="10"/>
+        </Frame.Margin>
+        <Frame.Padding>
+            <OnPlatform x:TypeArguments="Thickness"
+                  Android="0" iOS="0"/>
+        </Frame.Padding>
+
+        <StackLayout Orientation="Vertical">
+            <AbsoluteLayout>
+                <Image x:Name="Newsimage"  AbsoluteLayout.LayoutBounds="0,0,1,210" Aspect="AspectFill" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional"/>
+                <Frame CornerRadius = "5" OutlineColor = "Transparent" Padding ="3, 3, 3, 3" AbsoluteLayout.LayoutBounds="1.05,10,0.35,21" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" Opacity="0.7" BackgroundColor = "#ffffff">
+                    <Label x:Name="Newssource"  TextColor="Black" HorizontalTextAlignment="Start" VerticalOptions="Center" FontSize="14"/>
+                </Frame>
+            </AbsoluteLayout>
+
+
+            <StackLayout Orientation="Vertical" Padding="10,5,10,5" HorizontalOptions="Start" >
+                <Label FontAttributes="None"
+                           x:Name="newstitle"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="StartAndExpand"
+                           FontSize="20"
+                           Text="{Binding title , Mode = TwoWay}"
+                           TextColor="Black" >
+                </Label>
+                <Label FontAttributes="None"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="StartAndExpand"
+                           FontSize="16"
+                           x:Name="date"
+                           Text="{Binding publishedAt , Mode = TwoWay}"
+                           TextColor="Gray" >
+                </Label>
+
+                <Label FontAttributes="None"
+                            x:Name="description"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="StartAndExpand"
+                            FontSize="20"
+                            Text="{Binding description , Mode = TwoWay}"
+                            TextColor="Black" >
+                </Label>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
+                    <Frame CornerRadius = "5"
+                                OutlineColor = "Gray"
+                                Padding = "15, 5, 15, 5"
+                                HorizontalOptions = "Start"
+                                VerticalOptions = "Fill"
+                                BackgroundColor = "Transparent">
+
+
+                        <Label FontAttributes="None"
+                               HorizontalTextAlignment="Start"
+                               VerticalTextAlignment="Start"
+                               HorizontalOptions="StartAndExpand"
+                               FontSize="16"
+                               Text="10 Likes" TextColor="Black">
+
+                        </Label>
+                    </Frame>
+                    <Frame CornerRadius = "5"
+                                OutlineColor = "Gray"
+                                Padding = "15, 5, 15, 5"
+                                HorizontalOptions = "End"
+                                VerticalOptions = "Fill"
+                                BackgroundColor = "Transparent">
+                        <Label FontAttributes="None"
+                               HorizontalTextAlignment="End"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="End"
+                               FontSize="16"
+                               Text="26 Comments" TextColor="Black">
+
+                        </Label>
+                    </Frame>
+                </StackLayout>
+
+            </StackLayout>
+
+        </StackLayout>
+
+    </Frame>
+</ContentView>
