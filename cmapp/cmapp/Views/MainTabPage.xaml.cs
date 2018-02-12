@@ -19,7 +19,7 @@ namespace cmapp.Views
             this.Children.Add(new NewsView());
             this.Children.Add(new NewsTabPage());
             this.Children.Add(new NewsView());
-            this.Children.Add(new NewsView());
+            this.Children.Add(new BioPage());
             CurrentPage = Children[id];
         }
 

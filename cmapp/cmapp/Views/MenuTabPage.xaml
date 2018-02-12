@@ -13,9 +13,10 @@
              data that you want to have in your menu drawer
         -->
                 <StackLayout.Children >
-                    <Image Source="{Binding profile_picture}" HorizontalOptions="Center" VerticalOptions="Center" Aspect="AspectFill" HeightRequest="100" WidthRequest="100"/>
-
-                    <Label Text="{Binding firstname}" />
+                    <Frame IsClippedToBounds="True" CornerRadius = "63" OutlineColor = "Gray" Padding ="0, 0, 0, 0" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor = "#ffffff" HeightRequest="120" WidthRequest="120">
+                        <Image Source="{Binding profile_picture}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill" HeightRequest="120" WidthRequest="120"/>
+                    </Frame>
+                    <Label x:Name="usname" HorizontalOptions="Center" />
                 </StackLayout.Children>
 
                 <ListView x:Name="navigationDrawerList"
@@ -29,7 +30,7 @@
                             <ViewCell>
 
                                 <!-- Main design for our menu items -->
-                                <StackLayout VerticalOptions="FillAndExpand"
+                                <StackLayout VerticalOptions="CenterAndExpand"
                              Orientation="Horizontal"
                              Padding="20,10,0,10"
                              Spacing="20">

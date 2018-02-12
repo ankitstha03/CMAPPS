@@ -130,6 +130,9 @@
   <ItemGroup>
     <BundleResource Include="Resources\ssss.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_apps_black_24dp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\cmapp\cmapp.projitems" Label="Shared" />
 </Project>

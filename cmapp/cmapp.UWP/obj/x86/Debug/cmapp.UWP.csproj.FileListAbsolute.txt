@@ -476,3 +476,4 @@ D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.
 D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.NewsTabPage.xaml.g.cs
 D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.NewsDetailPage.xaml.g.cs
 D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.MenuTabPage.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.BioPage.xaml.g.cs

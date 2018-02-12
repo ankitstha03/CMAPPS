@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-12T11:14:02.484</Modified>
+      <Modified>2018-02-12T13:25:13.338</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\cmapp.UWP.exe">
       <PackagePath>entrypoint\cmapp.UWP.exe</PackagePath>
-      <Modified>2018-02-12T11:14:01.976</Modified>
+      <Modified>2018-02-12T13:25:12.834</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ankitstha03\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -716,11 +716,11 @@
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-12T10:51:53.540</Modified>
+      <Modified>2018-02-12T12:55:13.283</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\Core\cmapp.UWP.exe">
       <PackagePath>cmapp.UWP.exe</PackagePath>
-      <Modified>2018-02-12T11:14:02.480</Modified>
+      <Modified>2018-02-12T13:25:13.334</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
