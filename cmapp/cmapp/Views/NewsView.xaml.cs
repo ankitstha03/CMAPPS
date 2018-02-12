@@ -52,11 +52,13 @@ namespace cmapp.Views
             }
         }
 
-        private void Onrefresh(object sender, EventArgs e)
+        private async void Onrefresh(object sender, EventArgs e)
         {
-            Navigation.InsertPageBefore(new NewsView(), this);
+            var content = await _client.GetStringAsync(Url);
+            newlist = JsonConvert.DeserializeObject<Newlist>(content);
+            NewsCollection = new ObservableCollection<News>(newlist.articles);
+            listView.ItemsSource = NewsCollection.Reverse<News>();
             listView.EndRefresh();
-            Navigation.RemovePage(this);
         }
 
         protected override async void OnAppearing()
