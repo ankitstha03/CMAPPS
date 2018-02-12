@@ -28007,11 +28007,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ankitstha03\\source\\repos\\cmapp\\cmapp\\cmapp.UWP\\cmapp.UWP.csproj",
+      "projectUniqueName": "D:\\CmAppli\\cmapp\\cmapp.UWP\\cmapp.UWP.csproj",
       "projectName": "cmapp.UWP",
-      "projectPath": "C:\\Users\\ankitstha03\\source\\repos\\cmapp\\cmapp\\cmapp.UWP\\cmapp.UWP.csproj",
+      "projectPath": "D:\\CmAppli\\cmapp\\cmapp.UWP\\cmapp.UWP.csproj",
       "packagesPath": "C:\\Users\\ankitstha03\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ankitstha03\\source\\repos\\cmapp\\cmapp\\cmapp.UWP\\obj\\",
+      "outputPath": "D:\\CmAppli\\cmapp\\cmapp.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

@@ -21,7 +21,6 @@ namespace cmapp.Views
         private const string Url = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=92348f99d6004ff2b789dd74af818e16";
         private HttpClient _client = new HttpClient();
         Newlist newlist;
-        private bool _canClose = true;
         App app = Application.Current as App;
 
         public NewsView ()
@@ -73,20 +72,5 @@ namespace cmapp.Views
             listView.FadeTo(1, 1000, Easing.SpringIn);
         }
 
-        protected override bool OnBackButtonPressed()
-        {
-            if (_canClose)
-            {
-                ShowExitDialog();
-            }
-            return _canClose;
-        }
-
-        private async void ShowExitDialog()
-        {
-            await DisplayAlert("Exit", "Press back again to exit", "Ok");
-            _canClose = false;
-            this.OnBackButtonPressed();
-        }
     }
 }

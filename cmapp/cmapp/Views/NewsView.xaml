@@ -4,7 +4,7 @@
              x:Class="cmapp.Views.NewsView"
              xmlns:view="clr-namespace:cmapp.TemplateViews"
              xmlns:viewModel="clr-namespace:cmapp.Models"
-             Title="News">
+             Title="Local">
 
     <ContentPage.BindingContext>
         <viewModel:News/>

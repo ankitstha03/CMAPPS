@@ -5767,11 +5767,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ankitstha03\\source\\repos\\cmapp\\cmapp\\cmapp.iOS\\cmapp.iOS.csproj",
+      "projectUniqueName": "D:\\CmAppli\\cmapp\\cmapp.iOS\\cmapp.iOS.csproj",
       "projectName": "cmapp.iOS",
-      "projectPath": "C:\\Users\\ankitstha03\\source\\repos\\cmapp\\cmapp\\cmapp.iOS\\cmapp.iOS.csproj",
+      "projectPath": "D:\\CmAppli\\cmapp\\cmapp.iOS\\cmapp.iOS.csproj",
       "packagesPath": "C:\\Users\\ankitstha03\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ankitstha03\\source\\repos\\cmapp\\cmapp\\cmapp.iOS\\obj\\",
+      "outputPath": "D:\\CmAppli\\cmapp\\cmapp.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

@@ -19,7 +19,7 @@
 
         <StackLayout Orientation="Vertical">
             <AbsoluteLayout>
-                <Image x:Name="Newsimage"  AbsoluteLayout.LayoutBounds="0,0,1,210" Aspect="AspectFill" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional"/>
+                <Image x:Name="Newsimage"  AbsoluteLayout.LayoutBounds="0,0,1,220" Aspect="AspectFill" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional"/>
                 <Frame CornerRadius = "5" OutlineColor = "Transparent" Padding ="3, 3, 3, 3" AbsoluteLayout.LayoutBounds="1.05,10,0.35,21" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" Opacity="0.7" BackgroundColor = "#ffffff">
                     <Label x:Name="Newssource"  TextColor="Black" HorizontalTextAlignment="Start" VerticalOptions="Center" FontSize="14"/>
                 </Frame>
@@ -32,7 +32,7 @@
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="20"
+                           FontSize="16"
                            Text="{Binding title , Mode = TwoWay}"
                            TextColor="Black" >
                 </Label>
@@ -40,7 +40,7 @@
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="16"
+                           FontSize="10"
                            x:Name="date"
                            Text="{Binding publishedAt , Mode = TwoWay}"
                            TextColor="Gray" >
@@ -51,7 +51,7 @@
                             HorizontalTextAlignment="Start"
                             VerticalTextAlignment="Center"
                             HorizontalOptions="StartAndExpand"
-                            FontSize="20"
+                            FontSize="14"
                             Text="{Binding description , Mode = TwoWay}"
                             TextColor="Black" >
                 </Label>
@@ -69,7 +69,7 @@
                                HorizontalTextAlignment="Start"
                                VerticalTextAlignment="Start"
                                HorizontalOptions="StartAndExpand"
-                               FontSize="16"
+                               FontSize="12"
                                Text="10 Likes" TextColor="Black">
 
                         </Label>
@@ -84,7 +84,7 @@
                                HorizontalTextAlignment="End"
                                VerticalTextAlignment="Center"
                                HorizontalOptions="End"
-                               FontSize="16"
+                               FontSize="12"
                                Text="26 Comments" TextColor="Black">
 
                         </Label>

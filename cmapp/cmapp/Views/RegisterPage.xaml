@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cmapp.Views.RegisterPage"
+             Title="Register-CMAPP">
+    
+    
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                0,20,0,0
+            </OnPlatform.iOS>
+            <OnPlatform.Android>
+                0,0,0,0
+            </OnPlatform.Android>
+            <OnPlatform.WinPhone>
+                0,0,0,0
+            </OnPlatform.WinPhone>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <Grid BackgroundColor="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="*"/>
+
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="1"  Margin="20,0,20,0" HorizontalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+
+                            <RowDefinition Height="50"/>
+
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Image Source="profile.png" HeightRequest="90" VerticalOptions="End" />
+                        </StackLayout>
+                        <Grid Grid.Row="1">
+                            <Entry   Placeholder="Enter your First Name"    FontSize="16" />
+                        </Grid>
+
+                        <Grid Grid.Row="2">
+                            <Entry  Placeholder="Enter your Last Name"   FontSize="16"/>
+                        </Grid>
+
+                        <Grid Grid.Row="3">
+                            <Entry  Placeholder="Enter your Email" Keyboard="Numeric"  FontSize="16"/>
+                        </Grid>
+
+                        <Grid Grid.Row="4">
+                            <Entry  x:Name="userent" Placeholder="Enter your Username"  FontSize="16"/>
+                        </Grid>
+                        
+                        <Grid Grid.Row="5">
+                            <Entry  x:Name="passent" IsPassword="True" Placeholder="Enter your password"  FontSize="16"/>
+                        </Grid>
+                        
+                        <Grid Grid.Row="6">
+                            <Entry  x:Name="passent2" IsPassword="True" Placeholder="Confirm you password"  FontSize="16"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Button Text="Register" x:Name="btnreg" TextColor="White" HeightRequest="50" VerticalOptions="Start" />
+            </StackLayout>
+
+        </ScrollView>
+
+
+    </ContentPage.Content>
+</ContentPage>

@@ -4169,11 +4169,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ankitstha03\\source\\repos\\cmapp\\cmapp\\cmapp.Android\\cmapp.Android.csproj",
+      "projectUniqueName": "D:\\CmAppli\\cmapp\\cmapp.Android\\cmapp.Android.csproj",
       "projectName": "cmapp.Android",
-      "projectPath": "C:\\Users\\ankitstha03\\source\\repos\\cmapp\\cmapp\\cmapp.Android\\cmapp.Android.csproj",
+      "projectPath": "D:\\CmAppli\\cmapp\\cmapp.Android\\cmapp.Android.csproj",
       "packagesPath": "C:\\Users\\ankitstha03\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ankitstha03\\source\\repos\\cmapp\\cmapp\\cmapp.Android\\obj\\",
+      "outputPath": "D:\\CmAppli\\cmapp\\cmapp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

@@ -14,7 +14,7 @@ namespace cmapp
 		{
 			InitializeComponent();
 
-			MainPage = new NavigationPage(new NewsView());
+			MainPage = new NavigationPage(new LoginPage());
 		}
 
 		protected override void OnStart ()
