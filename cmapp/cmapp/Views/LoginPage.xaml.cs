@@ -70,7 +70,7 @@ namespace cmapp.Views
                 {
                     var content = await _client.GetStringAsync(Url);
                     Constants.currentuser = JsonConvert.DeserializeObject<List<User>>(content).SingleOrDefault(x => x.username == enUser.Text); ;
-                    Application.Current.MainPage = new NavigationPage(new MainTabPage());
+                    Application.Current.MainPage = new NavigationPage(new MenuTabPage());
                 }
                 else
                 {

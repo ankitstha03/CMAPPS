@@ -13,14 +13,14 @@ namespace cmapp.Views
     public partial class MainTabPage : TabbedPage
     {
         private bool _canClose = true;
-        public MainTabPage ()
+        public MainTabPage (int id)
         {
             InitializeComponent();
             this.Children.Add(new NewsView());
             this.Children.Add(new NewsTabPage());
             this.Children.Add(new NewsView());
             this.Children.Add(new NewsView());
-
+            CurrentPage = Children[id];
         }
 
         protected override bool OnBackButtonPressed()

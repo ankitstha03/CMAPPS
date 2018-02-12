@@ -4,7 +4,7 @@ using System.Text;
 
 namespace cmapp.Models
 {
-    class Sources
+    public class Sources
     {
         public string id { get; set; }
         public string name { get; set; }

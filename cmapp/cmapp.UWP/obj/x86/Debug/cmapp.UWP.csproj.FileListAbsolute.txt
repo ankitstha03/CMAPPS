@@ -474,3 +474,5 @@ D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\ProjectArchitectures.txt
 D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.RegisterPage.xaml.g.cs
 D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.MainTabPage.xaml.g.cs
 D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.NewsTabPage.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.NewsDetailPage.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.MenuTabPage.xaml.g.cs

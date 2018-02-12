@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-12T05:49:38.063</Modified>
+      <Modified>2018-02-12T11:14:02.484</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\cmapp.UWP.exe">
       <PackagePath>entrypoint\cmapp.UWP.exe</PackagePath>
-      <Modified>2018-02-12T05:49:36.389</Modified>
+      <Modified>2018-02-12T11:14:01.976</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ankitstha03\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -539,9 +539,9 @@
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
       <Modified>2017-12-15T06:37:58.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2018-02-11T10:53:32.520</Modified>
+    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Assets\ssss.png">
+      <PackagePath>Assets\ssss.png</PackagePath>
+      <Modified>2018-02-12T10:19:04.676</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Assets\LockScreenLogo.scale-100.png">
       <PackagePath>Assets\LockScreenLogo.scale-100.png</PackagePath>
@@ -693,6 +693,14 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-02-11T10:53:32.520</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\ssss.png">
+      <PackagePath>ssss.png</PackagePath>
+      <Modified>2018-02-12T10:18:44.633</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2018-02-11T10:53:32.520</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\cmapp.UWP.xr.xml">
       <PackagePath>cmapp.UWP.xr.xml</PackagePath>
       <Modified>2018-02-11T13:21:23.816</Modified>
@@ -708,11 +716,11 @@
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-12T05:49:37.306</Modified>
+      <Modified>2018-02-12T10:51:53.540</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\Core\cmapp.UWP.exe">
       <PackagePath>cmapp.UWP.exe</PackagePath>
-      <Modified>2018-02-12T05:49:38.057</Modified>
+      <Modified>2018-02-12T11:14:02.480</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

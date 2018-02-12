@@ -28,14 +28,14 @@ namespace cmapp.Views
 			InitializeComponent ();
 		}
 
-        private void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem == null)
                 return;
 
             var dataCard = e.SelectedItem as News;
 
-            //await Navigation.PushAsync(new TicketPage(dataCard.Id),true);
+            await Navigation.PushAsync(new NewsDetailPage(dataCard),true);
             listView.SelectedItem = null;
         }
 

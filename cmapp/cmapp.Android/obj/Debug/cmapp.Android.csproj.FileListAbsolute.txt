@@ -66,6 +66,9 @@ D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\FormsViewGroup.dll.mdb
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.Views.NewsDetailPage.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.Views.MenuTabPage.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\res\drawable\ssss.png
 D:\CmAppli\cmapp\cmapp.Android\bin\Debug\cmapp.Android.dll
 bin\Debug\FormsViewGroup.dll.mdb
 bin\Debug\Xamarin.Forms.Core.dll.mdb

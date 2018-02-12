@@ -403,8 +403,8 @@
     <AppxPackagedFile Include="C:\Users\ankitstha03\.nuget\packages\xamarin.forms\2.5.0.122203\lib\uap10.0\Xamarin.Forms.Xaml.dll">
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Assets\ssss.png">
+      <PackagePath>Assets\ssss.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Assets\LockScreenLogo.scale-100.png">
       <PackagePath>Assets\LockScreenLogo.scale-100.png</PackagePath>
@@ -524,6 +524,12 @@
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\ssss.png">
+      <PackagePath>ssss.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\cmapp.UWP.xr.xml">
       <PackagePath>cmapp.UWP.xr.xml</PackagePath>
