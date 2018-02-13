@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-12T13:25:13.338</Modified>
+      <Modified>2018-02-13T09:10:53.390</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\cmapp.UWP.exe">
       <PackagePath>entrypoint\cmapp.UWP.exe</PackagePath>
-      <Modified>2018-02-12T13:25:12.834</Modified>
+      <Modified>2018-02-13T09:10:51.224</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ankitstha03\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -523,6 +523,14 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T17:30:04.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ankitstha03\.nuget\packages\xam.plugins.forms.imagecircle\2.0.2\lib\UAP10\ImageCircle.Forms.Plugin.Abstractions.dll">
+      <PackagePath>ImageCircle.Forms.Plugin.Abstractions.dll</PackagePath>
+      <Modified>2018-01-31T07:14:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ankitstha03\.nuget\packages\xam.plugins.forms.imagecircle\2.0.2\lib\UAP10\ImageCircle.Forms.Plugin.UWP.dll">
+      <PackagePath>ImageCircle.Forms.Plugin.UWP.dll</PackagePath>
+      <Modified>2018-01-31T07:14:42.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ankitstha03\.nuget\packages\xamarin.forms\2.5.0.122203\lib\uap10.0\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
       <Modified>2017-12-15T06:37:58.000</Modified>
@@ -539,9 +547,33 @@
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
       <Modified>2017-12-15T06:37:58.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Assets\ic_apps_black_24dp.png">
+      <PackagePath>Assets\ic_apps_black_24dp.png</PackagePath>
+      <Modified>2018-02-12T13:28:07.222</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Assets\Noticonred.png">
+      <PackagePath>Assets\Noticonred.png</PackagePath>
+      <Modified>2018-02-13T08:01:05.345</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Assets\Noticonwhite.png">
+      <PackagePath>Assets\Noticonwhite.png</PackagePath>
+      <Modified>2018-02-13T08:01:05.342</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Assets\ssss.png">
       <PackagePath>Assets\ssss.png</PackagePath>
       <Modified>2018-02-12T10:19:04.676</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\ic_apps_black_24dp.png">
+      <PackagePath>ic_apps_black_24dp.png</PackagePath>
+      <Modified>2018-02-12T13:28:03.592</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Noticonred.png">
+      <PackagePath>Noticonred.png</PackagePath>
+      <Modified>2018-02-13T08:00:59.534</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Noticonwhite.png">
+      <PackagePath>Noticonwhite.png</PackagePath>
+      <Modified>2018-02-13T08:00:59.531</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Assets\LockScreenLogo.scale-100.png">
       <PackagePath>Assets\LockScreenLogo.scale-100.png</PackagePath>
@@ -716,11 +748,11 @@
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-12T12:55:13.283</Modified>
+      <Modified>2018-02-13T08:55:18.590</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\Core\cmapp.UWP.exe">
       <PackagePath>cmapp.UWP.exe</PackagePath>
-      <Modified>2018-02-12T13:25:13.334</Modified>
+      <Modified>2018-02-13T09:10:53.386</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

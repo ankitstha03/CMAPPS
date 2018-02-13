@@ -2,6 +2,11 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="cmapp.Views.MenuTabPage">
+
+    <MasterDetailPage.ToolbarItems>
+        <ToolbarItem x:Name="Icon"  Clicked="Icon_Clicked"/>
+    </MasterDetailPage.ToolbarItems>
+    
     <MasterDetailPage.Master>
         <ContentPage Title="Menu"
                  BackgroundColor="#e8e8e8">

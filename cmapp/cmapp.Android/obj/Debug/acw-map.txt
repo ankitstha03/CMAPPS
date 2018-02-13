@@ -2,6 +2,10 @@ cmapp.Droid.MainActivity, cmapp.Android;md598fabe1e7754ea6ca6247c61077b73d8.Main
 cmapp.Droid.MainActivity, cmapp.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md598fabe1e7754ea6ca6247c61077b73d8.MainActivity
 cmapp.Droid.MainActivity;md598fabe1e7754ea6ca6247c61077b73d8.MainActivity
 cmapp.droid.MainActivity;md598fabe1e7754ea6ca6247c61077b73d8.MainActivity
+ImageCircle.Forms.Plugin.Droid.ImageCircleRenderer, ImageCircle.Forms.Plugin.Android;md5979977b59766b06d26cb3e819c6ba31c.ImageCircleRenderer
+ImageCircle.Forms.Plugin.Droid.ImageCircleRenderer, ImageCircle.Forms.Plugin.Android, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null;md5979977b59766b06d26cb3e819c6ba31c.ImageCircleRenderer
+ImageCircle.Forms.Plugin.Droid.ImageCircleRenderer;md5979977b59766b06d26cb3e819c6ba31c.ImageCircleRenderer
+imagecircle.forms.plugin.droid.ImageCircleRenderer;md5979977b59766b06d26cb3e819c6ba31c.ImageCircleRenderer
 Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer, Refractored.XamForms.PullToRefresh.Droid;md54355d1548ca58e697fb9844585971280.PullToRefreshLayoutRenderer
 Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer, Refractored.XamForms.PullToRefresh.Droid, Version=2.2.1.0, Culture=neutral, PublicKeyToken=null;md54355d1548ca58e697fb9844585971280.PullToRefreshLayoutRenderer
 Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer;md54355d1548ca58e697fb9844585971280.PullToRefreshLayoutRenderer

@@ -108,6 +108,8 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "cmapp.Android.dll" comes first in this list. */
 		"cmapp.Android.dll",
 		"FormsViewGroup.dll",
+		"ImageCircle.Forms.Plugin.Abstractions.dll",
+		"ImageCircle.Forms.Plugin.Android.dll",
 		"Newtonsoft.Json.dll",
 		"Refractored.XamForms.PullToRefresh.dll",
 		"Refractored.XamForms.PullToRefresh.Droid.dll",

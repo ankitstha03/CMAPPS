@@ -1,9 +1,12 @@
 WinMetadata\Windows.winmd
+Assets\ic_apps_black_24dp.png
 Assets\LockScreenLogo.scale-100.png
 Assets\LockScreenLogo.scale-125.png
 Assets\LockScreenLogo.scale-150.png
 Assets\LockScreenLogo.scale-200.png
 Assets\LockScreenLogo.scale-400.png
+Assets\Noticonred.png
+Assets\Noticonwhite.png
 Assets\SplashScreen.scale-100.png
 Assets\SplashScreen.scale-125.png
 Assets\SplashScreen.scale-150.png
@@ -32,5 +35,8 @@ Assets\Wide310x150Logo.scale-150.png
 Assets\Wide310x150Logo.scale-200.png
 Assets\Wide310x150Logo.scale-400.png
 cmapp.UWP.xr.xml
+ic_apps_black_24dp.png
+Noticonred.png
+Noticonwhite.png
 Properties\Default.rd.xml
 ssss.png

@@ -15,11 +15,10 @@ namespace cmapp.Views
     public partial class MenuTabPage : MasterDetailPage
     {
         public List<MasterPageItem> menuList { get; set; }
-
+        int count=0;
         public MenuTabPage()
         {
             NavigationPage.SetHasNavigationBar(this, false);
-
             InitializeComponent();
 
             menuList = new List<MasterPageItem>();
@@ -57,6 +56,28 @@ namespace cmapp.Views
                 Application.Current.MainPage = new NavigationPage(new LoginPage());
 
             IsPresented = false;
+        }
+
+        private void Icon_Clicked(object sender, EventArgs e)
+        {
+            Icon.Icon = "Noticonwhite.png";
+            Navigation.PushAsync(new NotificationPage(), true);
+        }
+
+        protected override async void OnAppearing()
+        {
+            foreach(Notifications n in Constants._notification)
+            {
+                if (n.unread)
+                {
+                    count++;
+                }
+            }
+
+            if (count >= 1)
+            {
+                Icon.Icon = "Noticonred.png";
+            }
         }
 
     }

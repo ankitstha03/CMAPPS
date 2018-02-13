@@ -125,6 +125,9 @@
     <PackageReference Include="Refractored.XamForms.PullToRefresh">
       <Version>2.2.1</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
+      <Version>2.0.2</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
   </ItemGroup>
   <ItemGroup>
@@ -132,6 +135,12 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_apps_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Noticonwhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Noticonred.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\cmapp\cmapp.projitems" Label="Shared" />

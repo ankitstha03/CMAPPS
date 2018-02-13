@@ -1,5 +1,7 @@
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\cmapp.Android.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\FormsViewGroup.dll
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\ImageCircle.Forms.Plugin.Abstractions.dll
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\ImageCircle.Forms.Plugin.Android.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Java.Interop.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Microsoft.CSharp.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Mono.Android.dll

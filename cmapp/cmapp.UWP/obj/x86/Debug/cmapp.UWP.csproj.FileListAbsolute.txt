@@ -477,3 +477,10 @@ D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.
 D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.NewsDetailPage.xaml.g.cs
 D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.MenuTabPage.xaml.g.cs
 D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.BioPage.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.TemplateViews.NotifTemplate.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.NotificationPage.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\ImageCircle.Forms.Plugin.Abstractions.dll
+D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\ImageCircle.Forms.Plugin.Abstractions.pdb
+D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\ImageCircle.Forms.Plugin.UWP.dll
+D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\ImageCircle.Forms.Plugin.UWP.pdb
+D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\ImageCircle.Forms.Plugin.UWP.pri.xml
