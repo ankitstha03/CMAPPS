@@ -15,6 +15,7 @@ namespace cmapp.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class LoginPage : ContentPage
 	{
+        string asas ="\u0923\u0938\u094d\u0924\u0930\u0940\u092f \u0909\u092a\u091a\u093e\u0930 \u0938\u0947\u0935\u093e \u0909\u092a\u0932\u092c\u094d\u0927 \u0917\u0930\u093e\u0909\u0928 \u090f\u091a\u0906\u0908\u092d\u0940 \u0938\u0902\u0915\u094d\u0930\u092e\u093f\u0924\u0939\u0930\u0941\u0915\u094b \u092e\u093e\u0917" ;
         private const string Url = "http://support.prixa.net/api-auth/customers/";
         private HttpClient _client = new HttpClient();
         private bool _canClose = true;
@@ -23,7 +24,9 @@ namespace cmapp.Views
         public LoginPage ()
 		{
 			InitializeComponent ();
-		}
+            newlbl.Text = asas;
+
+        }
 
         private void TapGestureRecognizer_Clicked(object sender, EventArgs e)
         {

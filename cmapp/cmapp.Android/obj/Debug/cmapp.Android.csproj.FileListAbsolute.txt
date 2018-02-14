@@ -30,7 +30,6 @@ C:\Users\ankitstha03\source\repos\cmapp\cmapp\cmapp.Android\obj\Debug\android\as
 C:\Users\ankitstha03\source\repos\cmapp\cmapp\cmapp.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 C:\Users\ankitstha03\source\repos\cmapp\cmapp\cmapp.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Users\ankitstha03\source\repos\cmapp\cmapp\cmapp.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
-D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Android.csprojResolveAssemblyReference.cache
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Android.csproj.CoreCompileInputs.cache
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.App.xaml.g.cs
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.MainPage.xaml.g.cs
@@ -65,6 +64,17 @@ D:\CmAppli\cmapp\cmapp.Android\obj\Debug\res\drawable\noticonwhite.png
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\res\drawable\noticonred.png
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\R.cs.flag
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\uploadflags.txt
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.Views.EventSchedule.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.Views.Profile.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\res\drawable\drawer.png
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\res\drawable\bullet.png
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.TemplateViews.NepaliNewsTemplate.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.Views.NepaliNewsView.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.Views.NepaliNewsDetailPage.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.TemplateViews.MessageTemplate.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.Views.MessageView.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.Views.NewMessagePage.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Android.csprojResolveAssemblyReference.cache
 D:\CmAppli\cmapp\cmapp.Android\bin\Debug\cmapp.Android.dll.mdb
 D:\CmAppli\cmapp\cmapp.Android\bin\Debug\FormsViewGroup.dll.mdb
 D:\CmAppli\cmapp\cmapp.Android\bin\Debug\ImageCircle.Forms.Plugin.Android.dll.mdb
@@ -77,7 +87,6 @@ D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\ImageCircle.Forms.Plugin
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
-D:\CmAppli\cmapp\cmapp.Android\bin\Debug\cmapp.Android.dll
 bin\Debug\FormsViewGroup.dll.mdb
 bin\Debug\ImageCircle.Forms.Plugin.Android.dll.mdb
 bin\Debug\Xamarin.Forms.Core.dll.mdb

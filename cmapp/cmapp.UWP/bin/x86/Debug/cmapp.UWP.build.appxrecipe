@@ -409,6 +409,15 @@
     <AppxPackagedFile Include="C:\Users\ankitstha03\.nuget\packages\xamarin.forms\2.5.0.122203\lib\uap10.0\Xamarin.Forms.Xaml.dll">
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Assets\Ananda 1 Md.ttf">
+      <PackagePath>Assets\Ananda 1 Md.ttf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Assets\Bullet.png">
+      <PackagePath>Assets\Bullet.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Assets\drawer.png">
+      <PackagePath>Assets\drawer.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Assets\ic_apps_black_24dp.png">
       <PackagePath>Assets\ic_apps_black_24dp.png</PackagePath>
     </AppxPackagedFile>
@@ -420,6 +429,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Assets\ssss.png">
       <PackagePath>Assets\ssss.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\Bullet.png">
+      <PackagePath>Bullet.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\drawer.png">
+      <PackagePath>drawer.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\CmAppli\cmapp\cmapp.UWP\ic_apps_black_24dp.png">
       <PackagePath>ic_apps_black_24dp.png</PackagePath>

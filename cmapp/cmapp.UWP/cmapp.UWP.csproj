@@ -101,13 +101,18 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="Assets\Ananda 1 Md.ttf" />
     <None Include="cmapp.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Bullet.png" />
+    <Content Include="Assets\drawer.png" />
     <Content Include="Assets\ic_apps_black_24dp.png" />
     <Content Include="Assets\Noticonred.png" />
     <Content Include="Assets\Noticonwhite.png" />
     <Content Include="Assets\ssss.png" />
+    <Content Include="Bullet.png" />
+    <Content Include="drawer.png" />
     <Content Include="ic_apps_black_24dp.png" />
     <Content Include="Noticonred.png" />
     <Content Include="Noticonwhite.png" />

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cmapp.Views.Profile"
+             Title="Profile">
+    <ScrollView>
+        <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="AUTO" />
+            </Grid.RowDefinitions>
+
+            <!--  header background  -->
+          
+
+            <!--  profile image  -->
+            <Frame   CornerRadius = "63" OutlineColor = "Gray" Padding ="0, 0, 0, 0"  Margin="0,40" HorizontalOptions="Center"  BackgroundColor = "#ffffff" HeightRequest="120" WidthRequest="120">
+                <Image  Source="{Binding profile_picture}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill" HeightRequest="120" WidthRequest="120"/>
+            </Frame>
+
+            <!--  Profile Name  -->
+            <StackLayout Grid.Row="1"  HorizontalOptions="Center">
+                <Label TextColor="Black" FontSize="30" FontAttributes="Bold" Text="User" HorizontalOptions="Center"  />
+                <Label Margin="0,-5" TextColor="#BDBDBD" FontSize="20" Text="Bio kjasfhdk skafh "  HorizontalOptions="Center"  />
+            </StackLayout>
+
+            <!--  Social Stats Section  -->
+            <Grid Grid.Row="2" Margin="0,30" ColumnSpacing="0" RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout>
+                    <Label TextColor="#2196F3" FontSize="30"  Text="33"  HorizontalOptions="Center" />
+                    <Label TextColor="#BDBDBD" FontSize="20" Text="Likes"  HorizontalOptions="Center"  />
+                </StackLayout>
+
+                <StackLayout Grid.Column="1">
+                    <Label TextColor="#2196F3" FontSize="30" Text="94"  HorizontalOptions="Center" />
+                    <Label TextColor="#BDBDBD" FontSize="20" Text="Following"  HorizontalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="2">
+                    <Label TextColor="#2196F3" FontSize="30" Text="957"  HorizontalOptions="Center"  />
+                    <Label TextColor="#BDBDBD" FontSize="20" Text="Followers"  HorizontalOptions="Center"  />
+                </StackLayout>
+            </Grid>
+
+            <!--  profile description  -->
+            <Label Margin="20,0" Grid.Row="3" TextColor="#BDBDBD" FontSize="15" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada ultricies arcu nec egestas. Nam porta fermentum aliquam. Nullam tincidunt odio purus." />
+
+            <!--  follow button  -->
+            <Button Grid.Row="4" Margin="20" BackgroundColor="#2196F3" TextColor="White" Text="Follow" />
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

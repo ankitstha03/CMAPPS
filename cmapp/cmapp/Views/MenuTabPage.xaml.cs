@@ -15,7 +15,6 @@ namespace cmapp.Views
     public partial class MenuTabPage : MasterDetailPage
     {
         public List<MasterPageItem> menuList { get; set; }
-        int count=0;
         public MenuTabPage()
         {
             NavigationPage.SetHasNavigationBar(this, false);
@@ -23,50 +22,67 @@ namespace cmapp.Views
 
             menuList = new List<MasterPageItem>();
 
-            var page1 = new MasterPageItem() { Title = "Home", Icon = "ic_apps_black_24dp.png", id=0 };
-            var page2 = new MasterPageItem() { Title = "News", Icon = "ic_apps_black_24dp.png", id=1 };
-            var page3 = new MasterPageItem() { Title = "Schedule", Icon = "ic_apps_black_24dp.png", id=2 };
-            var page4 = new MasterPageItem() { Title = "Biography", Icon = "ic_apps_black_24dp.png", id=3 };
-            var page5 = new MasterPageItem() { Title = "Logout ", Icon = "ic_apps_black_24dp.png", id = 4 };
+            var page1 = new MasterPageItem() {  Icon = "ic_apps_black_24dp.png", id=0 };
+            var page2 = new MasterPageItem() { Icon = "ic_apps_black_24dp.png", id=1 };
+            var page3 = new MasterPageItem() {  Icon = "ic_apps_black_24dp.png", id=2 };
+            var page4 = new MasterPageItem() {  Icon = "ic_apps_black_24dp.png", id=3 };
+            var page5 = new MasterPageItem() { Icon = "ic_apps_black_24dp.png", id = 4 };
 
+            if (Constants.English)
+            {
+                usname.Text = "Shankar Pokhrel";
+                page1.Title = "Home";
+                page2.Title = "News";
+                page3.Title = "Schedule";
+                page4.Title = "Message";
+                page5.Title = "Biography";
+            }
+            else
+            {
+                usname.Text = "शंकर पोख्रेल";
+                page1.Title = "प्रमुख";
+                page2.Title = "समाचार";
+                page3.Title = "तलिका";
+                page4.Title = "सन्देश";
+                page5.Title = "जिवनी";
+            }
 
             menuList.Add(page1);
             menuList.Add(page2);
             menuList.Add(page3);
             menuList.Add(page4);
-            menuList.Add(page5);
 
 
             // Setting our list to be ItemSource for ListView in MainPage.xaml
             navigationDrawerList.ItemsSource = menuList;
             // Initial navigation, this can be used for our home page
             Detail = new NavigationPage(new MainTabPage(0));
-            usname.Text = Constants.currentuser.first_name + " " + Constants.currentuser.last_name;
+            
             this.BindingContext = Constants.currentuser;
         }
 
         private void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var item = (MasterPageItem)e.SelectedItem;
-            if (item.id <= 3)
-            {
-                Detail = new NavigationPage(new MainTabPage(item.id));
-            }
-            else
-                Application.Current.MainPage = new NavigationPage(new LoginPage());
-
+            Detail = new NavigationPage(new MainTabPage(item.id));
             IsPresented = false;
         }
 
         private void Icon_Clicked(object sender, EventArgs e)
         {
-            Icon.Icon = "Noticonwhite.png";
             Navigation.PushAsync(new NotificationPage(), true);
+        }
+        private void Icon2_Clicked(object sender, EventArgs e)
+        {
+            Constants.English = !Constants.English;
+            Application.Current.MainPage= new NavigationPage(new MenuTabPage());
         }
 
         protected override async void OnAppearing()
         {
-            foreach(Notifications n in Constants._notification)
+            base.OnAppearing();
+            int count = 0;
+            foreach (Notifications n in Constants._notification)
             {
                 if (n.unread)
                 {
@@ -78,7 +94,21 @@ namespace cmapp.Views
             {
                 Icon.Icon = "Noticonred.png";
             }
+            else
+            {
+                Icon.Icon = "Noticonwhite.png";
+            }
+
+            if (Constants.English)
+            {
+                Icon2.Text = "EN";
+            }
+            else
+            {
+                Icon2.Text = "NP";
+            }
         }
 
     }
 }
+

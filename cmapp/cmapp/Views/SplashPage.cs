@@ -54,7 +54,7 @@ namespace cmapp.Views
             await splashImage.ScaleTo(0.9, 1500, Easing.Linear);
             await labelFormatted.ScaleTo(0.9, 1000, Easing.Linear);
 
-            Application.Current.MainPage = new NavigationPage(new LoginPage());    //After loading  MainPage it gets Navigated to our new Page
+            Application.Current.MainPage = new NavigationPage(new MenuTabPage());    //After loading  MainPage it gets Navigated to our new Page
         }
     }
 }

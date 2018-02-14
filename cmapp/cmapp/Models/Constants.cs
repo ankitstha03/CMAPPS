@@ -8,6 +8,7 @@ namespace cmapp.Models
     class Constants
     {
         public static bool IsDev = true;
+        public static bool English = true;
         public static User currentuser;
         public static List<Notifications> _notification = new List<Notifications>()
         {

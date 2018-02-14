@@ -4,7 +4,8 @@
              x:Class="cmapp.Views.MenuTabPage">
 
     <MasterDetailPage.ToolbarItems>
-        <ToolbarItem x:Name="Icon"  Clicked="Icon_Clicked"/>
+        <ToolbarItem x:Name="Icon2" Order="Primary"  Clicked="Icon2_Clicked"/>
+        <ToolbarItem x:Name="Icon" Order="Primary" Clicked="Icon_Clicked"/>
     </MasterDetailPage.ToolbarItems>
     
     <MasterDetailPage.Master>
@@ -18,10 +19,23 @@
              data that you want to have in your menu drawer
         -->
                 <StackLayout.Children >
-                    <Frame IsClippedToBounds="True" CornerRadius = "63" OutlineColor = "Gray" Padding ="0, 0, 0, 0" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor = "#ffffff" HeightRequest="120" WidthRequest="120">
-                        <Image Source="{Binding profile_picture}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill" HeightRequest="120" WidthRequest="120"/>
-                    </Frame>
-                    <Label x:Name="usname" HorizontalOptions="Center" />
+                    <StackLayout HeightRequest="200" >
+                        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Image Source="drawer.png" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
+                            <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Transparent">
+                                <Frame IsClippedToBounds="False"  CornerRadius = "63" OutlineColor = "Gray" Padding ="0, 0, 0, 0"  Margin="0,40" HorizontalOptions="Center"  BackgroundColor = "#ffffff" HeightRequest="120" WidthRequest="120">
+                                    <Image  Source="ssss.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill" HeightRequest="120" WidthRequest="120"/>
+                                </Frame>
+
+
+                                <Label x:Name="usname" TextColor="White" FontAttributes="Bold"  HorizontalOptions="Center" Margin="0,-30" >
+                                    
+                                </Label>
+
+                            </StackLayout>
+                        </AbsoluteLayout>
+
+                    </StackLayout>
                 </StackLayout.Children>
 
                 <ListView x:Name="navigationDrawerList"
@@ -66,3 +80,5 @@
         </NavigationPage>
     </MasterDetailPage.Detail>
 </MasterDetailPage>
+
+

@@ -484,3 +484,8 @@ D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\ImageCircle.Forms.Plugin.Abstractions.p
 D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\ImageCircle.Forms.Plugin.UWP.dll
 D:\CmAppli\cmapp\cmapp.UWP\bin\x86\Debug\ImageCircle.Forms.Plugin.UWP.pdb
 D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\ImageCircle.Forms.Plugin.UWP.pri.xml
+D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.EventSchedule.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.Profile.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.TemplateViews.NepaliNewsTemplate.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.NepaliNewsView.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.UWP\obj\x86\Debug\cmapp.UWP.D_.CmAppli.cmapp.cmapp.Views.NepaliNewsDetailPage.xaml.g.cs

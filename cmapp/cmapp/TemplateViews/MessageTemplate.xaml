@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cmapp.TemplateViews.MessageTemplate">
+    <Frame IsClippedToBounds="True"
+         CornerRadius = "12"
+         HasShadow="True"
+         BackgroundColor="White" 
+         OutlineColor="Gray">
+        <Frame.Margin>
+            <OnPlatform x:TypeArguments="Thickness"
+                  Android="10" iOS="10"/>
+        </Frame.Margin>
+        <Frame.Padding>
+            <OnPlatform x:TypeArguments="Thickness"
+                  Android="0" iOS="0"/>
+        </Frame.Padding>
+
+            <StackLayout Orientation="Vertical" Padding="10,5,10,5" HorizontalOptions="Start" >
+                <Label FontAttributes="None"
+                           x:Name="newstitle"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="StartAndExpand"
+                           FontSize="16"
+                           Text="{Binding title , Mode = TwoWay}"
+                           TextColor="Black" >
+                </Label>
+
+                <Label FontAttributes="None"
+                            x:Name="description"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="StartAndExpand"
+                            FontSize="14"
+                            Text="{Binding description , Mode = TwoWay}"
+                            TextColor="Black" >
+                </Label>
+
+            </StackLayout>
+    </Frame>
+</ContentView>

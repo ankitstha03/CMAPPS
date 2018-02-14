@@ -50,5 +50,9 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>cmapp</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Ananda 1 Md.ttf</string>
+	</array>
 </dict>
 </plist>
