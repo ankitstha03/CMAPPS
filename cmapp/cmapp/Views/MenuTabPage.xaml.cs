@@ -51,7 +51,7 @@ namespace cmapp.Views
             menuList.Add(page2);
             menuList.Add(page3);
             menuList.Add(page4);
-
+            menuList.Add(page5);
 
             // Setting our list to be ItemSource for ListView in MainPage.xaml
             navigationDrawerList.ItemsSource = menuList;
