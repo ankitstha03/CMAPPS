@@ -54,6 +54,9 @@
       <DependentUpon>BioPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ContactUs.xaml.cs">
+      <DependentUpon>ContactUs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\EventSchedule.xaml.cs">
       <DependentUpon>EventSchedule.xaml</DependentUpon>
     </Compile>
@@ -218,10 +221,19 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
+  
+<ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ContactUs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+<ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\NewMessagePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
+  
 </Project>

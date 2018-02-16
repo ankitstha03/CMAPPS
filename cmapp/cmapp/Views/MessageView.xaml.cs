@@ -52,7 +52,7 @@ namespace cmapp.Views
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new NewMessagePage(),true);
+            await Navigation.PushAsync(new ContactUs(),true);
         }
         private async void Onrefresh(object sender, EventArgs e)
         {
