@@ -64,6 +64,7 @@
     <PackageReference Include="Xam.Plugin.Connectivity">
       <Version>4.0.0.186-beta</Version>
     </PackageReference>
+
     <PackageReference Include="Xam.Plugin.PushNotification">
       <Version>1.2.5-beta</Version>
     </PackageReference>
