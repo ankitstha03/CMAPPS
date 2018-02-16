@@ -1,10 +1,16 @@
 FormsViewGroup
 ImageCircle.Forms.Plugin.Abstractions
 ImageCircle.Forms.Plugin.Android
+MonkeyCache
+MonkeyCache.FileStore
 Newtonsoft.Json
+Plugin.Connectivity.Abstractions
+Plugin.Connectivity
 Refractored.XamForms.PullToRefresh
 Refractored.XamForms.PullToRefresh.Droid
+System.Collections
 System.Runtime
+System.Threading.Tasks
 Xamarin.Android.Support.Animated.Vector.Drawable
 Xamarin.Android.Support.Annotations
 Xamarin.Android.Support.Compat
@@ -29,9 +35,7 @@ System.Resources.ResourceManager
 System.Runtime.Numerics
 System.Xml.XmlDocument
 System.Xml.XDocument
-System.Collections
 System.Globalization
-System.Threading.Tasks
 System.Diagnostics.Debug
 System.Dynamic.Runtime
 System.Runtime.Serialization.Formatters

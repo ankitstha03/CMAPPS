@@ -1,7 +1,11 @@
-﻿using System;
+﻿using MonkeyCache.FileStore;
+using Newtonsoft.Json;
+using Plugin.Connectivity;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace cmapp.Models
 {
@@ -29,5 +33,7 @@ namespace cmapp.Models
             new Notifications("The title of notication is here", "the description of notification is here", "12th Jan 2017", "http://markinternational.info/data/out/332/221663298-wallpaper-photos.jpg", true),
             new Notifications("The title of notication is here", "the description of notification is here", "12th Jan 2017", "http://markinternational.info/data/out/332/221663298-wallpaper-photos.jpg", false),
         };
+
+        
     }
 }

@@ -19,7 +19,6 @@ namespace cmapp.Views
 	{
         ObservableCollection<News> NewsCollection;
         private const string Url = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=92348f99d6004ff2b789dd74af818e16";
-        private HttpClient _client = new HttpClient();
         Newlist newlist;
         App app = Application.Current as App;
 
@@ -54,8 +53,7 @@ namespace cmapp.Views
 
         private async void Onrefresh(object sender, EventArgs e)
         {
-            var content = await _client.GetStringAsync(Url);
-            newlist = JsonConvert.DeserializeObject<Newlist>(content);
+            newlist = await MoneyCache.GetAsync<Newlist>(Url);
             NewsCollection = new ObservableCollection<News>(newlist.articles);
             listView.ItemsSource = NewsCollection.Reverse<News>();
             listView.EndRefresh();
@@ -64,8 +62,7 @@ namespace cmapp.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            var content = await _client.GetStringAsync(Url);
-            newlist = JsonConvert.DeserializeObject<Newlist>(content);
+            newlist = await MoneyCache.GetAsync<Newlist>(Url);
             NewsCollection = new ObservableCollection<News>(newlist.articles);
             listView.ItemsSource = NewsCollection.Reverse<News>();
             view.Margin = new Thickness(-200, 0, 200, 0);

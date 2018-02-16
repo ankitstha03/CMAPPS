@@ -32,6 +32,43 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "MonkeyCache/0.1.0.1-beta": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Net.Http",
+          "System.Xml",
+          "System.Xml.Linq",
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/MonkeyCache.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/MonkeyCache.dll": {}
+        }
+      },
+      "MonkeyCache.FileStore/0.1.0.1-beta": {
+        "type": "package",
+        "dependencies": {
+          "MonkeyCache": "0.1.0.1-beta",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Xml",
+          "System.Xml.Linq",
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/MonkeyCache.FileStore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/MonkeyCache.FileStore.dll": {}
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -596,6 +633,20 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xam.Plugin.Connectivity/4.0.0.186-beta": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.SimplePing": "1.4.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Connectivity.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Connectivity.dll": {}
+        }
+      },
       "Xam.Plugins.Forms.ImageCircle/2.0.2": {
         "type": "package",
         "dependencies": {
@@ -731,6 +782,15 @@
         "build": {
           "build/netstandard1.0/Xamarin.Forms.props": {},
           "build/netstandard1.0/Xamarin.Forms.targets": {}
+        }
+      },
+      "Xamarin.SimplePing/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/XamariniOS10/Xamarin.SimplePing.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/XamariniOS10/Xamarin.SimplePing.iOS.dll": {}
         }
       }
     },
@@ -765,6 +825,43 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "MonkeyCache/0.1.0.1-beta": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Net.Http",
+          "System.Xml",
+          "System.Xml.Linq",
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/MonkeyCache.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/MonkeyCache.dll": {}
+        }
+      },
+      "MonkeyCache.FileStore/0.1.0.1-beta": {
+        "type": "package",
+        "dependencies": {
+          "MonkeyCache": "0.1.0.1-beta",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Xml",
+          "System.Xml.Linq",
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/MonkeyCache.FileStore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/MonkeyCache.FileStore.dll": {}
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -1265,6 +1362,20 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xam.Plugin.Connectivity/4.0.0.186-beta": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.SimplePing": "1.4.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Connectivity.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Connectivity.dll": {}
+        }
+      },
       "Xam.Plugins.Forms.ImageCircle/2.0.2": {
         "type": "package",
         "dependencies": {
@@ -1400,6 +1511,15 @@
         "build": {
           "build/netstandard1.0/Xamarin.Forms.props": {},
           "build/netstandard1.0/Xamarin.Forms.targets": {}
+        }
+      },
+      "Xamarin.SimplePing/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/XamariniOS10/Xamarin.SimplePing.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/XamariniOS10/Xamarin.SimplePing.iOS.dll": {}
         }
       }
     },
@@ -1434,6 +1554,43 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "MonkeyCache/0.1.0.1-beta": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Net.Http",
+          "System.Xml",
+          "System.Xml.Linq",
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/MonkeyCache.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/MonkeyCache.dll": {}
+        }
+      },
+      "MonkeyCache.FileStore/0.1.0.1-beta": {
+        "type": "package",
+        "dependencies": {
+          "MonkeyCache": "0.1.0.1-beta",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Xml",
+          "System.Xml.Linq",
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/MonkeyCache.FileStore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/MonkeyCache.FileStore.dll": {}
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -1934,6 +2091,20 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xam.Plugin.Connectivity/4.0.0.186-beta": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.SimplePing": "1.4.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Connectivity.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Connectivity.dll": {}
+        }
+      },
       "Xam.Plugins.Forms.ImageCircle/2.0.2": {
         "type": "package",
         "dependencies": {
@@ -2069,6 +2240,15 @@
         "build": {
           "build/netstandard1.0/Xamarin.Forms.props": {},
           "build/netstandard1.0/Xamarin.Forms.targets": {}
+        }
+      },
+      "Xamarin.SimplePing/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/XamariniOS10/Xamarin.SimplePing.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/XamariniOS10/Xamarin.SimplePing.iOS.dll": {}
         }
       }
     },
@@ -2103,6 +2283,43 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "MonkeyCache/0.1.0.1-beta": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Net.Http",
+          "System.Xml",
+          "System.Xml.Linq",
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/MonkeyCache.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/MonkeyCache.dll": {}
+        }
+      },
+      "MonkeyCache.FileStore/0.1.0.1-beta": {
+        "type": "package",
+        "dependencies": {
+          "MonkeyCache": "0.1.0.1-beta",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Xml",
+          "System.Xml.Linq",
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/MonkeyCache.FileStore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/MonkeyCache.FileStore.dll": {}
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -2603,6 +2820,20 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xam.Plugin.Connectivity/4.0.0.186-beta": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.SimplePing": "1.4.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Connectivity.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Connectivity.dll": {}
+        }
+      },
       "Xam.Plugins.Forms.ImageCircle/2.0.2": {
         "type": "package",
         "dependencies": {
@@ -2738,6 +2969,15 @@
         "build": {
           "build/netstandard1.0/Xamarin.Forms.props": {},
           "build/netstandard1.0/Xamarin.Forms.targets": {}
+        }
+      },
+      "Xamarin.SimplePing/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/XamariniOS10/Xamarin.SimplePing.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/XamariniOS10/Xamarin.SimplePing.iOS.dll": {}
         }
       }
     }
@@ -2847,6 +3087,46 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
+      ]
+    },
+    "MonkeyCache/0.1.0.1-beta": {
+      "sha512": "Z0Qy+6qRJ3vOTPR9X4OFdvZt0Dl3TUJ8/r+Ts0Arcn9Utx0UTup4VRBqfhdrbWPlIIGOxzl9z0P7i02pbspNRw==",
+      "type": "package",
+      "path": "monkeycache/0.1.0.1-beta",
+      "files": [
+        "lib/monoandroid50/MonkeyCache.dll",
+        "lib/monoandroid50/MonkeyCache.xml",
+        "lib/netstandard2.0/MonkeyCache.dll",
+        "lib/netstandard2.0/MonkeyCache.xml",
+        "lib/uap10.0.16299/MonkeyCache.dll",
+        "lib/uap10.0.16299/MonkeyCache.pri",
+        "lib/uap10.0.16299/MonkeyCache.xml",
+        "lib/xamarinios10/MonkeyCache.dll",
+        "lib/xamarinios10/MonkeyCache.xml",
+        "lib/xamarinmac20/MonkeyCache.dll",
+        "lib/xamarinmac20/MonkeyCache.xml",
+        "monkeycache.0.1.0.1-beta.nupkg.sha512",
+        "monkeycache.nuspec"
+      ]
+    },
+    "MonkeyCache.FileStore/0.1.0.1-beta": {
+      "sha512": "5ghtK5fo6Vk8FSA2f7SpQS8Mz648iu8/CIVYQEU6p6irFU4hmMKD7GUKyj9RlDpjnlKqtlOtftEcIjDAj5gCZg==",
+      "type": "package",
+      "path": "monkeycache.filestore/0.1.0.1-beta",
+      "files": [
+        "lib/monoandroid50/MonkeyCache.FileStore.dll",
+        "lib/monoandroid50/MonkeyCache.FileStore.xml",
+        "lib/netstandard2.0/MonkeyCache.FileStore.dll",
+        "lib/netstandard2.0/MonkeyCache.FileStore.xml",
+        "lib/uap10.0.16299/MonkeyCache.FileStore.dll",
+        "lib/uap10.0.16299/MonkeyCache.FileStore.pri",
+        "lib/uap10.0.16299/MonkeyCache.FileStore.xml",
+        "lib/xamarinios10/MonkeyCache.FileStore.dll",
+        "lib/xamarinios10/MonkeyCache.FileStore.xml",
+        "lib/xamarinmac20/MonkeyCache.FileStore.dll",
+        "lib/xamarinmac20/MonkeyCache.FileStore.xml",
+        "monkeycache.filestore.0.1.0.1-beta.nupkg.sha512",
+        "monkeycache.filestore.nuspec"
       ]
     },
     "NETStandard.Library/1.6.1": {
@@ -5626,6 +5906,71 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
+    "Xam.Plugin.Connectivity/4.0.0.186-beta": {
+      "sha512": "omhy5ycD6LoXwuJYJAOQgth86oayAXfglT4e/ce5h8cn8oO3QJYZZug6leT5wQD8bD1Kb0wxIOXs8jKZZO1/Gw==",
+      "type": "package",
+      "path": "xam.plugin.connectivity/4.0.0.186-beta",
+      "files": [
+        "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.xml",
+        "lib/MonoAndroid10/Plugin.Connectivity.dll",
+        "lib/MonoAndroid10/Plugin.Connectivity.pdb",
+        "lib/MonoAndroid10/Plugin.Connectivity.xml",
+        "lib/UAP10/Plugin.Connectivity.Abstractions.dll",
+        "lib/UAP10/Plugin.Connectivity.Abstractions.pdb",
+        "lib/UAP10/Plugin.Connectivity.Abstractions.xml",
+        "lib/UAP10/Plugin.Connectivity.XML",
+        "lib/UAP10/Plugin.Connectivity.dll",
+        "lib/UAP10/Plugin.Connectivity.pdb",
+        "lib/UAP10/Plugin.Connectivity.pri",
+        "lib/UAP10/Plugin.Connectivity/Properties/Plugin.Connectivity.rd.xml",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.Abstractions.dll",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.Abstractions.pdb",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.Abstractions.xml",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.dll",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.pdb",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.xml",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.dll",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.pdb",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.xml",
+        "lib/XamarinTVOS/Plugin.Connectivity.Abstractions.dll",
+        "lib/XamarinTVOS/Plugin.Connectivity.Abstractions.pdb",
+        "lib/XamarinTVOS/Plugin.Connectivity.Abstractions.xml",
+        "lib/XamarinTVOS/Plugin.Connectivity.dll",
+        "lib/XamarinTVOS/Plugin.Connectivity.pdb",
+        "lib/XamarinTVOS/Plugin.Connectivity.xml",
+        "lib/net45/Plugin.Connectivity.Abstractions.dll",
+        "lib/net45/Plugin.Connectivity.Abstractions.pdb",
+        "lib/net45/Plugin.Connectivity.Abstractions.xml",
+        "lib/net45/Plugin.Connectivity.XML",
+        "lib/net45/Plugin.Connectivity.dll",
+        "lib/net45/Plugin.Connectivity.pdb",
+        "lib/netcoreapp2.0/Plugin.Connectivity.Abstractions.dll",
+        "lib/netcoreapp2.0/Plugin.Connectivity.Abstractions.pdb",
+        "lib/netcoreapp2.0/Plugin.Connectivity.Abstractions.xml",
+        "lib/netcoreapp2.0/Plugin.Connectivity.deps.json",
+        "lib/netcoreapp2.0/Plugin.Connectivity.dll",
+        "lib/netcoreapp2.0/Plugin.Connectivity.xml",
+        "lib/netstandard1.0/Plugin.Connectivity.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.Connectivity.Abstractions.pdb",
+        "lib/netstandard1.0/Plugin.Connectivity.Abstractions.xml",
+        "lib/netstandard1.0/Plugin.Connectivity.deps.json",
+        "lib/netstandard1.0/Plugin.Connectivity.dll",
+        "lib/netstandard1.0/Plugin.Connectivity.pdb",
+        "lib/netstandard1.0/Plugin.Connectivity.xml",
+        "lib/tizen40/Plugin.Connectivity.Abstractions.dll",
+        "lib/tizen40/Plugin.Connectivity.Abstractions.pdb",
+        "lib/tizen40/Plugin.Connectivity.Abstractions.xml",
+        "lib/tizen40/Plugin.Connectivity.deps.json",
+        "lib/tizen40/Plugin.Connectivity.dll",
+        "xam.plugin.connectivity.4.0.0.186-beta.nupkg.sha512",
+        "xam.plugin.connectivity.nuspec"
+      ]
+    },
     "Xam.Plugins.Forms.ImageCircle/2.0.2": {
       "sha512": "LyLQE2Pn9hHFKURhCCs5Z+5nb5KALmzQPUySeCi7AmCBbs0UkXQ48PSre8Nf4SbXSvASe8ewycD++xeqaeufJw==",
       "type": "package",
@@ -5838,12 +6183,26 @@
         "xamarin.forms.2.5.0.122203.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
+    },
+    "Xamarin.SimplePing/1.4.0": {
+      "sha512": "L00a5GlowQZxI3yyvCo7clpA1s96eQ0MGgwFphB8azpUBn2TwPkFQGo1UTu6So2IuhIdwz9I61f1WF0XLQn95A==",
+      "type": "package",
+      "path": "xamarin.simpleping/1.4.0",
+      "files": [
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/XamarinMac20/Xamarin.SimplePing.Mac.dll",
+        "lib/XamariniOS10/Xamarin.SimplePing.iOS.dll",
+        "xamarin.simpleping.1.4.0.nupkg.sha512",
+        "xamarin.simpleping.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
+      "MonkeyCache.FileStore >= 0.1.0.1-beta",
       "Newtonsoft.Json >= 10.0.3",
       "Refractored.XamForms.PullToRefresh >= 2.2.1",
+      "Xam.Plugin.Connectivity >= 4.0.0.186-beta",
       "Xam.Plugins.Forms.ImageCircle >= 2.0.2",
       "Xamarin.Forms >= 2.5.0.122203"
     ]
@@ -5886,6 +6245,10 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "MonkeyCache.FileStore": {
+            "target": "Package",
+            "version": "[0.1.0.1-beta, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[10.0.3, )"
@@ -5893,6 +6256,10 @@
           "Refractored.XamForms.PullToRefresh": {
             "target": "Package",
             "version": "[2.2.1, )"
+          },
+          "Xam.Plugin.Connectivity": {
+            "target": "Package",
+            "version": "[4.0.0.186-beta, )"
           },
           "Xam.Plugins.Forms.ImageCircle": {
             "target": "Package",

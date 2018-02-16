@@ -18,7 +18,6 @@ namespace cmapp.Views
 	{
         ObservableCollection<NepNews> NewsCollection;
         private const string Url = "http://ratopati.com/jsonapi/wow-request/";
-        private HttpClient _client = new HttpClient();
         Nepali newlist;
         App app = Application.Current as App;
         public NepaliNewsView ()
@@ -41,8 +40,7 @@ namespace cmapp.Views
 
         private async void Onrefresh(object sender, EventArgs e)
         {
-            var content = await _client.GetStringAsync(Url);
-            newlist = JsonConvert.DeserializeObject<Nepali>(content);
+            newlist = await MoneyCache.GetAsync<Nepali>(Url);
             var temp = newlist.news_categories.SingleOrDefault(c => c.News_type.Equals("Latest news"));
             NewsCollection = new ObservableCollection<NepNews>(temp.links);
             listView.EndRefresh();
@@ -51,8 +49,7 @@ namespace cmapp.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            var content = await _client.GetStringAsync(Url);
-            newlist = JsonConvert.DeserializeObject<Nepali>(content);
+            newlist = await MoneyCache.GetAsync<Nepali>(Url);
             var temp = newlist.news_categories.SingleOrDefault(c => c.News_type.Equals("Latest news"));
             NewsCollection = new ObservableCollection<NepNews>(temp.links);
             listView.ItemsSource = NewsCollection.Reverse<NepNews>();

@@ -5,6 +5,8 @@ using System.Text;
 
 using Xamarin.Forms;
 using cmapp.Views;
+using MonkeyCache.FileStore;
+using Plugin.Connectivity;
 
 namespace cmapp
 {
@@ -13,16 +15,17 @@ namespace cmapp
 		public App ()
 		{
 			InitializeComponent();
-
+            Barrel.ApplicationId = "cmapp";
 			MainPage = new NavigationPage(new SplashPage());
 		}
 
-		protected override void OnStart ()
-		{
-			// Handle when your app starts
-		}
+        protected override void OnStart()
+        {
 
-		protected override void OnSleep ()
+        }
+
+
+        protected override void OnSleep ()
 		{
 			// Handle when your app sleeps
 		}
