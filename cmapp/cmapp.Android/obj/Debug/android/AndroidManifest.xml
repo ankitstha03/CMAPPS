@@ -10,7 +10,7 @@
   <uses-permission android:name="android.permission.WAKE_LOCK" />
   <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
   <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-  <application android:label="cmapp.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
+  <application android:label="ShankarPokhrel.Android" android:icon="@drawable/ssss" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
     <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="cmapp" android:theme="@style/MainTheme" android:name="md598fabe1e7754ea6ca6247c61077b73d8.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
