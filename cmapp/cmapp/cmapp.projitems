@@ -36,6 +36,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\NotificationView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Schedular.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Sources.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Tweet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TweetingViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TemplateViews\MessageTemplate.xaml.cs">
       <DependentUpon>MessageTemplate.xaml</DependentUpon>
@@ -128,6 +130,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\SplashPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TwitterViewPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)XFToast.cs" />
   </ItemGroup>
   <ItemGroup>
