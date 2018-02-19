@@ -15,8 +15,6 @@ namespace cmapp.TemplateViews
 		public NepaliNewsTemplate ()
 		{
 			InitializeComponent ();
-            Newsimage.SetBinding(Image.SourceProperty, "image_url");
-            Newssource.SetBinding(Label.TextProperty, "category_name");
         }
 	}
 }

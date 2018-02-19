@@ -6,7 +6,6 @@
 
     <Frame IsClippedToBounds="True"
          HasShadow="True"
-         BackgroundColor="{Binding color}" 
            HorizontalOptions="FillAndExpand">
         <Frame.OutlineColor>
             <OnPlatform x:TypeArguments="Color"
@@ -23,7 +22,6 @@
         </Frame.Padding>
 
                 <StackLayout Padding="5" Orientation="Horizontal" VerticalOptions="Start" >
-            <controls:CircleImage Source="{Binding image}" VerticalOptions="Start" HeightRequest="60" WidthRequest="60"></controls:CircleImage>
             <StackLayout Orientation="Vertical" HorizontalOptions="Start" >
                         <Label FontAttributes="None"
                            HorizontalTextAlignment="Start"
@@ -33,25 +31,43 @@
                            Text="{Binding title , Mode = TwoWay}" 
                            TextColor="Black" >
                         </Label>
-                        
-                        <Label FontAttributes="None"
-                           HorizontalTextAlignment="Start"
-                           VerticalTextAlignment="Center"
-                           HorizontalOptions="StartAndExpand"
-                           FontSize="16"
-                           Text="{Binding description , Mode = TwoWay}" 
-                           TextColor="Black" >
-                        </Label>
-                            
+                <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
+                    <Frame CornerRadius = "5"
+                                OutlineColor = "Gray"
+                                Padding = "15, 5, 15, 5"
+                                HorizontalOptions = "Start"
+                                VerticalOptions = "Fill"
+                                BackgroundColor = "Transparent">
+
+
                         <Label FontAttributes="None"
                                HorizontalTextAlignment="Start"
                                VerticalTextAlignment="Start"
                                HorizontalOptions="StartAndExpand"
                                FontSize="12"
-                               Text="{Binding dates, Mode = TwoWay}" 
-                               TextColor="Gray">
+                               Text="{Binding start_date}" TextColor="Black">
+
                         </Label>
-                    </StackLayout>
+                    </Frame>
+                    <Frame CornerRadius = "5"
+                                OutlineColor = "Gray"
+                                Padding = "15, 5, 15, 5"
+                                HorizontalOptions = "End"
+                                VerticalOptions = "Fill"
+                                BackgroundColor = "Transparent">
+                        <Label FontAttributes="None"
+                               HorizontalTextAlignment="End"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="End"
+                               FontSize="12"
+                               Text="{Binding location}" TextColor="Black">
+
+                        </Label>
+                    </Frame>
                 </StackLayout>
+
+            
+            </StackLayout>
+        </StackLayout>
     </Frame>
 </ContentView>

@@ -17,24 +17,9 @@ namespace cmapp.Views
 		public NepaliNewsDetailPage (NepNews news)
 		{
 			InitializeComponent ();
-            if (CrossConnectivity.Current.IsConnected)
-            {
-                var browser = new WebView
-                {
-                    Source = news.news_url
-                };
-                Content = browser;
-            }
+            BindingContext =news;
+            Title = new string(news.title.Take(15).ToArray()) + "...";
         }
 
-        protected override async void OnAppearing()
-        {
-            base.OnAppearing();
-            if (!CrossConnectivity.Current.IsConnected)
-            {
-                await DisplayAlert("No Internet", "Please connect to the internet to view this page", "OK");
-                await Navigation.PopAsync(true);
-            }
-        }
     }
 }

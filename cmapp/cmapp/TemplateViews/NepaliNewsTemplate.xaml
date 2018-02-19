@@ -18,15 +18,16 @@
 
         <StackLayout Orientation="Vertical">
             <AbsoluteLayout>
-                <Image x:Name="Newsimage"  AbsoluteLayout.LayoutBounds="0,0,1,220" Aspect="AspectFill" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional"/>
+                <Image Source="{Binding title_image}"  AbsoluteLayout.LayoutBounds="0,0,1,220" Aspect="AspectFill" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional"/>
                 <Frame CornerRadius = "5" OutlineColor = "Transparent" Padding ="3, 3, 3, 3" AbsoluteLayout.LayoutBounds="1.05,10,0.35,21" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" Opacity="0.7" BackgroundColor = "#ffffff">
-                    <Label x:Name="Newssource"  TextColor="Black" HorizontalTextAlignment="Start" VerticalOptions="Center" FontSize="14"/>
+                    <Label Text="Local news"  TextColor="Black" HorizontalTextAlignment="Start" VerticalOptions="Center" FontSize="14"/>
                 </Frame>
             </AbsoluteLayout>
 
+                <StackLayout>
 
-            <StackLayout Orientation="Vertical" Padding="10,5,10,5" HorizontalOptions="Start" >
-                <Label FontAttributes="None"
+                            <StackLayout Orientation="Vertical" Padding="10,5,10,5" HorizontalOptions="Start" >
+                                <Label FontAttributes="None"
                            x:Name="newstitle"
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
@@ -34,29 +35,9 @@
                            FontSize="16"
                            Text="{Binding title , Mode = TwoWay}"
                            TextColor="Black" >
-                </Label>
-                <Label FontAttributes="None"
-                           HorizontalTextAlignment="Start"
-                           VerticalTextAlignment="Center"
-                           HorizontalOptions="StartAndExpand"
-                           FontSize="10"
-                           x:Name="date"
-                           Text="{Binding date , Mode = TwoWay}"
-                           TextColor="Gray" >
-                </Label>
-
-                <Label FontAttributes="None"
-                            x:Name="description"
-                            HorizontalTextAlignment="Start"
-                            VerticalTextAlignment="Center"
-                            HorizontalOptions="StartAndExpand"
-                            FontSize="14"
-                            Text="{Binding short_desc , Mode = TwoWay}"
-                            TextColor="Black" >
-                </Label>
-
-                <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
-                    <Frame CornerRadius = "5"
+                                </Label>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
+                                    <Frame CornerRadius = "5"
                                 OutlineColor = "Gray"
                                 Padding = "15, 5, 15, 5"
                                 HorizontalOptions = "Start"
@@ -64,35 +45,49 @@
                                 BackgroundColor = "Transparent">
 
 
-                        <Label FontAttributes="None"
+                                        <Label FontAttributes="None"
                                HorizontalTextAlignment="Start"
                                VerticalTextAlignment="Start"
                                HorizontalOptions="StartAndExpand"
                                FontSize="12"
-                               Text="१० लाईक" TextColor="Black">
+                               Text="{Binding date}" TextColor="Black">
 
-                        </Label>
-                    </Frame>
-                    <Frame CornerRadius = "5"
+                                        </Label>
+                                       
+                                    </Frame>
+                                    <Frame CornerRadius = "5"
                                 OutlineColor = "Gray"
                                 Padding = "15, 5, 15, 5"
                                 HorizontalOptions = "End"
                                 VerticalOptions = "Fill"
                                 BackgroundColor = "Transparent">
-                        <Label FontAttributes="None"
+                                        <Label FontAttributes="None"
                                HorizontalTextAlignment="End"
                                VerticalTextAlignment="Center"
                                HorizontalOptions="End"
                                FontSize="12"
-                               Text="१० कमेन्ट" TextColor="Black">
+                               Text="{Binding location}" TextColor="Black">
 
-                        </Label>
-                    </Frame>
+                                        </Label>
+                                    </Frame>
+                                </StackLayout>
+
+                                <Label FontAttributes="None"
+                            x:Name="description"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="StartAndExpand"
+                            FontSize="14"
+                            Text="{Binding description, StringFormat='{0:35}' , Mode = TwoWay}"
+                            TextColor="Black" >
+                                </Label>
+
+                            </StackLayout>
+
+                        </StackLayout>
+
                 </StackLayout>
-
-            </StackLayout>
-
-        </StackLayout>
+            
 
     </Frame>
 </ContentView>

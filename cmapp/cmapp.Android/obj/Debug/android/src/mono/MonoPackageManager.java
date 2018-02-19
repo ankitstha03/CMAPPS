@@ -119,6 +119,7 @@ class MonoPackageManager_Resources {
 		"PushNotification.Plugin.dll",
 		"Refractored.XamForms.PullToRefresh.dll",
 		"Refractored.XamForms.PullToRefresh.Droid.dll",
+		"Toasts.Forms.Plugin.Abstractions.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Runtime.dll",

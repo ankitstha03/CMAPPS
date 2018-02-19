@@ -18,9 +18,8 @@ namespace cmapp.Views
 	{
         
         ObservableCollection<Notifications> NotiCollection;
-        private const string Url = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=92348f99d6004ff2b789dd74af818e16";
-        Newlist newlist;
-        News newse;
+        private const string Url = "http://pradesh-5.com/api-auth/notices/";
+        List<Notifications> notlist;
         App app = Application.Current as App;
 
         public NotificationPage ()
@@ -34,19 +33,16 @@ namespace cmapp.Views
                 return;
 
             var dataCard = e.SelectedItem as Notifications;
+            await Navigation.PushAsync(new NotifDetailPage(dataCard), true);
 
-            await Navigation.PushAsync(new NewsDetailPage(newse), true);
             listView.SelectedItem = null;
         }
 
-        private void Onrefresh(object sender, EventArgs e)
+        private async    void Onrefresh(object sender, EventArgs e)
         {
-            foreach (Notifications n in Constants._notification)
-            {
-                n.unread = false;
-                n.color = Color.White;
-            }
-            NotiCollection = new ObservableCollection<Notifications>(Constants._notification);
+
+            notlist = await MoneyCache.GetAsync<List<Notifications>>(Url);
+            NotiCollection = new ObservableCollection<Notifications>(notlist);
             listView.ItemsSource = NotiCollection.Reverse<Notifications>();
             listView.EndRefresh();
         }
@@ -54,9 +50,8 @@ namespace cmapp.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            newlist = await MoneyCache.GetAsync<Newlist>(Url);
-            newse = newlist.articles.First<News>();
-            NotiCollection = new ObservableCollection<Notifications>(Constants._notification);
+            notlist = await MoneyCache.GetAsync<List<Notifications>>(Url);
+            NotiCollection = new ObservableCollection<Notifications>(notlist);
             listView.ItemsSource = NotiCollection.Reverse<Notifications>();
             view.Margin = new Thickness(-200, 0, 200, 0);
             view.TranslateTo(200, 0, 1000, Easing.SpringIn);
@@ -65,24 +60,24 @@ namespace cmapp.Views
           
         }
 
-        protected override void OnDisappearing()
-        {
-            base.OnDisappearing();
-            foreach (Notifications n in Constants._notification)
-            {
-                n.unread = false;
-                n.color = Color.White;
-            }
-        }
+        //protected override void OnDisappearing()
+        //{
+        //    base.OnDisappearing();
+        //    foreach (Notifications n in Constants._notification)
+        //    {
+        //        n.unread = false;
+        //        n.color = Color.White;
+        //    }
+        //}
 
-        protected override bool OnBackButtonPressed()
-        {
-            foreach (Notifications n in Constants._notification)
-            {
-                n.unread = false;
-                n.color = Color.White;
-            }
-            return false;
-        }
+        //protected override bool OnBackButtonPressed()
+        //{
+        //    foreach (Notifications n in Constants._notification)
+        //    {
+        //        n.unread = false;
+        //        n.color = Color.White;
+        //    }
+        //    return false;
+        //}
     }
 }

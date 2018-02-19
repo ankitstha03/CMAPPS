@@ -1,8 +1,10 @@
 ﻿using cmapp.Models;
 using cmapp.Views;
+using Plugin.Connectivity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,7 +21,7 @@ namespace cmapp.Views
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
-
+            Icon.Icon = "Noticonwhite";
             menuList = new List<MasterPageItem>();
 
             var page1 = new MasterPageItem() {  Icon = "ic_apps_black_24dp.png", id=0 };
@@ -81,23 +83,8 @@ namespace cmapp.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
+            
             int count = 0;
-            foreach (Notifications n in Constants._notification)
-            {
-                if (n.unread)
-                {
-                    count++;
-                }
-            }
-
-            if (count >= 1)
-            {
-                Icon.Icon = "Noticonred.png";
-            }
-            else
-            {
-                Icon.Icon = "Noticonwhite.png";
-            }
 
             if (Constants.English)
             {

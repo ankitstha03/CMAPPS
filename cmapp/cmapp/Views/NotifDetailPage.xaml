@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cmapp.Views.NotifDetailPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame IsClippedToBounds="True"
+         CornerRadius = "12"
+         HasShadow="True"
+         BackgroundColor="White" 
+         OutlineColor="Gray">
+                    <Frame.Margin>
+                          <OnPlatform x:TypeArguments="Thickness"
+                  Android="10" iOS="10"/>
+                    </Frame.Margin>
+                    <Frame.Padding>
+                        <OnPlatform x:TypeArguments="Thickness"
+                  Android="0" iOS="0"/>
+                    </Frame.Padding>
+
+                    <StackLayout Orientation="Vertical">
+                        <Frame OutlineColor = "Transparent" Padding ="3, 3, 3, 3" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Opacity="0.7" BackgroundColor = "#ffffff">
+                            <Label Text="Notice"  TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                        </Frame>
+                        <Image Source="{Binding title_image}" Margin="10,0,10,5"  Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
+
+
+                        <StackLayout Orientation="Vertical" Padding="10,5,10,5" HorizontalOptions="Start" >
+                            <Label FontAttributes="None"
+                           x:Name="newstitle"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="StartAndExpand"
+                           FontSize="16"
+                           Text="{Binding title , Mode = TwoWay}"
+                           TextColor="Black" >
+                            </Label>
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
+                                <Frame CornerRadius = "5"
+                                OutlineColor = "Gray"
+                                Padding = "15, 5, 15, 5"
+                                HorizontalOptions = "Start"
+                                VerticalOptions = "Fill"
+                                BackgroundColor = "Transparent">
+
+
+                                    <Label FontAttributes="None"
+                               HorizontalTextAlignment="Start"
+                               VerticalTextAlignment="Start"
+                               HorizontalOptions="StartAndExpand"
+                               FontSize="12"
+                               Text="{Binding start_date}" TextColor="Black">
+
+                                    </Label>
+                                    
+                                </Frame>
+                                <Frame CornerRadius = "5"
+                                OutlineColor = "Gray"
+                                Padding = "15, 5, 15, 5"
+                                HorizontalOptions = "End"
+                                VerticalOptions = "Fill"
+                                BackgroundColor = "Transparent">
+                                    <Label FontAttributes="None"
+                               HorizontalTextAlignment="End"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="End"
+                               FontSize="12"
+                               Text="{Binding end_date}" TextColor="Black">
+
+                                    </Label>
+                                </Frame>
+                            </StackLayout>
+
+                            <Frame CornerRadius = "5"
+                                OutlineColor = "Gray"
+                                Padding = "15, 5, 15, 5"
+                                HorizontalOptions = "End"
+                                VerticalOptions = "Fill"
+                                BackgroundColor = "Transparent">
+                                <Label FontAttributes="None"
+                               HorizontalTextAlignment="End"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="End"
+                               FontSize="14"
+                               Text="{Binding location}" TextColor="Black">
+
+                                </Label>
+                            </Frame>
+                            <Label FontAttributes="None"
+                            x:Name="description"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="StartAndExpand"
+                            FontSize="14"
+                            Text="{Binding description , Mode = TwoWay}"
+                            TextColor="Black" >
+                            </Label>
+
+                            
+
+                        </StackLayout>
+
+                    </StackLayout>
+
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

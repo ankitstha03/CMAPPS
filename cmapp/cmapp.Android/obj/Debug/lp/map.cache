@@ -48,3 +48,4 @@ netstandard
 System.Resources.ResourceManager
 System.ComponentModel
 System.Reflection.Extensions
+Toasts.Forms.Plugin.Abstractions

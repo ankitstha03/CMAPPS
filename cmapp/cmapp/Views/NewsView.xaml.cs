@@ -10,7 +10,7 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 using cmapp.Models;
-
+using Plugin.Connectivity;
 
 namespace cmapp.Views
 {
@@ -18,13 +18,14 @@ namespace cmapp.Views
 	public partial class NewsView : ContentPage
 	{
         ObservableCollection<News> NewsCollection;
-        private const string Url = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=92348f99d6004ff2b789dd74af818e16";
-        Newlist newlist;
+        private string Url ;
+        List<News> newlist;
         App app = Application.Current as App;
 
-        public NewsView ()
+        public NewsView(string url)
 		{
 			InitializeComponent ();
+            Url = url;
 		}
 
         private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -33,8 +34,14 @@ namespace cmapp.Views
                 return;
 
             var dataCard = e.SelectedItem as News;
-
-            await Navigation.PushAsync(new NewsDetailPage(dataCard),true);
+            if (CrossConnectivity.Current.IsConnected)
+            {
+                await Navigation.PushAsync(new NewsDetailPage(dataCard), true);
+            }
+            else
+            {
+                XFToast.LongMessage("No Internet Connection");
+            }
             listView.SelectedItem = null;
         }
 
@@ -46,15 +53,15 @@ namespace cmapp.Views
             }
             else
             {
-                NewsCollection = new ObservableCollection<News>(newlist.articles);
+                NewsCollection = new ObservableCollection<News>(newlist);
                 listView.ItemsSource = NewsCollection.Reverse<News>();
             }
         }
 
         private async void Onrefresh(object sender, EventArgs e)
         {
-            newlist = await MoneyCache.GetAsync<Newlist>(Url);
-            NewsCollection = new ObservableCollection<News>(newlist.articles);
+            newlist = await MoneyCache.GetAsync<List<News>>(Url);
+            NewsCollection = new ObservableCollection<News>(newlist);
             listView.ItemsSource = NewsCollection.Reverse<News>();
             listView.EndRefresh();
         }
@@ -62,8 +69,8 @@ namespace cmapp.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            newlist = await MoneyCache.GetAsync<Newlist>(Url);
-            NewsCollection = new ObservableCollection<News>(newlist.articles);
+            newlist = await MoneyCache.GetAsync<List<News>>(Url);
+            NewsCollection = new ObservableCollection<News>(newlist);
             listView.ItemsSource = NewsCollection.Reverse<News>();
             view.Margin = new Thickness(-200, 0, 200, 0);
             view.TranslateTo(200, 0, 1000, Easing.SpringIn);

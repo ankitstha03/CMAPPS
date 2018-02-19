@@ -38,12 +38,7 @@ namespace cmapp
                     Descritpion = "Task Description",
                     EventDate = TaskAt(3,13,9,30),
                 },
-                 //new Schedular
-                //{
-                //    EventName = "Body Sculpt",
-                //    Descritpion = "Sadie Terry",
-                //    EventDate = DateTime.Now.AddHours(3),
-                //},
+         
                  new Schedular
                 {
                     EventName = "Cycle",
@@ -61,7 +56,6 @@ namespace cmapp
                     EventName = "Weights",
                     Descritpion = "Task Description",
                     EventDate = TaskAt(3,15,18,00),
-                    IsLast = true
                 },
             };
         }

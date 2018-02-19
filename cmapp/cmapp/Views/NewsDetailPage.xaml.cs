@@ -17,24 +17,14 @@ namespace cmapp.Views
 		public NewsDetailPage (News news)
 		{
 			InitializeComponent ();
-            if (CrossConnectivity.Current.IsConnected) { 
+
                 var browser = new WebView
             {
                 Source = news.url
             };
             Content = browser;
-            }
         }
 
-        protected override async void OnAppearing()
-        {
-            base.OnAppearing();
-            if (!CrossConnectivity.Current.IsConnected)
-            {
-                await DisplayAlert("No Internet", "Please connect to the internet to view this page", "OK");
-                await Navigation.PopAsync(true);
-            }
-        }
 
     }
 }

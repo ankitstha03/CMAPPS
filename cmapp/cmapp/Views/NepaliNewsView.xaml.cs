@@ -1,5 +1,6 @@
 ﻿using cmapp.Models;
 using Newtonsoft.Json;
+using Plugin.Connectivity;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -17,8 +18,8 @@ namespace cmapp.Views
 	public partial class NepaliNewsView : ContentPage
 	{
         ObservableCollection<NepNews> NewsCollection;
-        private const string Url = "http://ratopati.com/jsonapi/wow-request/";
-        Nepali newlist;
+        private const string Url = "http://pradesh-5.com/api-auth/news/";
+        List<NepNews> newlist;
         App app = Application.Current as App;
         public NepaliNewsView ()
 		{
@@ -31,7 +32,6 @@ namespace cmapp.Views
                 return;
 
             var dataCard = e.SelectedItem as NepNews;
-
             await Navigation.PushAsync(new NepaliNewsDetailPage(dataCard), true);
             listView.SelectedItem = null;
         }
@@ -40,18 +40,17 @@ namespace cmapp.Views
 
         private async void Onrefresh(object sender, EventArgs e)
         {
-            newlist = await MoneyCache.GetAsync<Nepali>(Url);
-            var temp = newlist.news_categories.SingleOrDefault(c => c.News_type.Equals("Latest news"));
-            NewsCollection = new ObservableCollection<NepNews>(temp.links);
+            newlist = await MoneyCache.GetAsync<List<NepNews>>(Url);
+            NewsCollection = new ObservableCollection<NepNews>(newlist);
+            listView.ItemsSource = NewsCollection.Reverse<NepNews>();
             listView.EndRefresh();
         }
 
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            newlist = await MoneyCache.GetAsync<Nepali>(Url);
-            var temp = newlist.news_categories.SingleOrDefault(c => c.News_type.Equals("Latest news"));
-            NewsCollection = new ObservableCollection<NepNews>(temp.links);
+            newlist = await MoneyCache.GetAsync<List<NepNews>>(Url);
+            NewsCollection = new ObservableCollection<NepNews>(newlist);
             listView.ItemsSource = NewsCollection.Reverse<NepNews>();
             view.Margin = new Thickness(-200, 0, 200, 0);
             view.TranslateTo(200, 0, 1000, Easing.SpringIn);

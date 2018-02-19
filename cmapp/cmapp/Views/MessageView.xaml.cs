@@ -1,5 +1,6 @@
 ﻿using cmapp.Models;
 using Newtonsoft.Json;
+using Plugin.Connectivity;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -16,9 +17,9 @@ namespace cmapp.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MessageView : ContentPage
 	{
-        ObservableCollection<News> NewsCollection;
-        private const string Url = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=92348f99d6004ff2b789dd74af818e16";
-        Newlist newlist;
+        ObservableCollection<Message> NewsCollection;
+        private const string Url = "http://pradesh-5.com/api-auth/messages/";
+        List<Message> messagelist;
         App app = Application.Current as App;
         public MessageView ()
 		{
@@ -31,9 +32,9 @@ namespace cmapp.Views
             if (e.SelectedItem == null)
                 return;
 
-            var dataCard = e.SelectedItem as News;
+            var dataCard = e.SelectedItem as Message;
 
-            await Navigation.PushAsync(new NewsDetailPage(dataCard), true);
+            await Navigation.PushAsync(new MessageDetailPage(dataCard), true);
             listView.SelectedItem = null;
         }
 
@@ -41,12 +42,12 @@ namespace cmapp.Views
         {
             if (!String.IsNullOrWhiteSpace(e.NewTextValue))
             {
-                listView.ItemsSource = NewsCollection.Where(c => c.title.StartsWith(e.NewTextValue));
+                listView.ItemsSource = NewsCollection.Where(c => c.subject.StartsWith(e.NewTextValue));
             }
             else
             {
-                NewsCollection = new ObservableCollection<News>(newlist.articles);
-                listView.ItemsSource = NewsCollection.Reverse<News>();
+                NewsCollection = new ObservableCollection<Message>(messagelist);
+                listView.ItemsSource = NewsCollection.Reverse<Message>();
             }
         }
 
@@ -56,18 +57,19 @@ namespace cmapp.Views
         }
         private async void Onrefresh(object sender, EventArgs e)
         {
-            newlist = await MoneyCache.GetAsync<Newlist>(Url);
-            NewsCollection = new ObservableCollection<News>(newlist.articles);
-            listView.ItemsSource = NewsCollection.Reverse<News>();
+            messagelist = await MoneyCache.GetAsync<List<Message>>(Url);
+            NewsCollection = new ObservableCollection<Message>(messagelist);
+            listView.ItemsSource = NewsCollection.Reverse<Message>();
             listView.EndRefresh();
         }
 
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            newlist = await MoneyCache.GetAsync<Newlist>(Url);
-            NewsCollection = new ObservableCollection<News>(newlist.articles);
-            listView.ItemsSource = NewsCollection.Reverse<News>();
+             
+            messagelist = await MoneyCache.GetAsync<List<Message>>(Url);
+            NewsCollection = new ObservableCollection<Message>(messagelist);
+            listView.ItemsSource = NewsCollection.Reverse<Message>();
             view.Margin = new Thickness(-200, 0, 200, 0);
             view.TranslateTo(200, 0, 1000, Easing.SpringIn);
             listView.Opacity = 0;

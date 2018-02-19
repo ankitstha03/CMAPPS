@@ -6,11 +6,6 @@
   BackgroundColor="White"
              Title="Schedule">
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <local:NotBooleanConverter x:Key="NotBooleanConverter" />
-        </ResourceDictionary>
-    </ContentPage.Resources>
 
     <ListView
     x:Name="timelineListView"
@@ -55,14 +50,6 @@
              FontSize="10" TextColor="Black"
               Text="{Binding Descritpion}" />
 
-                        <BoxView
-              Grid.RowSpan="2"
-              Grid.Column="1"
-              BackgroundColor="Coral"
-              HorizontalOptions="Center"
-              IsVisible="{Binding IsLast, Converter={local:NotBooleanConverter}}"
-              VerticalOptions="Fill"
-              WidthRequest="3" />
 
                         <Image Grid.Column="1" Source="Bullet.png" />
 

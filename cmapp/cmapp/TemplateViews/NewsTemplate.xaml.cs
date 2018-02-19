@@ -15,8 +15,8 @@ namespace cmapp.TemplateViews
 		public NewsTemplate ()
 		{
 			InitializeComponent ();
-            Newsimage.SetBinding(Image.SourceProperty, "urlToImage");
-            Newssource.SetBinding(Label.TextProperty, "source.name");
+            Newsimage.SetBinding(Image.SourceProperty, "images");
+            //Newssource.SetBinding(Label.TextProperty, "source.name");
         }
 	}
 }

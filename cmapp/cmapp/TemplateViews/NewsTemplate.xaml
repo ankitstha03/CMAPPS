@@ -21,7 +21,7 @@
             <AbsoluteLayout>
                 <Image x:Name="Newsimage"  AbsoluteLayout.LayoutBounds="0,0,1,220" Aspect="AspectFill" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional"/>
                 <Frame CornerRadius = "5" OutlineColor = "Transparent" Padding ="3, 3, 3, 3" AbsoluteLayout.LayoutBounds="1.05,10,0.35,21" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" Opacity="0.7" BackgroundColor = "#ffffff">
-                    <Label x:Name="Newssource"  TextColor="Black" HorizontalTextAlignment="Start" VerticalOptions="Center" FontSize="14"/>
+                    <Label Text="Press news"  TextColor="Black" HorizontalTextAlignment="Start" VerticalOptions="Center" FontSize="14"/>
                 </Frame>
             </AbsoluteLayout>
 
@@ -36,7 +36,7 @@
                            Text="{Binding title , Mode = TwoWay}"
                            TextColor="Black" >
                 </Label>
-                <Label FontAttributes="None"
+                <!--<Label FontAttributes="None"
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
@@ -44,7 +44,7 @@
                            x:Name="date"
                            Text="{Binding publishedAt , Mode = TwoWay}"
                            TextColor="Gray" >
-                </Label>
+                </Label>-->
 
                 <Label FontAttributes="None"
                             x:Name="description"
@@ -56,7 +56,7 @@
                             TextColor="Black" >
                 </Label>
 
-                <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
+                <!--<StackLayout Orientation="Horizontal" VerticalOptions="Start" >
                     <Frame CornerRadius = "5"
                                 OutlineColor = "Gray"
                                 Padding = "15, 5, 15, 5"
@@ -89,7 +89,7 @@
 
                         </Label>
                     </Frame>
-                </StackLayout>
+                </StackLayout>-->
 
             </StackLayout>
 

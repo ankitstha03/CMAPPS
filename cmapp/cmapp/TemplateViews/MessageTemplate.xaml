@@ -18,25 +18,49 @@
 
             <StackLayout Orientation="Vertical" Padding="10,5,10,5" HorizontalOptions="Start" >
                 <Label FontAttributes="None"
-                           x:Name="newstitle"
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
                            FontSize="16"
-                           Text="{Binding title , Mode = TwoWay}"
+                           Text="{Binding subject , Mode = TwoWay}"
                            TextColor="Black" >
                 </Label>
 
+            <Frame CornerRadius = "5"
+                                OutlineColor = "Gray"
+                                Padding = "15, 5, 15, 5"
+                                HorizontalOptions = "Start"
+                                VerticalOptions = "Fill"
+                                BackgroundColor = "Transparent">
+
+
                 <Label FontAttributes="None"
-                            x:Name="description"
+                               HorizontalTextAlignment="Start"
+                               VerticalTextAlignment="Start"
+                               HorizontalOptions="StartAndExpand"
+                               FontSize="12"
+                               Text="{Binding status}" TextColor="Black">
+                </Label>
+
+            </Frame>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
+                    <Label FontAttributes="None"
                             HorizontalTextAlignment="Start"
                             VerticalTextAlignment="Center"
                             HorizontalOptions="StartAndExpand"
                             FontSize="14"
-                            Text="{Binding description , Mode = TwoWay}"
+                            Text="Sent by:"
+                            TextColor="Black" >
+                    </Label>
+                    <Label FontAttributes="None"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="StartAndExpand"
+                            FontSize="14"
+                            Text="{Binding full_name , Mode = TwoWay}"
                             TextColor="Black" >
                 </Label>
-
-            </StackLayout>
+                </StackLayout>
+        </StackLayout>
     </Frame>
 </ContentView>

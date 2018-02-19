@@ -19,7 +19,8 @@ namespace cmapp.Views
             InitializeComponent();
             if (Constants.English)
             {
-                this.Children.Add(new NewsView() { Title="Home"});
+                Title = "Shankar Pokhrel";
+                this.Children.Add(new NewsView("http://pradesh-5.com/api-auth/press-news/") { Title="Home"});
                 this.Children.Add(new NewsTabPage() { Title = "News" });
                 this.Children.Add(new EventSchedule() { Title = "Schedule" });
                 this.Children.Add(new MessageView() { Title = "Message" });
@@ -27,13 +28,13 @@ namespace cmapp.Views
             }
             else
             {
-                this.Children.Add(new NepaliNewsView() { Title= "प्रमुख" });
+                Title = "शंकर पोख्रेल";
+                this.Children.Add(new NewsView("http://pradesh-5.com/api-auth/press-news/") { Title= "प्रमुख" });
                 this.Children.Add(new NewsTabPage() { Title = "समाचार" });
                 this.Children.Add(new EventSchedule() { Title = "तलिका" });
                 this.Children.Add(new MessageView() { Title = "सन्देश" });
                 this.Children.Add(new BioPage() { Title = "जिवनी" });
             }
-            
 
             CurrentPage = Children[id];
         }
@@ -49,9 +50,9 @@ namespace cmapp.Views
 
         private async void ShowExitDialog()
         {
-            await DisplayAlert("Exit", "Press back again to exit", "Ok");
+            XFToast.LongMessage("Press back again to exit");
+            await Task.Delay(1000);
             _canClose = false;
-            this.OnBackButtonPressed();
         }
     }
 }

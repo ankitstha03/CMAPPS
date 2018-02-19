@@ -4,6 +4,7 @@
              x:Class="cmapp.Views.ContactUs"
              Title="Contact Us">
     <ContentPage.Content>
+        <StackLayout>
         <ScrollView>
             <StackLayout>
 
@@ -17,97 +18,57 @@
                     <Grid Grid.Row="1"  Margin="20,0,20,0" HorizontalOptions="FillAndExpand">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="300"/>
-                            <RowDefinition Height="20"/>
                             <RowDefinition Height="50"/>
-                            <RowDefinition Height="20"/>
                             <RowDefinition Height="50"/>
-                            <RowDefinition Height="20"/>
                             <RowDefinition Height="50"/>
-                            <RowDefinition Height="20"/>
-                            <RowDefinition Height="250"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
 
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
 
                         <Frame OutlineColor = "Transparent" Padding ="3, 3, 3, 3" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Opacity="0.7" BackgroundColor = "#ffffff">
-                            <Label Text="Connect With Us"  TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                            <Label x:Name="connect"  TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
                         </Frame>
                         <Image Source="https://i2.wp.com/riddlenepal.com/wp-content/uploads/2017/12/sankar-pokhrel.jpg" Margin="10,0,10,5"  Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
-
+                        
                         <Grid Grid.Row="1">
-                            <Label FontAttributes="None"
-                            HorizontalTextAlignment="Start"
-                            HorizontalOptions="StartAndExpand"
-                            FontSize="14"
-                            Text="Name"
-                            TextColor="Black" >
-                            </Label>
-                           
+                        
+                            <Entry x:Name="enUser"  HorizontalOptions="Fill"  FontSize="16"/>
                         </Grid>
-                        
+
+
+
                         <Grid Grid.Row="2">
-                        
-                            <Entry x:Name="enUser" Placeholder="Your Name" HorizontalOptions="Fill"  FontSize="16"/>
+
+                            <Entry x:Name="enEmail"  HorizontalOptions="Fill"  FontSize="16"/>
                         </Grid>
 
 
                         <Grid Grid.Row="3">
-                            <Label FontAttributes="None"
-                            HorizontalTextAlignment="Start"
-                            HorizontalOptions="StartAndExpand"
-                            FontSize="14"
-                            Text="Email-ID"
-                            TextColor="Black" >
-                            </Label>
-                           
-                        </Grid>
 
-                        <Grid Grid.Row="4">
-
-                            <Entry x:Name="enEmail" Placeholder="Your Email" HorizontalOptions="Fill"  FontSize="16"/>
-                        </Grid>
-
-                        <Grid Grid.Row="5">
-                            <Label FontAttributes="None"
-                            HorizontalTextAlignment="Start"
-                            HorizontalOptions="StartAndExpand"
-                            FontSize="14"
-                            Text="Phone Number"
-                            TextColor="Black" >
-                            </Label>
-                            
-
-                        </Grid>
-
-                        <Grid Grid.Row="6">
-
-                            <Entry x:Name="enPhone" Keyboard="Numeric" HorizontalOptions="Fill"  Placeholder="Your Phone Number" FontSize="16"/>
+                                <Entry x:Name="enPhone" Keyboard="Numeric" HorizontalOptions="Fill"   FontSize="16"/>
                         </Grid>
                         
-                        <Grid Grid.Row="7">
-                            <Label FontAttributes="None"
-                            HorizontalTextAlignment="Start"
-                            HorizontalOptions="StartAndExpand"
-                            FontSize="14"
-                            Text="Description"
-                            TextColor="Black" >
-                            </Label>
-                           
+                        <Grid Grid.Row="4">
+
+                            <Entry x:Name="enSub" HorizontalOptions="Fill"   FontSize="16"/>
                         </Grid>
 
-                        <Grid Grid.Row="8">
 
-                            <Entry x:Name="enDesc" HeightRequest="200" HorizontalOptions="Fill"  Placeholder="Your Problem" FontSize="16"/>
+                        <Grid Grid.Row="5">
+
+                                <Entry x:Name="enDesc" HorizontalOptions="Fill"   FontSize="16"/>
                         </Grid>
 
-                    </Grid>
+                        </Grid>
                 </Grid>
 
-                <Button Grid.Row="4" Margin="20" BackgroundColor="#2196F3"  TextColor="White" Text="Send Message" />
             </StackLayout>
 
         </ScrollView>
+        <Button Margin="20" BackgroundColor="#2196F3" Clicked="Button_Clicked"  TextColor="White" x:Name="btnmessage" VerticalOptions="End"/>
+        </StackLayout>
 
-      
     </ContentPage.Content>
 </ContentPage>

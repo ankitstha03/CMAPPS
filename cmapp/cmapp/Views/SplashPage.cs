@@ -1,7 +1,8 @@
-﻿using System;
+﻿using Plugin.Connectivity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Net.Http;
 using System.Text;
 
 using System.Threading.Tasks;
@@ -17,13 +18,14 @@ namespace cmapp.Views
         {
             NavigationPage.SetHasNavigationBar(this, false);
 
-           
         }
 
 
         protected override async void OnAppearing()
         {
             base.OnAppearing();
+            
+            
             var sub = new AbsoluteLayout();
             splashImage = new Image
             {

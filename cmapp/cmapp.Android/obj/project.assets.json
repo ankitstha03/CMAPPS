@@ -74,6 +74,15 @@
           "lib/MonoAndroid10/Refractored.XamForms.PullToRefresh.dll": {}
         }
       },
+      "Toasts.Forms.Plugin-PCL/3.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+Xamarin.iOS10/Toasts.Forms.Plugin.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+Xamarin.iOS10/Toasts.Forms.Plugin.Abstractions.dll": {}
+        }
+      },
       "Xam.Plugin.Connectivity/4.0.0.186-beta": {
         "type": "package",
         "compile": {
@@ -688,6 +697,16 @@
         "refractored.xamforms.pulltorefresh.nuspec"
       ]
     },
+    "Toasts.Forms.Plugin-PCL/3.3.0": {
+      "sha512": "UtBNtWYzecsgu7cHI4ang/GNfQuH3osLwwkHCtXYTEyVxMvGwBmfaIXSdyfsC3qXxomzvrQK4QpMEm782piLMQ==",
+      "type": "package",
+      "path": "toasts.forms.plugin-pcl/3.3.0",
+      "files": [
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+Xamarin.iOS10/Toasts.Forms.Plugin.Abstractions.dll",
+        "toasts.forms.plugin-pcl.3.3.0.nupkg.sha512",
+        "toasts.forms.plugin-pcl.nuspec"
+      ]
+    },
     "Xam.Plugin.Connectivity/4.0.0.186-beta": {
       "sha512": "omhy5ycD6LoXwuJYJAOQgth86oayAXfglT4e/ce5h8cn8oO3QJYZZug6leT5wQD8bD1Kb0wxIOXs8jKZZO1/Gw==",
       "type": "package",
@@ -1134,14 +1153,18 @@
         "lib/MonoAndroid10/Design/Xamarin.Forms.Core.Design.dll",
         "lib/MonoAndroid10/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/MonoAndroid10/FormsViewGroup.dll",
+        "lib/MonoAndroid10/FormsViewGroup.dll.mdb",
         "lib/MonoAndroid10/FormsViewGroup.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Core.dll",
+        "lib/MonoAndroid10/Xamarin.Forms.Core.dll.mdb",
         "lib/MonoAndroid10/Xamarin.Forms.Core.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Core.xml",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.dll",
+        "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.dll.mdb",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.dll",
         "lib/MonoAndroid10/Xamarin.Forms.Xaml.dll",
+        "lib/MonoAndroid10/Xamarin.Forms.Xaml.dll.mdb",
         "lib/MonoAndroid10/Xamarin.Forms.Xaml.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Xaml.xml",
         "lib/WP80/Design/Xamarin.Forms.Core.Design.dll",
@@ -1350,6 +1373,7 @@
       "MonkeyCache.FileStore >= 0.1.0.1-beta",
       "Newtonsoft.Json >= 11.0.1-beta3",
       "Refractored.XamForms.PullToRefresh >= 2.2.1",
+      "Toasts.Forms.Plugin-PCL >= 3.3.0",
       "Xam.Plugin.Connectivity >= 4.0.0.186-beta",
       "Xam.Plugin.PushNotification >= 1.2.5-beta",
       "Xam.Plugins.Forms.ImageCircle >= 2.0.2",
@@ -1412,6 +1436,10 @@
           "Refractored.XamForms.PullToRefresh": {
             "target": "Package",
             "version": "[2.2.1, )"
+          },
+          "Toasts.Forms.Plugin-PCL": {
+            "target": "Package",
+            "version": "[3.3.0, )"
           },
           "Xam.Plugin.Connectivity": {
             "target": "Package",

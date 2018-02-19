@@ -11,7 +11,7 @@ namespace cmapp.Models
 {
     class MoneyCache
     {
-        public static async Task<T> GetAsync<T>(string url, int days = 7, bool forceRefresh = false)
+        public static async Task<T> GetAsync<T>(string url, int days = 100, bool forceRefresh = false)
         {
             var json = string.Empty;
             HttpClient client = new HttpClient();

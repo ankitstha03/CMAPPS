@@ -24,30 +24,87 @@
 
                     <StackLayout Orientation="Vertical">
                         <Frame OutlineColor = "Transparent" Padding ="3, 3, 3, 3" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Opacity="0.7" BackgroundColor = "#ffffff">
-                            <Label Text="Biography of L. Hale"  TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                            <Label Text="{Binding name}"  TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
                         </Frame>
-                        <Image Source="http://www.sacitaslan.com/g/bee_ed716.jpg" Margin="10,0,10,5"  Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
+                        <Image Source="{Binding photo}" Margin="10,0,10,5"  Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
 
 
                         <StackLayout Orientation="Vertical" Padding="10,5,10,5" HorizontalOptions="Start" >
+                            <StackLayout Orientation="Horizontal" Padding="3,3,3,3" VerticalOptions="Start" >
+
+                                <Label FontAttributes="None"
+                                HorizontalTextAlignment="Start"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="StartAndExpand"
+                                FontSize="14"
+                                Text="Designation"
+                                TextColor="Black" >
+                                </Label>
+
+                                <Label FontAttributes="None"
+                                HorizontalTextAlignment="Start"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="StartAndExpand"
+                                FontSize="14"
+                                x:Name="desig"
+                                TextColor="Black" >
+                                </Label>
+
+
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Padding="3,3,3,3" VerticalOptions="Start" >
+
+                                <Label FontAttributes="None"
+                                HorizontalTextAlignment="Start"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="StartAndExpand"
+                                FontSize="14"
+                                Text="Date of birth"
+                                TextColor="Black" >
+                                </Label>
+
+                                <Label FontAttributes="None"
+                                HorizontalTextAlignment="Start"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="StartAndExpand"
+                                FontSize="14"
+                                Text="asdadds"
+                                TextColor="Black" >
+                                </Label>
+
+
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Padding="3,3,3,3" VerticalOptions="Start" >
+
+                                <Label FontAttributes="None"
+                                HorizontalTextAlignment="Start"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="StartAndExpand"
+                                FontSize="14"
+                                Text="Education"
+                                TextColor="Black" >
+                                </Label>
+
+                                <Label FontAttributes="None"
+                                HorizontalTextAlignment="Start"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="StartAndExpand"
+                                FontSize="14"
+                                Text="desig"
+                                TextColor="Black" >
+                                </Label>
+
+
+                            </StackLayout>
 
                             <Label FontAttributes="None"
-                            HorizontalTextAlignment="Start"
-                            VerticalTextAlignment="Center"
-                            HorizontalOptions="StartAndExpand"
-                            FontSize="14"
-                            Text="Lucy Hale is an American actress and singer. She was born Karen Lucille Hale in Memphis, Tennessee, to Julia (Caperton) Knight and John Preston Hale. She started out as a singer, appearing on American Juniors (2003) in a search for band members. She successfully won her place in the band. The group disbanded in 2005. Lucy turned to acting. She is best known for roles in TV shows Privileged (2008) and Pretty Little Liars (2010).
-    
-She has stated that music is her first love and in June 2012 she signed a record deal with Hollywood Records.
-                                   
-                                   Lucy Hale is an American actress and singer. She was born Karen Lucille Hale in Memphis, Tennessee, to Julia (Caperton) Knight and John Preston Hale. She started out as a singer, appearing on American Juniors (2003) in a search for band members. She successfully won her place in the band. The group disbanded in 2005. Lucy turned to acting. She is best known for roles in TV shows Privileged (2008) and Pretty Little Liars (2010).
-    
-She has stated that music is her first love and in June 2012 she signed a record deal with Hollywood Records."
-                            TextColor="Black" >
+                                HorizontalTextAlignment="Start"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="StartAndExpand"
+                                FontSize="14"
+                                Text="{Binding description}"
+                                TextColor="Black" >
                             </Label>
-
-                            
-
                         </StackLayout>
 
                     </StackLayout>

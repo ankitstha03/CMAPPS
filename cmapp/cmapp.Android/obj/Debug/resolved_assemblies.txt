@@ -24,6 +24,7 @@ D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Runtime.Serializa
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Threading.Tasks.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Xml.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Xml.Linq.dll
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Toasts.Forms.Plugin.Abstractions.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Xamarin.Android.Arch.Core.Common.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Xamarin.Android.Arch.Lifecycle.Common.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Xamarin.Android.Arch.Lifecycle.Runtime.dll

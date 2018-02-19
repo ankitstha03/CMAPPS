@@ -11,7 +11,5 @@ namespace cmapp.Models
         public DateTime EventDate { get; set; }
         public string EventName { get; set; }
         public string Descritpion { get; set; }
-
-        public bool IsLast { get; set; } = false;
     }
 }
