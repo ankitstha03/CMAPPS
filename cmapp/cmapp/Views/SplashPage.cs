@@ -49,7 +49,7 @@ namespace cmapp.Views
              new Rectangle(0.5, 0.6, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
             sub.Children.Add(splashImage);
             sub.Children.Add(labelFormatted);
-            this.BackgroundColor = Color.FromHex("#448AFF");
+            this.BackgroundColor = Color.FromHex("#C62828");
             this.Content = sub;
 
             await splashImage.ScaleTo(1, 2000); //Time-consuming processes such as initialization
