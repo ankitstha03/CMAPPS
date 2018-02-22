@@ -79,9 +79,9 @@
                                 VerticalOptions = "Fill"
                                 BackgroundColor = "Transparent">
                                 <Label FontAttributes="None"
-                               HorizontalTextAlignment="End"
+                               HorizontalTextAlignment="Start"
                                VerticalTextAlignment="Center"
-                               HorizontalOptions="End"
+                               HorizontalOptions="Start"
                                FontSize="14"
                                Text="{Binding location}" TextColor="Black">
 

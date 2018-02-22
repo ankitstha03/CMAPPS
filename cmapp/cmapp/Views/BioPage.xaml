@@ -6,7 +6,7 @@
     
     
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView x:Name="view">
             <StackLayout>
                 <Frame IsClippedToBounds="True"
          CornerRadius = "12"

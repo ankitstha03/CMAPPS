@@ -1,4 +1,5 @@
 ﻿using cmapp.Models;
+using MonkeyCache.FileStore;
 using Newtonsoft.Json;
 using Plugin.Connectivity;
 using System;
@@ -24,9 +25,22 @@ namespace cmapp.Views
         public NepaliNewsView ()
 		{
 			InitializeComponent ();
-            DataGet();
+            
+                DataGet();
         }
 
+        private void Onchange(object sender, TextChangedEventArgs e)
+        {
+            if (!String.IsNullOrWhiteSpace(e.NewTextValue))
+            {
+                listView.ItemsSource = NewsCollection.Where(c => c.title.StartsWith(e.NewTextValue));
+            }
+            else
+            {
+                NewsCollection = new ObservableCollection<NepNews>(newlist);
+                listView.ItemsSource = NewsCollection.Reverse<NepNews>();
+            }
+        }
         private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem == null)
@@ -37,23 +51,25 @@ namespace cmapp.Views
             listView.SelectedItem = null;
         }
 
-   
-
-        private async void Onrefresh(object sender, EventArgs e)
-        {
-            newlist = await MoneyCache.GetAsync<List<NepNews>>(Url);
-            NewsCollection = new ObservableCollection<NepNews>(newlist);
-            listView.ItemsSource = NewsCollection.Reverse<NepNews>();
-            listView.EndRefresh();
-        }
 
         private async void DataGet()
         {
-            newlist = await MoneyCache.GetAsync<List<NepNews>>(Url);
-            NewsCollection = new ObservableCollection<NepNews>(newlist);
-            listView.ItemsSource = NewsCollection.Reverse<NepNews>();
-            listView.Opacity = 0;
-            await listView.FadeTo(1, 1000, Easing.SpringIn);
+            if (string.IsNullOrWhiteSpace(Barrel.Current.Get(Url)) && !CrossConnectivity.Current.IsConnected)
+            {
+                XFToast.LongMessage("No Previous data or Internet");
+                searbar.IsVisible = false;
+            }
+            else
+            {
+                searbar.IsVisible = true;
+                newlist = await MoneyCache.GetAsync<List<NepNews>>(Url);
+                NewsCollection = new ObservableCollection<NepNews>(newlist);
+                listView.ItemsSource = NewsCollection.Reverse<NepNews>();
+                listView.Opacity = 0;
+                await listView.FadeTo(1, 1000, Easing.SpringIn);
+            }
+            listView.EndRefresh();
+
         }
 
     }

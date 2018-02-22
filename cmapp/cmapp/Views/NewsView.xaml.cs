@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using MonkeyCache.FileStore;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Net.Http;
@@ -26,7 +27,8 @@ namespace cmapp.Views
 		{
 			InitializeComponent ();
             Url = url;
-            DataGet();
+            
+                DataGet();
         }
 
         private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -48,7 +50,8 @@ namespace cmapp.Views
 
         private void Onchange(object sender, TextChangedEventArgs e)
         {
-            if (!String.IsNullOrWhiteSpace(e.NewTextValue))
+
+                if (!String.IsNullOrWhiteSpace(e.NewTextValue))
             {
                 listView.ItemsSource = NewsCollection.Where(c => c.title.StartsWith(e.NewTextValue));
             }
@@ -59,21 +62,27 @@ namespace cmapp.Views
             }
         }
 
-        private async void Onrefresh(object sender, EventArgs e)
-        {
-            newlist = await MoneyCache.GetAsync<List<News>>(Url);
-            NewsCollection = new ObservableCollection<News>(newlist);
-            listView.ItemsSource = NewsCollection.Reverse<News>();
-            listView.EndRefresh();
-        }
+
 
         private async void DataGet()
         {
-            newlist = await MoneyCache.GetAsync<List<News>>(Url);
-            NewsCollection = new ObservableCollection<News>(newlist);
-            listView.ItemsSource = NewsCollection.Reverse<News>();
-            listView.Opacity = 0;
-            await listView.FadeTo(1, 1000, Easing.SpringIn);
+            if (string.IsNullOrWhiteSpace(Barrel.Current.Get(Url)) && !CrossConnectivity.Current.IsConnected)
+            {
+                XFToast.LongMessage("No Previous data or Internet");
+                searbar.IsVisible = false;
+            }
+            else
+            {
+                searbar.IsVisible = true;
+                newlist = await MoneyCache.GetAsync<List<News>>(Url);
+                NewsCollection = new ObservableCollection<News>(newlist);
+                listView.ItemsSource = NewsCollection.Reverse<News>();
+                listView.Opacity = 0;
+                await listView.FadeTo(1, 1000, Easing.SpringIn);
+            }
+
+            listView.EndRefresh();
+
         }
 
     }

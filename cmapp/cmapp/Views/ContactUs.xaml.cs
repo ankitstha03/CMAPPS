@@ -1,5 +1,7 @@
 ﻿using cmapp.Models;
+using MonkeyCache.FileStore;
 using Newtonsoft.Json;
+using Plugin.Connectivity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,17 +49,24 @@ namespace cmapp.Views
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            var msg = new Message { full_name = enUser.Text, email = enEmail.Text, contact_no = enPhone.Text, subject = enSub.Text, body = enDesc.Text, status="Sent" };
-            var content = JsonConvert.SerializeObject(msg);
-            var response= await _client.PostAsync(Url, new StringContent(content, Encoding.UTF8, "application/json"));
-
-            if ((int)response.StatusCode <= 200 && (int)response.StatusCode <= 299)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                await Navigation.PopAsync(true);
+                XFToast.LongMessage("No Internet Connection");
             }
             else
             {
-                await DisplayAlert("Error", "Please fill all the fields", "OK");
+                var msg = new Message { full_name = enUser.Text, email = enEmail.Text, contact_no = enPhone.Text, subject = enSub.Text, body = enDesc.Text, status = "Sent" };
+                var content = JsonConvert.SerializeObject(msg);
+                var response = await _client.PostAsync(Url, new StringContent(content, Encoding.UTF8, "application/json"));
+
+                if ((int)response.StatusCode <= 200 && (int)response.StatusCode <= 299)
+                {
+                    await Navigation.PopAsync(true);
+                }
+                else
+                {
+                    await DisplayAlert("Error", "Please fill all the fields", "OK");
+                }
             }
         }
     }

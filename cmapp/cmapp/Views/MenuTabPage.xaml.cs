@@ -28,6 +28,7 @@ namespace cmapp.Views
             var page2 = new MasterPageItem() { Icon = "ic_apps_black_24dp.png", id=1 };
             var page3 = new MasterPageItem() {  Icon = "ic_apps_black_24dp.png", id=2 };
             var page4 = new MasterPageItem() {  Icon = "ic_apps_black_24dp.png", id=3 };
+            var page5 = new MasterPageItem() { Icon = "ic_apps_black_24dp.png", id = 4 };
 
             if (Constants.English)
             {
@@ -36,6 +37,7 @@ namespace cmapp.Views
                 page2.Title = "News";
                 page3.Title = "Schedule";
                 page4.Title = "Message";
+                page5.Title = "Know CM";
             }
             else
             {
@@ -44,12 +46,16 @@ namespace cmapp.Views
                 page2.Title = "समाचार";
                 page3.Title = "तलिका";
                 page4.Title = "सन्देश";
+                page5.Title = "चिन्नुहोस";
             }
 
             menuList.Add(page1);
             menuList.Add(page2);
             menuList.Add(page3);
             menuList.Add(page4);
+            menuList.Add(page5);
+
+
             var tapGestureRecognizer = new TapGestureRecognizer();
             tapGestureRecognizer.Tapped += async (s, e) => {
                 await Navigation.PushAsync(new KnowCmPage(),true);
@@ -66,9 +72,21 @@ namespace cmapp.Views
 
         private void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
+
+            if (e.SelectedItem == null)
+                return;
+
             var item = (MasterPageItem)e.SelectedItem;
-            Detail = new NavigationPage(new MainTabPage(item.id));
+            if (item.id == 4)
+            {
+                Navigation.PushAsync(new KnowCmPage());
+            }
+            else
+            {
+                Detail = new NavigationPage(new MainTabPage(item.id));
+            }
             IsPresented = false;
+            navigationDrawerList.SelectedItem = null;
         }
 
         private void Icon_Clicked(object sender, EventArgs e)

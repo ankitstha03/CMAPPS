@@ -20,7 +20,9 @@ namespace cmapp.Models
         {
             var step1 = Regex.Replace(value, @"<[^>]+>|&nbsp;", "").Trim();
             var step2 = Regex.Replace(step1, @"\s{2,}", " ");
-            return step2;
+            var step3 = Regex.Replace(step1, @"T\d+\:\d+\:\d+\+05\:45", "");
+
+            return step3;
         }
     }
 }

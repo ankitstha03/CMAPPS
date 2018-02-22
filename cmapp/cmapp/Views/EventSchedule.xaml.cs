@@ -1,4 +1,6 @@
 ﻿using cmapp.Models;
+using MonkeyCache.FileStore;
+using Plugin.Connectivity;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -21,24 +23,26 @@ namespace cmapp.Views
         public EventSchedule ()
 		{
 			InitializeComponent ();
-            DataGet();
+            
+                DataGet();
         }
 
-        private async void Onrefresh(object sender, EventArgs e)
-        {
-            messagelist = await MoneyCache.GetAsync<List<Notifications>>(Url);
-            NewsCollection = new ObservableCollection<Notifications>(messagelist);
-            timelineListView.ItemsSource = NewsCollection;
-            timelineListView.EndRefresh();
-        }
 
         private async void DataGet()
         {
-            messagelist = await MoneyCache.GetAsync<List<Notifications>>(Url);
-            NewsCollection = new ObservableCollection<Notifications>(messagelist);
-            timelineListView.ItemsSource = NewsCollection;
-            timelineListView.Opacity = 0;
-            await timelineListView.FadeTo(1, 1000, Easing.SpringIn);
+            if (string.IsNullOrWhiteSpace(Barrel.Current.Get(Url)) && !CrossConnectivity.Current.IsConnected)
+            {
+                XFToast.LongMessage("No Previous data or Internet");
+            }
+            else
+            {
+                messagelist = await MoneyCache.GetAsync<List<Notifications>>(Url);
+                NewsCollection = new ObservableCollection<Notifications>(messagelist);
+                timelineListView.ItemsSource = NewsCollection;
+                timelineListView.Opacity = 0;
+                await timelineListView.FadeTo(1, 1000, Easing.SpringIn);
+            }
+            timelineListView.EndRefresh();
 
         }
         private async void timelineListView_ItemTapped(object sender, SelectedItemChangedEventArgs e)

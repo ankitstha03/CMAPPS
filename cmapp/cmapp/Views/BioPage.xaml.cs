@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using MonkeyCache.FileStore;
+using Plugin.Connectivity;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,14 +20,22 @@ namespace cmapp.Views
         public BioPage ()
 		{
 			InitializeComponent ();
-            desig.SetBinding(Label.TextProperty, "designate.name");
+            view.Opacity = 0;
+            if(string.IsNullOrWhiteSpace(Barrel.Current.Get(Url)) && !CrossConnectivity.Current.IsConnected)
+            {
+                XFToast.LongMessage("No Previous data or Internet");
+            }
+            else
+                DataGet();
 		}
 
-        protected override async void OnAppearing()
+        private async void DataGet()
         {
-            base.OnAppearing();
             lead = await MoneyCache.GetAsync<List<Leader>>(Url);
             BindingContext = lead.First<Leader>();
+            desig.SetBinding(Label.TextProperty, "designate.name");
+            await view.FadeTo(1, 1000, Easing.SpringIn);
         }
+
     }
 }

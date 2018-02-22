@@ -1,4 +1,5 @@
 ﻿using cmapp.Models;
+using MonkeyCache.FileStore;
 using Newtonsoft.Json;
 using Plugin.Connectivity;
 using System;
@@ -24,7 +25,8 @@ namespace cmapp.Views
         public MessageView ()
 		{
 			InitializeComponent ();
-
+            
+                DataGet();
             if (Constants.English)
             {
                 send.Text = "Send Message";
@@ -63,21 +65,26 @@ namespace cmapp.Views
         {
             await Navigation.PushAsync(new ContactUs(),true);
         }
-        private async void Onrefresh(object sender, EventArgs e)
-        {
-            messagelist = await MoneyCache.GetAsync<List<Message>>(Url);
-            NewsCollection = new ObservableCollection<Message>(messagelist);
-            listView.ItemsSource = NewsCollection.Reverse<Message>();
-            listView.EndRefresh();
-        }
+    
 
         private async void DataGet()
         {
-            messagelist = await MoneyCache.GetAsync<List<Message>>(Url);
-            NewsCollection = new ObservableCollection<Message>(messagelist);
-            listView.ItemsSource = NewsCollection.Reverse<Message>();
-            listView.Opacity = 0;
-            await listView.FadeTo(1, 1000, Easing.SpringIn);
+            if (string.IsNullOrWhiteSpace(Barrel.Current.Get(Url)) && !CrossConnectivity.Current.IsConnected)
+            {
+                XFToast.LongMessage("No Previous data or Internet");
+                searbar.IsVisible = false;
+            }
+            else
+            {
+                searbar.IsVisible = true;
+                messagelist = await MoneyCache.GetAsync<List<Message>>(Url);
+                NewsCollection = new ObservableCollection<Message>(messagelist);
+                listView.ItemsSource = NewsCollection.Reverse<Message>();
+                listView.Opacity = 0;
+                await listView.FadeTo(1, 1000, Easing.SpringIn);
+            }
+            listView.EndRefresh();
+
         }
     }
 }

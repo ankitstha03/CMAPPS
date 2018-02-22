@@ -5,14 +5,9 @@
              x:Class="cmapp.Views.HomeView">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Padding="5,5,5,5">
-            <SearchBar x:Name="searbar" HeightRequest="40" HorizontalOptions="FillAndExpand" Placeholder="Search..." TextChanged="Onchange">
 
-
-            </SearchBar>
-
-            <ScrollView x:Name="view" VerticalOptions="FillAndExpand">
-                <StackLayout Orientation="Vertical">
-                    <ListView x:Name="listView1" VerticalOptions="FillAndExpand" IsPullToRefreshEnabled="True" Refreshing="Onrefresh" ItemSelected="listView_ItemSelected" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}"  HasUnevenRows="True" >
+                <StackLayout x:Name="view" Orientation="Vertical" VerticalOptions="Start">
+                <ListView x:Name="listView1" SeparatorVisibility="None" VerticalOptions="FillAndExpand" IsPullToRefreshEnabled="True" Refreshing="DataGet" ItemSelected="listView_ItemSelected" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}"  HasUnevenRows="True" >
 
                         <ListView.ItemTemplate>
                             <DataTemplate>
@@ -22,8 +17,12 @@
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
+                </StackLayout>
 
-                    <ListView x:Name="listView2" VerticalOptions="FillAndExpand"  ItemSelected="listView_ItemSelected2" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}"  HasUnevenRows="True" >
+
+                <StackLayout Orientation="Vertical" VerticalOptions="Start">
+
+                        <ListView x:Name="listView2" SeparatorVisibility="None" VerticalOptions="FillAndExpand"  ItemSelected="listView_ItemSelected2" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}"  HasUnevenRows="True" >
 
                         <ListView.ItemTemplate>
                             <DataTemplate>
@@ -34,7 +33,6 @@
                         </ListView.ItemTemplate>
                     </ListView>
                 </StackLayout>
-            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

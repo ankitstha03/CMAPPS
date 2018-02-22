@@ -10,6 +10,8 @@ using cmapp.Models;
 using System.Collections.ObjectModel;
 using System.Net.Http;
 using Newtonsoft.Json;
+using Plugin.Connectivity;
+using MonkeyCache.FileStore;
 
 namespace cmapp.Views
 {
@@ -25,7 +27,9 @@ namespace cmapp.Views
         public NotificationPage ()
 		{
 			InitializeComponent ();
-		}
+            
+                DataGet();
+        }
 
         private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
@@ -38,46 +42,24 @@ namespace cmapp.Views
             listView.SelectedItem = null;
         }
 
-        private async void Onrefresh(object sender, EventArgs e)
-        {
 
-            notlist = await MoneyCache.GetAsync<List<Notifications>>(Url);
-            NotiCollection = new ObservableCollection<Notifications>(notlist);
-            listView.ItemsSource = NotiCollection.Reverse<Notifications>();
+        private async void DataGet()
+        {
+            if (string.IsNullOrWhiteSpace(Barrel.Current.Get(Url)) && !CrossConnectivity.Current.IsConnected)
+            {
+                XFToast.LongMessage("No Previous data or Internet");
+            }
+            else
+            {
+                notlist = await MoneyCache.GetAsync<List<Notifications>>(Url);
+                NotiCollection = new ObservableCollection<Notifications>(notlist);
+                listView.ItemsSource = NotiCollection.Reverse<Notifications>();
+                listView.Opacity = 0;
+                await listView.FadeTo(1, 1000, Easing.SpringIn);
+            }
+                
             listView.EndRefresh();
         }
 
-        protected override async void OnAppearing()
-        {
-            base.OnAppearing();
-            notlist = await MoneyCache.GetAsync<List<Notifications>>(Url);
-            NotiCollection = new ObservableCollection<Notifications>(notlist);
-            listView.ItemsSource = NotiCollection.Reverse<Notifications>();
-            view.Margin = new Thickness(-200, 0, 200, 0);
-            view.TranslateTo(200, 0, 1000, Easing.SpringIn);
-            listView.Opacity = 0;
-            listView.FadeTo(1, 1000, Easing.SpringIn);
-          
-        }
-
-        //protected override void OnDisappearing()
-        //{
-        //    base.OnDisappearing();
-        //    foreach (Notifications n in Constants._notification)
-        //    {
-        //        n.unread = false;
-        //        n.color = Color.White;
-        //    }
-        //}
-
-        //protected override bool OnBackButtonPressed()
-        //{
-        //    foreach (Notifications n in Constants._notification)
-        //    {
-        //        n.unread = false;
-        //        n.color = Color.White;
-        //    }
-        //    return false;
-        //}
     }
 }

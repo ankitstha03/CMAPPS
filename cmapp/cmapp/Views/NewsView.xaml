@@ -18,7 +18,7 @@
             </SearchBar>
 
             <ScrollView x:Name="view" VerticalOptions="FillAndExpand">
-                <ListView x:Name="listView" VerticalOptions="FillAndExpand" IsPullToRefreshEnabled="True" Refreshing="Onrefresh" ItemSelected="listView_ItemSelected" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}"  HasUnevenRows="True" >
+                <ListView x:Name="listView" SeparatorVisibility="None" VerticalOptions="FillAndExpand" IsPullToRefreshEnabled="True" Refreshing="DataGet" ItemSelected="listView_ItemSelected" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}"  HasUnevenRows="True" >
 
                     <ListView.ItemTemplate>
                         <DataTemplate>
