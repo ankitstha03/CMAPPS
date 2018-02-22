@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using cmapp.Views;
 using MonkeyCache.FileStore;
 using Plugin.Connectivity;
+using Plugin.FirebasePushNotification;
 
 namespace cmapp
 {
@@ -17,6 +18,14 @@ namespace cmapp
 			InitializeComponent();
             Barrel.ApplicationId = "cmapp";
 			MainPage = new NavigationPage(new SplashPage());
+			
+			  CrossFirebasePushNotification.Current.OnNotificationOpened += (s, p) =>
+            {
+
+                App.Current.MainPage.Navigation.PushAsync(new NotificationPage());
+
+            };
+	    
 		}
 
         protected override void OnStart()
