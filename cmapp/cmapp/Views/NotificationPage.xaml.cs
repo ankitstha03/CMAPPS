@@ -38,7 +38,7 @@ namespace cmapp.Views
             listView.SelectedItem = null;
         }
 
-        private async    void Onrefresh(object sender, EventArgs e)
+        private async void Onrefresh(object sender, EventArgs e)
         {
 
             notlist = await MoneyCache.GetAsync<List<Notifications>>(Url);

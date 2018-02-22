@@ -161,6 +161,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="linqtotwitter">
+      <Version>5.0.0-beta1</Version>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>10.0.3</Version>
     </PackageReference>

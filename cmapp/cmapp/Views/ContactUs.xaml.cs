@@ -23,6 +23,7 @@ namespace cmapp.Views
 			InitializeComponent ();
             if (Constants.English)
             {
+                Title = "Contact Us";
                 connect.Text = "Connect with us";
                 enUser.Placeholder = "Your Full Name";
                 enEmail.Placeholder = "Your Email";
@@ -33,6 +34,7 @@ namespace cmapp.Views
             }
             else
             {
+                Title = "सन्देश पठाउनुहोस्";
                 connect.Text = "हामीलाई सम्पर्क गर्नुहोस्";
                 enUser.Placeholder = "हजुरको पुरा नाम";
                 enEmail.Placeholder = "हजुरको इमेल";

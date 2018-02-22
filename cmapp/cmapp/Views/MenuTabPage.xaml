@@ -19,7 +19,7 @@
              data that you want to have in your menu drawer
         -->
                 <StackLayout.Children >
-                    <StackLayout HeightRequest="200" >
+                    <StackLayout x:Name="stck1" HeightRequest="200" >
                         <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                             <Image Source="drawer.png" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
                             <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Transparent">

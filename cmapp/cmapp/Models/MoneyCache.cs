@@ -20,6 +20,7 @@ namespace cmapp.Models
             if (CrossConnectivity.Current.IsConnected)
             {
                 json = await client.GetStringAsync(url);
+                json = Constants.ScrubHtml(json);
                 Barrel.Current.Add(url, json, TimeSpan.FromDays(days));
             }
             else if (!forceRefresh && !Barrel.Current.IsExpired(url))
@@ -27,18 +28,11 @@ namespace cmapp.Models
 
             try
             {
-                //skip web request because we are using cached data
-                if (string.IsNullOrWhiteSpace(json))
-                {
-                    json = await client.GetStringAsync(url);
-                    Barrel.Current.Add(url, json, TimeSpan.FromDays(days));
-                }
                 return await Task.Run(() => JsonConvert.DeserializeObject<T>(json));
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Unable to get information from server {ex}");
-                //probably re-throw here :)
             }
 
             return default(T);

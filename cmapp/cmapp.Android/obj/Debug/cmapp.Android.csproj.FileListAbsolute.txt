@@ -72,6 +72,8 @@ D:\CmAppli\cmapp\cmapp.Android\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.Views.NoNetwork.xaml.g.cs
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.Views.MessageDetailPage.xaml.g.cs
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.Views.NotifDetailPage.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.Views.KnowCmPage.xaml.g.cs
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.Views.HomeView.xaml.g.cs
 D:\CmAppli\cmapp\cmapp.Android\bin\Debug\cmapp.Android.dll
 bin\Debug\FormsViewGroup.dll.mdb
 bin\Debug\ImageCircle.Forms.Plugin.Android.dll.mdb
@@ -88,6 +90,7 @@ bin\Debug\Refractored.XamForms.PullToRefresh.pdb
 bin\Debug\System.Core.pdb
 bin\Debug\System.pdb
 bin\Debug\System.IdentityModel.pdb
+bin\Debug\System.IO.Compression.pdb
 bin\Debug\System.Net.Http.pdb
 bin\Debug\System.Runtime.Serialization.pdb
 bin\Debug\System.Xml.pdb
@@ -97,7 +100,6 @@ bin\Debug\System.Numerics.pdb
 bin\Debug\System.Transactions.pdb
 bin\Debug\Mono.Data.Tds.pdb
 bin\Debug\Mono.Security.pdb
-bin\Debug\System.IO.Compression.pdb
 bin\Debug\System.IO.Compression.FileSystem.pdb
 bin\Debug\System.ComponentModel.Composition.pdb
 bin\Debug\System.Web.Services.pdb
@@ -118,6 +120,7 @@ obj\Debug\linksrc\Refractored.XamForms.PullToRefresh.pdb
 obj\Debug\linksrc\System.Core.pdb
 obj\Debug\linksrc\System.pdb
 obj\Debug\linksrc\System.IdentityModel.pdb
+obj\Debug\linksrc\System.IO.Compression.pdb
 obj\Debug\linksrc\System.Net.Http.pdb
 obj\Debug\linksrc\System.Runtime.Serialization.pdb
 obj\Debug\linksrc\System.Xml.pdb
@@ -127,7 +130,6 @@ obj\Debug\linksrc\System.Numerics.pdb
 obj\Debug\linksrc\System.Transactions.pdb
 obj\Debug\linksrc\Mono.Data.Tds.pdb
 obj\Debug\linksrc\Mono.Security.pdb
-obj\Debug\linksrc\System.IO.Compression.pdb
 obj\Debug\linksrc\System.IO.Compression.FileSystem.pdb
 obj\Debug\linksrc\System.ComponentModel.Composition.pdb
 obj\Debug\linksrc\System.Web.Services.pdb

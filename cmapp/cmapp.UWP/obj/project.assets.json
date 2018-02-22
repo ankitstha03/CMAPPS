@@ -2,6 +2,24 @@
   "version": 3,
   "targets": {
     "UAP,Version=v10.0.10240": {
+      "linqtotwitter/5.0.0-beta1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3",
+          "System.Reactive.Core": "3.1.1",
+          "System.Reactive.Interfaces": "3.1.1",
+          "System.Reactive.Linq": "3.1.1",
+          "System.Reactive.PlatformServices": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/LinqToTwitter.Uwp.dll": {},
+          "lib/uap10.0/LinqToTwitter.netstandard.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/LinqToTwitter.Uwp.dll": {},
+          "lib/uap10.0/LinqToTwitter.netstandard.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1500,6 +1518,58 @@
           }
         }
       },
+      "System.Reactive.Core/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.0.1",
+          "System.Diagnostics.Contracts": "4.0.1",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Reactive.Interfaces": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.Core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.Core.dll": {}
+        }
+      },
+      "System.Reactive.Interfaces/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/System.Reactive.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Reactive.Interfaces.dll": {}
+        }
+      },
+      "System.Reactive.Linq/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive.Core": "3.1.1",
+          "System.Runtime.InteropServices.WindowsRuntime": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Reactive.Linq.dll": {}
+        }
+      },
+      "System.Reactive.PlatformServices/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive.Linq": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.PlatformServices.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.PlatformServices.dll": {}
+        }
+      },
       "System.Reflection/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2497,6 +2567,24 @@
       }
     },
     "UAP,Version=v10.0.10240/win10-arm": {
+      "linqtotwitter/5.0.0-beta1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3",
+          "System.Reactive.Core": "3.1.1",
+          "System.Reactive.Interfaces": "3.1.1",
+          "System.Reactive.Linq": "3.1.1",
+          "System.Reactive.PlatformServices": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/LinqToTwitter.Uwp.dll": {},
+          "lib/uap10.0/LinqToTwitter.netstandard.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/LinqToTwitter.Uwp.dll": {},
+          "lib/uap10.0/LinqToTwitter.netstandard.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4128,6 +4216,58 @@
           "ref/netstandard/_._": {}
         }
       },
+      "System.Reactive.Core/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.0.1",
+          "System.Diagnostics.Contracts": "4.0.1",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Reactive.Interfaces": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.Core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.Core.dll": {}
+        }
+      },
+      "System.Reactive.Interfaces/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/System.Reactive.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Reactive.Interfaces.dll": {}
+        }
+      },
+      "System.Reactive.Linq/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive.Core": "3.1.1",
+          "System.Runtime.InteropServices.WindowsRuntime": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Reactive.Linq.dll": {}
+        }
+      },
+      "System.Reactive.PlatformServices/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive.Linq": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.PlatformServices.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.PlatformServices.dll": {}
+        }
+      },
       "System.Reflection/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -5029,6 +5169,24 @@
       }
     },
     "UAP,Version=v10.0.10240/win10-arm-aot": {
+      "linqtotwitter/5.0.0-beta1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3",
+          "System.Reactive.Core": "3.1.1",
+          "System.Reactive.Interfaces": "3.1.1",
+          "System.Reactive.Linq": "3.1.1",
+          "System.Reactive.PlatformServices": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/LinqToTwitter.Uwp.dll": {},
+          "lib/uap10.0/LinqToTwitter.netstandard.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/LinqToTwitter.Uwp.dll": {},
+          "lib/uap10.0/LinqToTwitter.netstandard.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -6696,6 +6854,58 @@
           "ref/netstandard/_._": {}
         }
       },
+      "System.Reactive.Core/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.0.1",
+          "System.Diagnostics.Contracts": "4.0.1",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Reactive.Interfaces": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.Core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.Core.dll": {}
+        }
+      },
+      "System.Reactive.Interfaces/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/System.Reactive.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Reactive.Interfaces.dll": {}
+        }
+      },
+      "System.Reactive.Linq/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive.Core": "3.1.1",
+          "System.Runtime.InteropServices.WindowsRuntime": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Reactive.Linq.dll": {}
+        }
+      },
+      "System.Reactive.PlatformServices/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive.Linq": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.PlatformServices.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.PlatformServices.dll": {}
+        }
+      },
       "System.Reflection/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -7597,6 +7807,24 @@
       }
     },
     "UAP,Version=v10.0.10240/win10-x64": {
+      "linqtotwitter/5.0.0-beta1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3",
+          "System.Reactive.Core": "3.1.1",
+          "System.Reactive.Interfaces": "3.1.1",
+          "System.Reactive.Linq": "3.1.1",
+          "System.Reactive.PlatformServices": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/LinqToTwitter.Uwp.dll": {},
+          "lib/uap10.0/LinqToTwitter.netstandard.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/LinqToTwitter.Uwp.dll": {},
+          "lib/uap10.0/LinqToTwitter.netstandard.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -9237,6 +9465,58 @@
           "ref/netstandard/_._": {}
         }
       },
+      "System.Reactive.Core/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.0.1",
+          "System.Diagnostics.Contracts": "4.0.1",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Reactive.Interfaces": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.Core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.Core.dll": {}
+        }
+      },
+      "System.Reactive.Interfaces/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/System.Reactive.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Reactive.Interfaces.dll": {}
+        }
+      },
+      "System.Reactive.Linq/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive.Core": "3.1.1",
+          "System.Runtime.InteropServices.WindowsRuntime": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Reactive.Linq.dll": {}
+        }
+      },
+      "System.Reactive.PlatformServices/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive.Linq": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.PlatformServices.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.PlatformServices.dll": {}
+        }
+      },
       "System.Reflection/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -10138,6 +10418,24 @@
       }
     },
     "UAP,Version=v10.0.10240/win10-x64-aot": {
+      "linqtotwitter/5.0.0-beta1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3",
+          "System.Reactive.Core": "3.1.1",
+          "System.Reactive.Interfaces": "3.1.1",
+          "System.Reactive.Linq": "3.1.1",
+          "System.Reactive.PlatformServices": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/LinqToTwitter.Uwp.dll": {},
+          "lib/uap10.0/LinqToTwitter.netstandard.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/LinqToTwitter.Uwp.dll": {},
+          "lib/uap10.0/LinqToTwitter.netstandard.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -11814,6 +12112,58 @@
           "ref/netstandard/_._": {}
         }
       },
+      "System.Reactive.Core/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.0.1",
+          "System.Diagnostics.Contracts": "4.0.1",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Reactive.Interfaces": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.Core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.Core.dll": {}
+        }
+      },
+      "System.Reactive.Interfaces/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/System.Reactive.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Reactive.Interfaces.dll": {}
+        }
+      },
+      "System.Reactive.Linq/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive.Core": "3.1.1",
+          "System.Runtime.InteropServices.WindowsRuntime": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Reactive.Linq.dll": {}
+        }
+      },
+      "System.Reactive.PlatformServices/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive.Linq": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.PlatformServices.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.PlatformServices.dll": {}
+        }
+      },
       "System.Reflection/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -12715,6 +13065,24 @@
       }
     },
     "UAP,Version=v10.0.10240/win10-x86": {
+      "linqtotwitter/5.0.0-beta1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3",
+          "System.Reactive.Core": "3.1.1",
+          "System.Reactive.Interfaces": "3.1.1",
+          "System.Reactive.Linq": "3.1.1",
+          "System.Reactive.PlatformServices": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/LinqToTwitter.Uwp.dll": {},
+          "lib/uap10.0/LinqToTwitter.netstandard.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/LinqToTwitter.Uwp.dll": {},
+          "lib/uap10.0/LinqToTwitter.netstandard.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -14355,6 +14723,58 @@
           "ref/netstandard/_._": {}
         }
       },
+      "System.Reactive.Core/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.0.1",
+          "System.Diagnostics.Contracts": "4.0.1",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Reactive.Interfaces": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.Core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.Core.dll": {}
+        }
+      },
+      "System.Reactive.Interfaces/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/System.Reactive.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Reactive.Interfaces.dll": {}
+        }
+      },
+      "System.Reactive.Linq/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive.Core": "3.1.1",
+          "System.Runtime.InteropServices.WindowsRuntime": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Reactive.Linq.dll": {}
+        }
+      },
+      "System.Reactive.PlatformServices/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive.Linq": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.PlatformServices.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.PlatformServices.dll": {}
+        }
+      },
       "System.Reflection/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -15256,6 +15676,24 @@
       }
     },
     "UAP,Version=v10.0.10240/win10-x86-aot": {
+      "linqtotwitter/5.0.0-beta1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3",
+          "System.Reactive.Core": "3.1.1",
+          "System.Reactive.Interfaces": "3.1.1",
+          "System.Reactive.Linq": "3.1.1",
+          "System.Reactive.PlatformServices": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/LinqToTwitter.Uwp.dll": {},
+          "lib/uap10.0/LinqToTwitter.netstandard.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/LinqToTwitter.Uwp.dll": {},
+          "lib/uap10.0/LinqToTwitter.netstandard.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -16932,6 +17370,58 @@
           "ref/netstandard/_._": {}
         }
       },
+      "System.Reactive.Core/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.0.1",
+          "System.Diagnostics.Contracts": "4.0.1",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Reactive.Interfaces": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.Core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.Core.dll": {}
+        }
+      },
+      "System.Reactive.Interfaces/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/System.Reactive.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Reactive.Interfaces.dll": {}
+        }
+      },
+      "System.Reactive.Linq/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive.Core": "3.1.1",
+          "System.Runtime.InteropServices.WindowsRuntime": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Reactive.Linq.dll": {}
+        }
+      },
+      "System.Reactive.PlatformServices/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive.Linq": "3.1.1"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.PlatformServices.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.PlatformServices.dll": {}
+        }
+      },
       "System.Reflection/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -17834,6 +18324,24 @@
     }
   },
   "libraries": {
+    "linqtotwitter/5.0.0-beta1": {
+      "sha512": "xL++G9QvVHn/mIr2NzluyjSZ7j9h4iT9GYmUPjXDw0luwCVKWXaPLT71n4Os6i1WMAds2n6rBxXa2+86xm4I8A==",
+      "type": "package",
+      "path": "linqtotwitter/5.0.0-beta1",
+      "files": [
+        "lib/monoandroid/LinqToTwitter.netstandard.dll",
+        "lib/monotouch/LinqToTwitter.netstandard.dll",
+        "lib/net461/LinqToTwitter.AspNet.dll",
+        "lib/net461/LinqToTwitter.netstandard.dll",
+        "lib/netcoreapp2.0/LinqToTwitter.AspNetCore.dll",
+        "lib/netcoreapp2.0/LinqToTwitter.netstandard.dll",
+        "lib/netstandard2.0/LinqToTwitter.netstandard.dll",
+        "lib/uap10.0/LinqToTwitter.Uwp.dll",
+        "lib/uap10.0/LinqToTwitter.netstandard.dll",
+        "linqtotwitter.5.0.0-beta1.nupkg.sha512",
+        "linqtotwitter.nuspec"
+      ]
+    },
     "Microsoft.CSharp/4.3.0": {
       "sha512": "P+MBhIM0YX+JqROuf7i306ZLJEjQYA9uUyRDE+OqwUI5sh41e2ZbPQV3LfAPh+29cmceE1pUffXsGfR4eMY3KA==",
       "type": "package",
@@ -25243,6 +25751,90 @@
         "system.private.uri.nuspec"
       ]
     },
+    "System.Reactive.Core/3.1.1": {
+      "sha512": "CKWC+UP1aM75taNX+sTBn2P97uHIUjKxq+z45iy7P91QGFqNFleR2tsqIC76HMVvYl7o8oWyMiycdsc9rC1Z/g==",
+      "type": "package",
+      "path": "system.reactive.core/3.1.1",
+      "files": [
+        "lib/net45/System.Reactive.Core.dll",
+        "lib/net45/System.Reactive.Core.xml",
+        "lib/net46/System.Reactive.Core.dll",
+        "lib/net46/System.Reactive.Core.xml",
+        "lib/netcore451/System.Reactive.Core.dll",
+        "lib/netcore451/System.Reactive.Core.xml",
+        "lib/netcoreapp1.0/System.Reactive.Core.dll",
+        "lib/netcoreapp1.0/System.Reactive.Core.xml",
+        "lib/netstandard1.0/System.Reactive.Core.dll",
+        "lib/netstandard1.0/System.Reactive.Core.xml",
+        "lib/netstandard1.1/System.Reactive.Core.dll",
+        "lib/netstandard1.1/System.Reactive.Core.xml",
+        "lib/netstandard1.3/System.Reactive.Core.dll",
+        "lib/netstandard1.3/System.Reactive.Core.xml",
+        "lib/uap10.0/System.Reactive.Core.dll",
+        "lib/uap10.0/System.Reactive.Core.xml",
+        "lib/wpa81/System.Reactive.Core.dll",
+        "lib/wpa81/System.Reactive.Core.xml",
+        "system.reactive.core.3.1.1.nupkg.sha512",
+        "system.reactive.core.nuspec"
+      ]
+    },
+    "System.Reactive.Interfaces/3.1.1": {
+      "sha512": "aNVY3QoRznGFeQ+w+bMqhD8ElNWoyYq+7XTQIoxKKjBOyTOjUqIMEf1wvSdtwC4y92zg2W9q38b4Sr6cYNHVLg==",
+      "type": "package",
+      "path": "system.reactive.interfaces/3.1.1",
+      "files": [
+        "lib/net45/System.Reactive.Interfaces.dll",
+        "lib/net45/System.Reactive.Interfaces.xml",
+        "lib/netstandard1.0/System.Reactive.Interfaces.dll",
+        "lib/netstandard1.0/System.Reactive.Interfaces.xml",
+        "system.reactive.interfaces.3.1.1.nupkg.sha512",
+        "system.reactive.interfaces.nuspec"
+      ]
+    },
+    "System.Reactive.Linq/3.1.1": {
+      "sha512": "HwsZsoYRg51cLGBOEa0uoZ5+d4CMcHEg/KrbqePhLxoz/SLA+ULISphBtn3woABPATOQ6j5YgGZWh4jxnJ3KYQ==",
+      "type": "package",
+      "path": "system.reactive.linq/3.1.1",
+      "files": [
+        "lib/net45/System.Reactive.Linq.dll",
+        "lib/net45/System.Reactive.Linq.xml",
+        "lib/net46/System.Reactive.Linq.dll",
+        "lib/net46/System.Reactive.Linq.xml",
+        "lib/netstandard1.0/System.Reactive.Linq.dll",
+        "lib/netstandard1.0/System.Reactive.Linq.xml",
+        "lib/netstandard1.1/System.Reactive.Linq.dll",
+        "lib/netstandard1.1/System.Reactive.Linq.xml",
+        "lib/netstandard1.3/System.Reactive.Linq.dll",
+        "lib/netstandard1.3/System.Reactive.Linq.xml",
+        "system.reactive.linq.3.1.1.nupkg.sha512",
+        "system.reactive.linq.nuspec"
+      ]
+    },
+    "System.Reactive.PlatformServices/3.1.1": {
+      "sha512": "jCJ3iGDLb4duOxZ/Uo3O7PssWE48uRp0fw92AlIwrMNaZRUmZNkZyqbl0nUT+joFARBYun8XiVIDQreMJKBedA==",
+      "type": "package",
+      "path": "system.reactive.platformservices/3.1.1",
+      "files": [
+        "lib/net45/System.Reactive.PlatformServices.dll",
+        "lib/net45/System.Reactive.PlatformServices.xml",
+        "lib/net46/System.Reactive.PlatformServices.dll",
+        "lib/net46/System.Reactive.PlatformServices.xml",
+        "lib/netcore451/System.Reactive.PlatformServices.dll",
+        "lib/netcore451/System.Reactive.PlatformServices.xml",
+        "lib/netcoreapp1.0/System.Reactive.PlatformServices.dll",
+        "lib/netcoreapp1.0/System.Reactive.PlatformServices.xml",
+        "lib/netstandard1.0/System.Reactive.PlatformServices.dll",
+        "lib/netstandard1.0/System.Reactive.PlatformServices.xml",
+        "lib/netstandard1.3/System.Reactive.PlatformServices.dll",
+        "lib/netstandard1.3/System.Reactive.PlatformServices.xml",
+        "lib/uap10.0/System.Reactive.PlatformServices.dll",
+        "lib/uap10.0/System.Reactive.PlatformServices.xml",
+        "lib/wpa81/System.Reactive.PlatformServices.dll",
+        "lib/wpa81/System.Reactive.PlatformServices.xml",
+        "system.reactive.platformservices.3.1.1.nupkg.sha512",
+        "system.reactive.platformservices.nuspec"
+      ]
+    },
     "System.Reflection/4.3.0": {
       "sha512": "KMiAFoW7MfJGa9nDFNcfu+FpEdiHpWgTcS2HdMpDvt9saK3y/G4GwprPyzqjFH9NTaGPQeWNHU+iDlDILj96aQ==",
       "type": "package",
@@ -28127,7 +28719,8 @@
       "Newtonsoft.Json >= 10.0.3",
       "Refractored.XamForms.PullToRefresh >= 2.2.1",
       "Xam.Plugins.Forms.ImageCircle >= 2.0.2",
-      "Xamarin.Forms >= 2.5.0.122203"
+      "Xamarin.Forms >= 2.5.0.122203",
+      "linqtotwitter >= 5.0.0-beta1"
     ]
   },
   "packageFolders": {
@@ -28187,6 +28780,10 @@
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[2.5.0.122203, )"
+          },
+          "linqtotwitter": {
+            "target": "Package",
+            "version": "[5.0.0-beta1, )"
           }
         }
       }

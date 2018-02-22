@@ -24,7 +24,8 @@ namespace cmapp.Views
         public NepaliNewsView ()
 		{
 			InitializeComponent ();
-		}
+            DataGet();
+        }
 
         private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
@@ -46,16 +47,14 @@ namespace cmapp.Views
             listView.EndRefresh();
         }
 
-        protected override async void OnAppearing()
+        private async void DataGet()
         {
-            base.OnAppearing();
             newlist = await MoneyCache.GetAsync<List<NepNews>>(Url);
             NewsCollection = new ObservableCollection<NepNews>(newlist);
             listView.ItemsSource = NewsCollection.Reverse<NepNews>();
-            view.Margin = new Thickness(-200, 0, 200, 0);
-            view.TranslateTo(200, 0, 1000, Easing.SpringIn);
             listView.Opacity = 0;
-            listView.FadeTo(1, 1000, Easing.SpringIn);
+            await listView.FadeTo(1, 1000, Easing.SpringIn);
         }
+
     }
 }

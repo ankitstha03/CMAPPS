@@ -49,3 +49,14 @@ System.Resources.ResourceManager
 System.ComponentModel
 System.Reflection.Extensions
 Toasts.Forms.Plugin.Abstractions
+LinqToTwitter.netstandard
+System.Reactive.Core
+System.Reactive.Interfaces
+System.Reactive.Linq
+System.Reactive.PlatformServices
+System.Threading
+System.Diagnostics.Tools
+System.Diagnostics.Debug
+System.Globalization
+System.Collections.Concurrent
+System.Runtime.InteropServices.WindowsRuntime

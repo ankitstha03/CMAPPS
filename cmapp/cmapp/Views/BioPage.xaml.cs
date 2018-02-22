@@ -19,7 +19,6 @@ namespace cmapp.Views
 		{
 			InitializeComponent ();
             desig.SetBinding(Label.TextProperty, "designate.name");
-            BindingContext = lead;
 		}
 
         protected override async void OnAppearing()
