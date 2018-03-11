@@ -32,7 +32,7 @@ namespace cmapp.Views
                 enPhone.Placeholder = "Your Phone Number";
                 enSub.Placeholder = "Subject";
                 enDesc.Placeholder = "Body";
-                btnmessage.Text = "Send Message";
+                btnmessage.Text = "Send Suggestion";
             }
             else
             {
@@ -43,7 +43,7 @@ namespace cmapp.Views
                 enPhone.Placeholder = "हजुरको फोन नम्बर";
                 enSub.Placeholder = "विषय";
                 enDesc.Placeholder = "विश्लेशन";
-                btnmessage.Text = "सन्देश पठाउनुहोस्";
+                btnmessage.Text = "सुझाव पठाउनुहोस्";
             }
         }
 
