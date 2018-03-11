@@ -28,6 +28,13 @@ namespace cmapp.Views
         public HomeView ()
 		{
 			InitializeComponent ();
+			StackLayout sls = new StackLayout
+			{
+			    Spacing = 10,
+			    Padding = new Thickness(20, 20, 20, 20),
+			    Orientation = StackOrientation.Vertical
+
+			};
 
             
                 DataGet();
@@ -37,32 +44,6 @@ namespace cmapp.Views
 
         }
 
-        private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            if (e.SelectedItem == null)
-                return;
-
-            var dataCard = e.SelectedItem as News;
-            if (CrossConnectivity.Current.IsConnected)
-            {
-                await Navigation.PushAsync(new NewsDetailPage(dataCard), true);
-            }
-            else
-            {
-                XFToast.LongMessage("No Internet Connection");
-            }
-            listView1.SelectedItem = null;
-        }
-
-        private async void listView_ItemSelected2(object sender, SelectedItemChangedEventArgs e)
-        {
-            if (e.SelectedItem == null)
-                return;
-
-            var dataCard = e.SelectedItem as NepNews;
-            await Navigation.PushAsync(new NepaliNewsDetailPage(dataCard), true);
-            listView2.SelectedItem = null;
-        }
 
 
         private async void DataGet()
@@ -82,14 +63,56 @@ namespace cmapp.Views
                 NewsCollection1 = new ObservableCollection<News>(newlist1);
                 NewsCollection2 = new ObservableCollection<NepNews>(newlist2);
 
-                listView1.ItemsSource = NewsCollection1.Reverse<News>();
-                listView2.ItemsSource = NewsCollection2.Reverse<NepNews>();
+                foreach(News n in newlist1){
+			Frame fram= new Frame
+			{
+			    IsClippedToBounds = true,
+			    HasShadow = true,
+			    BackgroundColor = Color.White,
+			    OutlineColor = Color.Gray,
+			    Margin = new Thickness(7),
+			    Padding = new Thickness(5)
+			};
+			
+			var tapGestureRecognizer = new TapGestureRecognizer();
+             		tapGestureRecognizer.Tapped += async (s, e) => {
+                  		if (CrossConnectivity.Current.IsConnected)
+			    {
+				await Navigation.PushAsync(new NewsDetailPage(n), true);
+			    }
+			    else
+			    {
+				XFToast.LongMessage("No Internet Connection");
+			    }
+		 	 };
 
+               		 fram.GestureRecognizers.Add(tapGestureRecognizer);
+			 sls.Children.Add(fram);
+		}
+		
+		foreach(NepNews n2 in newlist1){
+			Frame fram2= new Frame
+			{
+			    IsClippedToBounds = true,
+			    HasShadow = true,
+			    BackgroundColor = Color.White,
+			    OutlineColor = Color.Gray,
+			    Margin = new Thickness(7),
+			    Padding = new Thickness(5)
+			};
+			
+			var tapGestureRecognizer2 = new TapGestureRecognizer();
+             		tapGestureRecognizer2.Tapped += async (s, e) => {
+				await Navigation.PushAsync(new NepaliNewsDetailPage(n2), true);
+		 	 };
+
+               		 fram2.GestureRecognizers.Add(tapGestureRecognizer2);
+			 sls.Children.Add(fram2);
+		}
+		view.Content=sls;
                 view.Opacity = 0;
                 await view.FadeTo(1, 1000, Easing.SpringIn);
             }
-
-            listView1.EndRefresh();
 
         }
 
