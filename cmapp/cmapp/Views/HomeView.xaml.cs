@@ -77,7 +77,7 @@ namespace cmapp.Views
 			
 			var slsins=new StackLayout
 			{
-				Orientation=Vertical
+				Orientation=StackOrientation.Vertical
 			};
 			
 			var abs=new AbsoluteLayout
@@ -86,7 +86,7 @@ namespace cmapp.Views
 			
 			var imag=new Image
 			{
-			n.
+			Source=n.images,
 			Aspect=Aspect.AspectFill
 			};
 			AbsoluteLayout.SetLayoutBounds (imag, new Rectangle (0, 0, 1, 220));
@@ -113,7 +113,38 @@ namespace cmapp.Views
 			};
 			framer.Content=lbl;
 			
+			abs.Children.Add(imag);
+			abs.CHildren.Add(framer);
 			
+			slsins.Children.Add(abs);
+			
+			var slslb=new StackLayout
+			{
+				Orientation=StackOrientation.Vertical,
+				Padding=new Thickness(10,5,10,5)
+			};
+			
+			Label title=new Label
+			{
+			Text=n.title,
+			FontSize=16,
+			TextColor=Color.Black
+			};
+			
+			Label desc=new Label
+			{
+			Text=n.description,
+			FontSize=16,
+			TextColor=Color.Black
+			};
+			
+			slslb.Children.Add(title);
+			slslb.Children.Add(desc);
+			
+			slsins.Children.Add(framer);
+			
+			fram.Content=slsins;
+
 			var tapGestureRecognizer = new TapGestureRecognizer();
              		tapGestureRecognizer.Tapped += async (s, e) => {
                   		if (CrossConnectivity.Current.IsConnected)
@@ -141,7 +172,76 @@ namespace cmapp.Views
 			    Margin = new Thickness(7),
 			    Padding = new Thickness(5)
 			};
+			var slsins=new StackLayout
+			{
+				Orientation=StackOrientation.Vertical
+			};
 			
+			var abs=new AbsoluteLayout
+			{
+			};
+			
+			var imag=new Image
+			{
+			Source=n2.title_images,
+			Aspect=Aspect.AspectFill
+			};
+			AbsoluteLayout.SetLayoutBounds (imag, new Rectangle (0, 0, 1, 220));
+        		AbsoluteLayout.SetLayoutFlags (imag, AbsoluteLayoutFlags.XProportional);
+			AbsoluteLayout.SetLayoutFlags (imag, AbsoluteLayoutFlags.WidthProportional);
+			Frame framer= new Frame
+			{
+			    IsClippedToBounds = true,
+			    CornerRadius=5,
+			    HasShadow = true,
+			    BackgroundColor = Color.White,
+			    OutlineColor = Color.Transparent,
+			    Padding=new Thickness(3,3,3,3),
+			    Opacity=0.7
+			};
+			AbsoluteLayout.SetLayoutBounds (framer, new Rectangle (1.05, 10, 0.35, 21));
+        		AbsoluteLayout.SetLayoutFlags (framer, AbsoluteLayoutFlags.XProportional);
+			AbsoluteLayout.SetLayoutFlags (framer, AbsoluteLayoutFlags.WidthProportional);
+			Label lbl=new Label
+			{
+				Text="Local news",
+				TextColor=Color.Black,
+				FontSize=14
+			};
+			framer.Content=lbl;
+			
+			abs.Children.Add(imag);
+			abs.CHildren.Add(framer);
+			
+			slsins.Children.Add(abs);
+			
+			var slslb=new StackLayout
+			{
+				Orientation=StackOrientation.Vertical,
+				Padding=new Thickness(10,5,10,5)
+			};
+			
+			Label title=new Label
+			{
+			Text=n2.title,
+			FontSize=16,
+			TextColor=Color.Black
+			};
+			
+			Label desc=new Label
+			{
+			Text=n2.description,
+			FontSize=16,
+			TextColor=Color.Black
+			};
+			
+			slslb.Children.Add(title);
+			slslb.Children.Add(desc);
+			
+			slsins.Children.Add(framer);
+			
+			fram2.Content=slsins;
+
 			var tapGestureRecognizer2 = new TapGestureRecognizer();
              		tapGestureRecognizer2.Tapped += async (s, e) => {
 				await Navigation.PushAsync(new NepaliNewsDetailPage(n2), true);
