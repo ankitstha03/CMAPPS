@@ -5,34 +5,9 @@
              x:Class="cmapp.Views.HomeView">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Padding="5,5,5,5">
-
-                <StackLayout x:Name="view" Orientation="Vertical" VerticalOptions="Start">
-                <ListView x:Name="listView1" SeparatorVisibility="None" VerticalOptions="FillAndExpand" IsPullToRefreshEnabled="True" Refreshing="DataGet" ItemSelected="listView_ItemSelected" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}"  HasUnevenRows="True" >
-
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <view:NewsTemplate/>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </StackLayout>
-
-
-                <StackLayout Orientation="Vertical" VerticalOptions="Start">
-
-                        <ListView x:Name="listView2" SeparatorVisibility="None" VerticalOptions="FillAndExpand"  ItemSelected="listView_ItemSelected2" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}"  HasUnevenRows="True" >
-
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <view:NepaliNewsTemplate/>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </StackLayout>
+          <Scrollview x:Name="view">
+            
+          </Scrollview>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
