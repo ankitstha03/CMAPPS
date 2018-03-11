@@ -31,7 +31,7 @@ namespace cmapp.Views
 			StackLayout sls = new StackLayout
 			{
 			    Spacing = 10,
-			    Padding = new Thickness(20, 20, 20, 20),
+			    Padding = new Thickness(3, 3, 3, 3),
 			    Orientation = StackOrientation.Vertical
 
 			};
@@ -67,6 +67,7 @@ namespace cmapp.Views
 			Frame fram= new Frame
 			{
 			    IsClippedToBounds = true,
+			    CornerRadius=12,
 			    HasShadow = true,
 			    BackgroundColor = Color.White,
 			    OutlineColor = Color.Gray,
@@ -90,10 +91,11 @@ namespace cmapp.Views
 			 sls.Children.Add(fram);
 		}
 		
-		foreach(NepNews n2 in newlist1){
+		foreach(NepNews n2 in newlist2){
 			Frame fram2= new Frame
 			{
 			    IsClippedToBounds = true,
+			    CornerRadius=12,
 			    HasShadow = true,
 			    BackgroundColor = Color.White,
 			    OutlineColor = Color.Gray,
