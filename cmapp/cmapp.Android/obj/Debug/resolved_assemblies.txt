@@ -11,6 +11,8 @@ D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\mscorlib.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Newtonsoft.Json.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Plugin.Connectivity.Abstractions.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Plugin.Connectivity.dll
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Plugin.FirebasePushNotification.Abstractions.dll
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Plugin.FirebasePushNotification.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\PushNotification.Plugin.Abstractions.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\PushNotification.Plugin.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Refractored.XamForms.PullToRefresh.dll

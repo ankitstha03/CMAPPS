@@ -27,6 +27,18 @@
       </intent-filter>
     </service>
     <receiver android:enabled="true" android:label="Connectivity Plugin Broadcast Receiver" android:name="md5433775bdc1c7ba2237d7dcd631be0ae5.ConnectivityChangeBroadcastReceiver" />
+    <service android:name="md5c9fdf433d3ec0f8be6a8960db86c02c1.PNFirebaseIIDService">
+      <intent-filter>
+        <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+      </intent-filter>
+    </service>
+    <service android:name="md5c9fdf433d3ec0f8be6a8960db86c02c1.PNFirebaseMessagingService">
+      <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+      </intent-filter>
+    </service>
+    <receiver android:name="md5c9fdf433d3ec0f8be6a8960db86c02c1.PushNotificationActionReceiver" />
+    <receiver android:name="md5c9fdf433d3ec0f8be6a8960db86c02c1.PushNotificationDeletedReceiver" />
     <service android:exported="false" android:name="pushnotification.plugin.PushNotificationGcmListener">
       <intent-filter>
         <action android:name="com.google.android.c2dm.intent.RECEIVE" />
@@ -64,8 +76,6 @@
         <action android:name="com.google.firebase.MESSAGING_EVENT" />
       </intent-filter>
     </service>
-    <!-- FirebaseMessagingService performs security checks at runtime,
-             no need for explicit permissions despite exported="true" -->
     <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
   </application>

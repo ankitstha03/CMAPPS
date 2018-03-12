@@ -20,12 +20,12 @@ namespace cmapp.Views
             if (Constants.English)
             {
                 this.Children.Add(new NepaliNewsView() { Title = "Local" });
-                this.Children.Add(new NewsView("http://pradesh-5.com/api-auth/press-news/") { Title = "Media" });
+                this.Children.Add(new NewsView("http://en.pradesh-5.com/api-auth/press-news/") { Title = "Media" });
             }
             else
             {
                 this.Children.Add(new NepaliNewsView() { Title = "स्थानिय" });
-                this.Children.Add(new NewsView("http://pradesh-5.com/api-auth/press-news/") { Title = "मिडिया" });
+                this.Children.Add(new NewsView("http://en.pradesh-5.com/api-auth/press-news/") { Title = "मिडिया" });
             }
             
         }

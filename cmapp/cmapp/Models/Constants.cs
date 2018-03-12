@@ -12,7 +12,6 @@ namespace cmapp.Models
 {
     class Constants
     {
-        public static bool IsDev = true;
         public static bool English = true;
         public static User currentuser;
 

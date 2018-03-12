@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 using cmapp.Models;
+using Plugin.Connectivity;
+using Plugin.Connectivity.Abstractions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -35,9 +37,12 @@ namespace cmapp.Views
             }
 
             CurrentPage = Children[id];
+            
+          
         }
 
-        protected override bool OnBackButtonPressed()
+
+    protected override bool OnBackButtonPressed()
         {
             if (_canClose)
             {
@@ -52,5 +57,6 @@ namespace cmapp.Views
             await Task.Delay(1000);
             _canClose = false;
         }
-    }
+   
+}
 }

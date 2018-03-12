@@ -29,6 +29,14 @@ namespace cmapp.Views
             Url = url;
             
                 DataGet();
+
+            CrossConnectivity.Current.ConnectivityChanged += async (sender, args) =>
+            {
+                if (args.IsConnected)
+                {
+                    DataGet();
+                }
+            };
         }
 
         private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -43,7 +51,7 @@ namespace cmapp.Views
             }
             else
             {
-                XFToast.LongMessage("No Internet Connection");
+                XFToast.ShortMessage("No Internet Connection");
             }
             listView.SelectedItem = null;
         }
@@ -68,17 +76,22 @@ namespace cmapp.Views
         {
             if (string.IsNullOrWhiteSpace(Barrel.Current.Get(Url)) && !CrossConnectivity.Current.IsConnected)
             {
-                XFToast.LongMessage("No Previous data or Internet");
+                XFToast.ShortMessage("No Previous data or Internet");
                 searbar.IsVisible = false;
             }
             else
             {
-                searbar.IsVisible = true;
-                newlist = await MoneyCache.GetAsync<List<News>>(Url);
-                NewsCollection = new ObservableCollection<News>(newlist);
-                listView.ItemsSource = NewsCollection.Reverse<News>();
-                listView.Opacity = 0;
-                await listView.FadeTo(1, 1000, Easing.SpringIn);
+                try
+                {
+                    searbar.IsVisible = true;
+                    newlist = await MoneyCache.GetAsync<List<News>>(Url);
+                    NewsCollection = new ObservableCollection<News>(newlist);
+                    listView.ItemsSource = NewsCollection.Reverse<News>();
+                    listView.Opacity = 0;
+                    await listView.FadeTo(1, 1000, Easing.SpringIn);
+                }catch(Exception ex)
+                {
+                }
             }
 
             listView.EndRefresh();

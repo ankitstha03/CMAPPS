@@ -17,7 +17,7 @@ namespace cmapp.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ContactUs : ContentPage
 	{
-        private const string Url = "http://pradesh-5.com/api-auth/messages/";
+        private const string Url = "http://en.pradesh-5.com/api-auth/messages/";
         private HttpClient _client = new HttpClient();
 
         public ContactUs ()
@@ -51,21 +51,28 @@ namespace cmapp.Views
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                XFToast.LongMessage("No Internet Connection");
+                XFToast.ShortMessage("No Internet Connection");
             }
             else
             {
-                var msg = new Message { full_name = enUser.Text, email = enEmail.Text, contact_no = enPhone.Text, subject = enSub.Text, body = enDesc.Text, status = "Sent" };
-                var content = JsonConvert.SerializeObject(msg);
-                var response = await _client.PostAsync(Url, new StringContent(content, Encoding.UTF8, "application/json"));
+                try
+                {
+                    var msg = new Message { full_name = enUser.Text, email = enEmail.Text, contact_no = enPhone.Text, subject = enSub.Text, body = enDesc.Text, status = "Sent" };
+                    var content = JsonConvert.SerializeObject(msg);
+                    var response = await _client.PostAsync(Url, new StringContent(content, Encoding.UTF8, "application/json"));
 
-                if ((int)response.StatusCode <= 200 && (int)response.StatusCode <= 299)
+                    if ((int)response.StatusCode >= 200 && (int)response.StatusCode <= 299)
+                    {
+                        XFToast.ShortMessage("Message Sent");
+                        await Navigation.PopAsync(true);
+                    }
+                    else
+                    {
+                        XFToast.ShortMessage("Please fill all the fields");
+                    }
+                }catch(Exception ex)
                 {
-                    await Navigation.PopAsync(true);
-                }
-                else
-                {
-                    await DisplayAlert("Error", "Please fill all the fields", "OK");
+                    XFToast.ShortMessage("Internet cut-off while sending");
                 }
             }
         }

@@ -116,6 +116,8 @@ class MonoPackageManager_Resources {
 		"Newtonsoft.Json.dll",
 		"Plugin.Connectivity.Abstractions.dll",
 		"Plugin.Connectivity.dll",
+		"Plugin.FirebasePushNotification.Abstractions.dll",
+		"Plugin.FirebasePushNotification.dll",
 		"PushNotification.Plugin.Abstractions.dll",
 		"PushNotification.Plugin.dll",
 		"Refractored.XamForms.PullToRefresh.dll",

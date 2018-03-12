@@ -143,6 +143,22 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.FirebasePushNotification/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.v4": "26.0.2",
+          "Xamarin.Build.Download": "0.4.7",
+          "Xamarin.Firebase.Messaging": "[60.1142.0]"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Plugin.FirebasePushNotification.Abstractions.dll": {},
+          "lib/MonoAndroid80/Plugin.FirebasePushNotification.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Plugin.FirebasePushNotification.Abstractions.dll": {},
+          "lib/MonoAndroid80/Plugin.FirebasePushNotification.dll": {}
+        }
+      },
       "Refractored.XamForms.PullToRefresh/2.2.1": {
         "type": "package",
         "dependencies": {
@@ -1365,6 +1381,32 @@
         "newtonsoft.json.11.0.1-beta3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
+      ]
+    },
+    "Plugin.FirebasePushNotification/2.3.0": {
+      "sha512": "Y/lq1imeqXafgYqqopPMBeaklS3/FL44rPX04hHac4A8CftXrExp3OONSBezt4UgsLjL+6SEOtKA6C5Flx6IAA==",
+      "type": "package",
+      "path": "plugin.firebasepushnotification/2.3.0",
+      "files": [
+        "lib/MonoAndroid80/Plugin.FirebasePushNotification.Abstractions.dll",
+        "lib/MonoAndroid80/Plugin.FirebasePushNotification.Abstractions.pdb",
+        "lib/MonoAndroid80/Plugin.FirebasePushNotification.Abstractions.xml",
+        "lib/MonoAndroid80/Plugin.FirebasePushNotification.XML",
+        "lib/MonoAndroid80/Plugin.FirebasePushNotification.dll",
+        "lib/MonoAndroid80/Plugin.FirebasePushNotification.pdb",
+        "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.XML",
+        "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.dll",
+        "lib/netstandard1.0/Plugin.FirebasePushNotification.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.FirebasePushNotification.Abstractions.pdb",
+        "lib/netstandard1.0/Plugin.FirebasePushNotification.Abstractions.xml",
+        "lib/netstandard1.0/Plugin.FirebasePushNotification.deps.json",
+        "lib/netstandard1.0/Plugin.FirebasePushNotification.dll",
+        "lib/netstandard1.0/Plugin.FirebasePushNotification.xml",
+        "plugin.firebasepushnotification.2.3.0.nupkg.sha512",
+        "plugin.firebasepushnotification.nuspec"
       ]
     },
     "Refractored.XamForms.PullToRefresh/2.2.1": {
@@ -4902,6 +4944,7 @@
     "MonoAndroid,Version=v8.0": [
       "MonkeyCache.FileStore >= 0.1.0.1-beta",
       "Newtonsoft.Json >= 11.0.1-beta3",
+      "Plugin.FirebasePushNotification >= 2.3.0",
       "Refractored.XamForms.PullToRefresh >= 2.2.1",
       "Toasts.Forms.Plugin-PCL >= 3.3.0",
       "Xam.Plugin.Connectivity >= 4.0.0.186-beta",
@@ -4963,6 +5006,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[11.0.1-beta3, )"
+          },
+          "Plugin.FirebasePushNotification": {
+            "target": "Package",
+            "version": "[2.3.0, )"
           },
           "Refractored.XamForms.PullToRefresh": {
             "target": "Package",

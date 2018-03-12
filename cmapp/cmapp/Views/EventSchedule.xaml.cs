@@ -17,7 +17,7 @@ namespace cmapp.Views
 	public partial class EventSchedule : ContentPage
 	{
         ObservableCollection<Notifications> NewsCollection;
-        private const string Url = "http://pradesh-5.com/api-auth/events/";
+        private const string Url = "http://en.pradesh-5.com/api-auth/events/";
         List<Notifications> messagelist;
         App app = Application.Current as App;
         public EventSchedule ()
@@ -25,6 +25,13 @@ namespace cmapp.Views
 			InitializeComponent ();
             
                 DataGet();
+            CrossConnectivity.Current.ConnectivityChanged += async (sender, args) =>
+            {
+                if (args.IsConnected)
+                {
+                    DataGet();
+                }
+            };
         }
 
 
@@ -32,15 +39,20 @@ namespace cmapp.Views
         {
             if (string.IsNullOrWhiteSpace(Barrel.Current.Get(Url)) && !CrossConnectivity.Current.IsConnected)
             {
-                XFToast.LongMessage("No Previous data or Internet");
+                XFToast.ShortMessage("No Previous data or Internet");
             }
             else
             {
-                messagelist = await MoneyCache.GetAsync<List<Notifications>>(Url);
-                NewsCollection = new ObservableCollection<Notifications>(messagelist);
-                timelineListView.ItemsSource = NewsCollection;
-                timelineListView.Opacity = 0;
-                await timelineListView.FadeTo(1, 1000, Easing.SpringIn);
+                try
+                {
+                    messagelist = await MoneyCache.GetAsync<List<Notifications>>(Url);
+                    NewsCollection = new ObservableCollection<Notifications>(messagelist);
+                    timelineListView.ItemsSource = NewsCollection;
+                    timelineListView.Opacity = 0;
+                    await timelineListView.FadeTo(1, 1000, Easing.SpringIn);
+                }catch(Exception ex)
+                {
+                }
             }
             timelineListView.EndRefresh();
 

@@ -19,8 +19,8 @@ namespace cmapp.Views
         ObservableCollection<News> NewsCollection1;
         ObservableCollection<NepNews> NewsCollection2;
 
-        private const string Url1 = "http://pradesh-5.com/api-auth/press-news/";
-        private const string Url2 = "http://pradesh-5.com/api-auth/news/";
+        private const string Url1 = "http://en.pradesh-5.com/api-auth/press-news/";
+        private const string Url2 = "http://en.pradesh-5.com/api-auth/news/";
         List<News> newlist1;
         List<NepNews> newlist2;
         App app = Application.Current as App;
@@ -31,6 +31,13 @@ namespace cmapp.Views
 
             
                 DataGet();
+            CrossConnectivity.Current.ConnectivityChanged += async (sender, args) =>
+            {
+                if (args.IsConnected)
+                {
+                    DataGet();
+                }
+            };
             //view.Margin = new Thickness(-200, 0, 200, 0);
             //view.TranslateTo(200, 0, 1000, Easing.SpringIn);
 
@@ -49,7 +56,7 @@ namespace cmapp.Views
             }
             else
             {
-                XFToast.LongMessage("No Internet Connection");
+                XFToast.ShortMessage("No Internet Connection");
             }
             listView1.SelectedItem = null;
         }
@@ -70,23 +77,28 @@ namespace cmapp.Views
 
             if (string.IsNullOrWhiteSpace(Barrel.Current.Get(Url1)) && !CrossConnectivity.Current.IsConnected)
             {
-                XFToast.LongMessage("No Previous data or Internet");
+                XFToast.ShortMessage("No Previous data or Internet");
             }
             else
             {
-                newlist1 = await MoneyCache.GetAsync<List<News>>(Url1);
-                newlist2 = await MoneyCache.GetAsync<List<NepNews>>(Url2);
-                newlist1 = newlist1.Take(3).ToList();
-                newlist2 = newlist2.Take(3).ToList();
+                try
+                {
+                    newlist1 = await MoneyCache.GetAsync<List<News>>(Url1);
+                    newlist2 = await MoneyCache.GetAsync<List<NepNews>>(Url2);
+                    newlist1 = newlist1.Take(3).ToList();
+                    newlist2 = newlist2.Take(3).ToList();
 
-                NewsCollection1 = new ObservableCollection<News>(newlist1);
-                NewsCollection2 = new ObservableCollection<NepNews>(newlist2);
+                    NewsCollection1 = new ObservableCollection<News>(newlist1);
+                    NewsCollection2 = new ObservableCollection<NepNews>(newlist2);
 
-                listView1.ItemsSource = NewsCollection1.Reverse<News>();
-                listView2.ItemsSource = NewsCollection2.Reverse<NepNews>();
+                    listView1.ItemsSource = NewsCollection1.Reverse<News>();
+                    listView2.ItemsSource = NewsCollection2.Reverse<NepNews>();
 
-                view.Opacity = 0;
-                await view.FadeTo(1, 1000, Easing.SpringIn);
+                    view.Opacity = 0;
+                    await view.FadeTo(1, 1000, Easing.SpringIn);
+                }catch(Exception ex)
+                {
+                }
             }
 
             listView1.EndRefresh();
