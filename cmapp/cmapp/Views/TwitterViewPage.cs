@@ -1,92 +1,68 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Net;
 using System.Text;
+using System.Threading.Tasks;
 using cmapp.Models;
 using Xamarin.Forms;
 
 namespace cmapp.Views
 {
-    public class TwitterViewPage : ContentPage
+
+
+    public class  TwitterViewPage : ContentPage
     {
-        public TwitterViewPage()
+        public  TwitterViewPage()
+
+
         {
-            BackgroundColor = Color.White;
 
-            var twitterViewModel = new TweetingViewModel();
+            var source = new HtmlWebViewSource();
+            //source.BaseUrl = DependencyService.Get<IBaseUrl>().Get();
+            //var assetManager = Xamarin.Forms.Forms.Context.Assets;
+            //using (var streamReader = new StreamReader(assetManager.Open("local.html")))
+            //{
+            //    source.Html = streamReader.ReadToEnd();
+            //}
 
-            BindingContext = twitterViewModel;
+            source.Html = @"<a class=""twitter - timeline"" href=""https://twitter.com/shankarpokhrel8"">Tweets by shankarpokhrel8</a> <script async src=""https://platform.twitter.com/widgets.js"" charset=""utf-8""></script>";
 
-            var dataTemplate = new DataTemplate(() =>
+            var labelhtml = new Xamarin.Forms.Label
             {
-                var screenNameLabel = new Label
-                {
-                    TextColor = Color.FromHex("#2196F3"),
-                    FontSize = 22
-                };
-
-                var textLabel = new Label
-                {
-                    TextColor = Color.Black,
-                    FontSize = 18
-                };
-
-                var image = new Image
-                {
-                    WidthRequest = 60,
-                    HeightRequest = 60,
-                    VerticalOptions = LayoutOptions.Start
-                };
-
-                var mediaImage = new Image();
-
-                screenNameLabel.SetBinding(Label.TextProperty, new Binding("ScreenName"));
-                textLabel.SetBinding(Label.TextProperty, new Binding("Text"));
-                image.SetBinding(Image.SourceProperty, new Binding("ImageUrl"));
-                mediaImage.SetBinding(Image.SourceProperty, new Binding("MediaUrl"));
-
-                return new ViewCell
-                {
-                    View = new StackLayout
-                    {
-                        Orientation = StackOrientation.Horizontal,
-                        Padding = new Thickness(0, 5),
-                        Children =
-                        {
-                            image,
-                            new StackLayout
-                            {
-                                Orientation = StackOrientation.Vertical,
-                                Children =
-                                {
-                                    screenNameLabel,
-                                    textLabel,
-                                    mediaImage
-                                }
-                            }
-                        }
-                    }
-                };
-
-            });
-
-            var listView = new ListView
-            {
-                HasUnevenRows = true
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                HorizontalOptions = LayoutOptions.Fill,
+                Text = source.Html,
             };
-
-            listView.SetBinding(ListView.ItemsSourceProperty, "Tweets");
-            listView.ItemTemplate = dataTemplate;
+            var webview = new WebView
+            {
+                Source = source,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+            };
+            var inMemoryScrollView = new ScrollView
+            {
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                HorizontalOptions = LayoutOptions.Fill,
+                IsClippedToBounds = true,
+                Content = labelhtml
+            };
 
             Content = new StackLayout
             {
-                Padding = new Thickness(5, 10),
-                Children =
-                {
-                    listView
-
-                }
+                Children = { webview ,
+        }
             };
 
-        }
+
+        
+
+
+
+
+
+
+    }
+
     }
 }

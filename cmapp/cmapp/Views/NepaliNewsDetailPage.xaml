@@ -21,7 +21,7 @@
 
                     <StackLayout Orientation="Vertical">
                         <Frame OutlineColor = "Transparent" Padding ="3, 3, 3, 3" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Opacity="0.7" BackgroundColor = "#ffffff">
-                            <Label Text="Notice"  TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                            <Label Text="Local News"  TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
                         </Frame>
                         <Image Source="{Binding title_image}" Margin="10,0,10,5"  Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
 

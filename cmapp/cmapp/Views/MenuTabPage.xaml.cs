@@ -36,7 +36,7 @@ namespace cmapp.Views
                 page1.Title = "Home";
                 page2.Title = "News";
                 page3.Title = "Schedule";
-                page4.Title = "Message";
+                page4.Title = "Suggestions";
                 page5.Title = "Know CM";
             }
             else
@@ -45,7 +45,7 @@ namespace cmapp.Views
                 page1.Title = "प्रमुख";
                 page2.Title = "समाचार";
                 page3.Title = "तलिका";
-                page4.Title = "सन्देश";
+                page4.Title = "सुझाव";
                 page5.Title = "चिन्नुहोस";
             }
 

@@ -25,7 +25,7 @@ namespace cmapp.Views
                 this.Children.Add(new HomeView() { Title="Home"});
                 this.Children.Add(new NewsTabPage() { Title = "News" });
                 this.Children.Add(new EventSchedule() { Title = "Schedule" });
-                this.Children.Add(new MessageView() { Title = "Message" });
+                this.Children.Add(new MessageView() { Title = "Suggestions" });
             }
             else
             {
@@ -33,7 +33,7 @@ namespace cmapp.Views
                 this.Children.Add(new HomeView() { Title= "प्रमुख" });
                 this.Children.Add(new NewsTabPage() { Title = "समाचार" });
                 this.Children.Add(new EventSchedule() { Title = "तलिका" });
-                this.Children.Add(new MessageView() { Title = "सन्देश" });
+                this.Children.Add(new MessageView() { Title = "सुझाव" });
             }
 
             CurrentPage = Children[id];
@@ -57,6 +57,7 @@ namespace cmapp.Views
             await Task.Delay(1000);
             _canClose = false;
         }
-   
+
+    }
 }
-}
+

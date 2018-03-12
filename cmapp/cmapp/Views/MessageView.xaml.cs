@@ -38,11 +38,11 @@ namespace cmapp.Views
             };
             if (Constants.English)
             {
-                send.Text = "Send Message";
+                send.Text = "Send Suggestion";
             }
             else
             {
-                send.Text = "सन्देश पठाउनुहोस्";
+                send.Text = "सुझाव पठाउनुहोस्";
             }
           
         }
