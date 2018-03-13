@@ -24,27 +24,21 @@ namespace cmapp.Views
         List<News> newlist1;
         List<NepNews> newlist2;
         App app = Application.Current as App;
+        StackLayout sls = new StackLayout
+        {
+            Spacing = 10,
+            Padding = new Thickness(3, 3, 3, 3),
+            Orientation = StackOrientation.Vertical
+
+        };
 
         public HomeView ()
 		{
 			InitializeComponent ();
-			StackLayout sls = new StackLayout
-			{
-			    Spacing = 10,
-			    Padding = new Thickness(3, 3, 3, 3),
-			    Orientation = StackOrientation.Vertical
-
-			};
+		
 
             
                 DataGet();
-            CrossConnectivity.Current.ConnectivityChanged += async (sender, args) =>
-            {
-                if (args.IsConnected)
-                {
-                    DataGet();
-                }
-            };
             //view.Margin = new Thickness(-200, 0, 200, 0);
             //view.TranslateTo(200, 0, 1000, Easing.SpringIn);
 
@@ -52,6 +46,16 @@ namespace cmapp.Views
         }
 
 
+
+        private async void DataGet()
+        {
+
+            if (string.IsNullOrWhiteSpace(Barrel.Current.Get(Url1)) && !CrossConnectivity.Current.IsConnected)
+            {
+                XFToast.LongMessage("No Previous data or Internet");
+            }
+            else
+            {
                 newlist1 = await MoneyCache.GetAsync<List<News>>(Url1);
                 newlist2 = await MoneyCache.GetAsync<List<NepNews>>(Url2);
                 newlist1 = newlist1.Take(3).ToList();
@@ -111,7 +115,7 @@ namespace cmapp.Views
 			framer.Content=lbl;
 			
 			abs.Children.Add(imag);
-			abs.CHildren.Add(framer);
+			abs.Children.Add(framer);
 			
 			slsins.Children.Add(abs);
 			
@@ -180,7 +184,7 @@ namespace cmapp.Views
 			
 			var imag=new Image
 			{
-			Source=n2.title_images,
+			Source=n2.title_image,
 			Aspect=Aspect.AspectFill
 			};
 			AbsoluteLayout.SetLayoutBounds (imag, new Rectangle (0, 0, 1, 220));
@@ -208,7 +212,7 @@ namespace cmapp.Views
 			framer.Content=lbl;
 			
 			abs.Children.Add(imag);
-			abs.CHildren.Add(framer);
+			abs.Children.Add(framer);
 			
 			slsins.Children.Add(abs);
 			
@@ -250,7 +254,6 @@ namespace cmapp.Views
 		view.Content=sls;
                 view.Opacity = 0;
                 await view.FadeTo(1, 1000, Easing.SpringIn);
-
             }
 
         }

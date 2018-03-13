@@ -23,32 +23,18 @@ namespace cmapp.Views
             view.Opacity = 0;
             if(string.IsNullOrWhiteSpace(Barrel.Current.Get(Url)) && !CrossConnectivity.Current.IsConnected)
             {
-                XFToast.ShortMessage("No Previous data or Internet");
+                XFToast.LongMessage("No Previous data or Internet");
             }
             else
                 DataGet();
-
-            CrossConnectivity.Current.ConnectivityChanged += async (sender, args) =>
-            {
-                if (args.IsConnected)
-                {
-                    DataGet();
-                }
-            };
-        }
+		}
 
         private async void DataGet()
         {
-            try
-            {
-                lead = await MoneyCache.GetAsync<List<Leader>>(Url);
-                BindingContext = lead.First<Leader>();
-                desig.SetBinding(Label.TextProperty, "designate.name");
-                await view.FadeTo(1, 1000, Easing.SpringIn);
-            }
-            catch
-            {
-            }
+            lead = await MoneyCache.GetAsync<List<Leader>>(Url);
+            BindingContext = lead.First<Leader>();
+            desig.SetBinding(Label.TextProperty, "designate.name");
+            await view.FadeTo(1, 1000, Easing.SpringIn);
         }
 
     }

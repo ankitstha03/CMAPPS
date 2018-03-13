@@ -51,28 +51,21 @@ namespace cmapp.Views
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                XFToast.ShortMessage("No Internet Connection");
+                XFToast.LongMessage("No Internet Connection");
             }
             else
             {
-                try
-                {
-                    var msg = new Message { full_name = enUser.Text, email = enEmail.Text, contact_no = enPhone.Text, subject = enSub.Text, body = enDesc.Text, status = "Sent" };
-                    var content = JsonConvert.SerializeObject(msg);
-                    var response = await _client.PostAsync(Url, new StringContent(content, Encoding.UTF8, "application/json"));
+                var msg = new Message { full_name = enUser.Text, email = enEmail.Text, contact_no = enPhone.Text, subject = enSub.Text, body = enDesc.Text, status = "Sent" };
+                var content = JsonConvert.SerializeObject(msg);
+                var response = await _client.PostAsync(Url, new StringContent(content, Encoding.UTF8, "application/json"));
 
-                    if ((int)response.StatusCode >= 200 && (int)response.StatusCode <= 299)
-                    {
-                        XFToast.ShortMessage("Message Sent");
-                        await Navigation.PopAsync(true);
-                    }
-                    else
-                    {
-                        XFToast.ShortMessage("Please fill all the fields");
-                    }
-                }catch(Exception ex)
+                if ((int)response.StatusCode <= 200 && (int)response.StatusCode <= 299)
                 {
-                    XFToast.ShortMessage("Internet cut-off while sending");
+                    await Navigation.PopAsync(true);
+                }
+                else
+                {
+                    await DisplayAlert("Error", "Please fill all the fields", "OK");
                 }
             }
         }

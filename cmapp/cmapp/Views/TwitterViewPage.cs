@@ -11,9 +11,9 @@ namespace cmapp.Views
 {
 
 
-    public class  TwitterViewPage : ContentPage
+    public class TwitterViewPage : ContentPage
     {
-        public  TwitterViewPage()
+        public TwitterViewPage()
 
 
         {
@@ -26,7 +26,7 @@ namespace cmapp.Views
             //    source.Html = streamReader.ReadToEnd();
             //}
 
-            source.Html = @"<a class=""twitter - timeline"" href=""https://twitter.com/shankarpokhrel8"">Tweets by shankarpokhrel8</a> <script async src=""https://platform.twitter.com/widgets.js"" charset=""utf-8""></script>";
+            source.Html = @"<a class=""twitter - timeline"" style=""color:white; font-size=80px; height:100px"" href=""https://twitter.com/shankarpokhrel8"">Tweets by shankarpokhrel8</a><script async src=""https://platform.twitter.com/widgets.js"" charset=""utf-8""></script>";
 
             var labelhtml = new Xamarin.Forms.Label
             {
@@ -51,18 +51,19 @@ namespace cmapp.Views
             Content = new StackLayout
             {
                 Children = { webview ,
-        }
+         }
             };
 
 
-        
 
 
 
 
 
 
-    }
+
+
+        }
 
     }
 }

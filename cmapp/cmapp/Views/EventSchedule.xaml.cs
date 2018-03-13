@@ -25,13 +25,6 @@ namespace cmapp.Views
 			InitializeComponent ();
             
                 DataGet();
-            CrossConnectivity.Current.ConnectivityChanged += async (sender, args) =>
-            {
-                if (args.IsConnected)
-                {
-                    DataGet();
-                }
-            };
         }
 
 
@@ -39,20 +32,15 @@ namespace cmapp.Views
         {
             if (string.IsNullOrWhiteSpace(Barrel.Current.Get(Url)) && !CrossConnectivity.Current.IsConnected)
             {
-                XFToast.ShortMessage("No Previous data or Internet");
+                XFToast.LongMessage("No Previous data or Internet");
             }
             else
             {
-                try
-                {
-                    messagelist = await MoneyCache.GetAsync<List<Notifications>>(Url);
-                    NewsCollection = new ObservableCollection<Notifications>(messagelist);
-                    timelineListView.ItemsSource = NewsCollection;
-                    timelineListView.Opacity = 0;
-                    await timelineListView.FadeTo(1, 1000, Easing.SpringIn);
-                }catch(Exception ex)
-                {
-                }
+                messagelist = await MoneyCache.GetAsync<List<Notifications>>(Url);
+                NewsCollection = new ObservableCollection<Notifications>(messagelist);
+                timelineListView.ItemsSource = NewsCollection;
+                timelineListView.Opacity = 0;
+                await timelineListView.FadeTo(1, 1000, Easing.SpringIn);
             }
             timelineListView.EndRefresh();
 

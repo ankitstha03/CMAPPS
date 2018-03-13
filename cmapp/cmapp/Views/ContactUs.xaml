@@ -16,7 +16,7 @@
 
                     <Grid Grid.Row="1"  Margin="20,0,20,0" HorizontalOptions="FillAndExpand">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="300"/>
+                            <RowDefinition Height="180"/>
                             <RowDefinition Height="50"/>
                             <RowDefinition Height="50"/>
                             <RowDefinition Height="50"/>
@@ -25,11 +25,11 @@
 
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
+                            <Image Source="https://i2.wp.com/riddlenepal.com/wp-content/uploads/2017/12/sankar-pokhrel.jpg" Margin="10,0,10,5"  Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
 
-                        <Frame OutlineColor = "Transparent" Padding ="3, 3, 3, 3" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Opacity="0.7" BackgroundColor = "#ffffff">
+                            <Frame OutlineColor = "Transparent" Padding ="3, 3, 3, 3" HeightRequest="40" HorizontalOptions="FillAndExpand" VerticalOptions="End" Opacity="0.7" BackgroundColor = "#ffffff">
                             <Label x:Name="connect"  TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
                         </Frame>
-                        <Image Source="https://i2.wp.com/riddlenepal.com/wp-content/uploads/2017/12/sankar-pokhrel.jpg" Margin="10,0,10,5"  Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
                         
                         <Grid Grid.Row="1">
                         

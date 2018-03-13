@@ -55,13 +55,13 @@
                              Spacing="20">
 
                                     <Image Source="{Binding Icon}"
-                         WidthRequest="40"
-                         HeightRequest="40"
+                         WidthRequest="30"
+                         HeightRequest="30"
                          VerticalOptions="Start" />
 
                                     <Label Text="{Binding Title}"
                          FontSize="Small"
-                         VerticalOptions="End"
+                         VerticalOptions="Center"
                          TextColor="Black"/>
                                 </StackLayout>
                             </ViewCell>

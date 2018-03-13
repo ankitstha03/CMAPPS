@@ -24,11 +24,11 @@ namespace cmapp.Views
             Icon.Icon = "Noticonwhite";
             menuList = new List<MasterPageItem>();
 
-            var page1 = new MasterPageItem() {  Icon = "ic_apps_black_24dp.png", id=0 };
-            var page2 = new MasterPageItem() { Icon = "ic_apps_black_24dp.png", id=1 };
-            var page3 = new MasterPageItem() {  Icon = "ic_apps_black_24dp.png", id=2 };
-            var page4 = new MasterPageItem() {  Icon = "ic_apps_black_24dp.png", id=3 };
-            var page5 = new MasterPageItem() { Icon = "ic_apps_black_24dp.png", id = 4 };
+            var page1 = new MasterPageItem() { Icon = "icons8home24.png", id = 0 };
+            var page2 = new MasterPageItem() { Icon = "icons8news24.png", id = 1 };
+            var page3 = new MasterPageItem() { Icon = "icons8calendar24.png", id = 2 };
+            var page4 = new MasterPageItem() { Icon = "icons8chat24.png", id = 3 };
+            var page5 = new MasterPageItem() { Icon = "icons8administratormale48.png", id = 4 };
 
             if (Constants.English)
             {
@@ -36,7 +36,7 @@ namespace cmapp.Views
                 page1.Title = "Home";
                 page2.Title = "News";
                 page3.Title = "Schedule";
-                page4.Title = "Suggestions";
+                page4.Title = "Message";
                 page5.Title = "Know CM";
             }
             else
@@ -45,7 +45,7 @@ namespace cmapp.Views
                 page1.Title = "प्रमुख";
                 page2.Title = "समाचार";
                 page3.Title = "तलिका";
-                page4.Title = "सुझाव";
+                page4.Title = "सन्देश";
                 page5.Title = "चिन्नुहोस";
             }
 
@@ -58,7 +58,7 @@ namespace cmapp.Views
 
             var tapGestureRecognizer = new TapGestureRecognizer();
             tapGestureRecognizer.Tapped += async (s, e) => {
-                await Navigation.PushAsync(new KnowCmPage(),true);
+                await Navigation.PushAsync(new TwitterViewPage(), true);
             };
 
             stck1.GestureRecognizers.Add(tapGestureRecognizer);
@@ -66,7 +66,7 @@ namespace cmapp.Views
             navigationDrawerList.ItemsSource = menuList;
             // Initial navigation, this can be used for our home page
             Detail = new NavigationPage(new MainTabPage(0));
-            
+
             this.BindingContext = Constants.currentuser;
         }
 
@@ -96,13 +96,13 @@ namespace cmapp.Views
         private void Icon2_Clicked(object sender, EventArgs e)
         {
             Constants.English = !Constants.English;
-            Application.Current.MainPage= new NavigationPage(new MenuTabPage());
+            Application.Current.MainPage = new NavigationPage(new MenuTabPage());
         }
 
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            
+
             int count = 0;
 
             if (Constants.English)

@@ -27,14 +27,6 @@ namespace cmapp.Views
 			InitializeComponent ();
             
                 DataGet();
-
-            CrossConnectivity.Current.ConnectivityChanged += async (sender, args) =>
-            {
-                if (args.IsConnected)
-                {
-                    DataGet();
-                }
-            };
         }
 
         private void Onchange(object sender, TextChangedEventArgs e)
@@ -64,22 +56,17 @@ namespace cmapp.Views
         {
             if (string.IsNullOrWhiteSpace(Barrel.Current.Get(Url)) && !CrossConnectivity.Current.IsConnected)
             {
-                XFToast.ShortMessage("No Previous data or Internet");
+                XFToast.LongMessage("No Previous data or Internet");
                 searbar.IsVisible = false;
             }
             else
             {
-                try
-                {
-                    searbar.IsVisible = true;
-                    newlist = await MoneyCache.GetAsync<List<NepNews>>(Url);
-                    NewsCollection = new ObservableCollection<NepNews>(newlist);
-                    listView.ItemsSource = NewsCollection.Reverse<NepNews>();
-                    listView.Opacity = 0;
-                    await listView.FadeTo(1, 1000, Easing.SpringIn);
-                }catch(Exception ex)
-                {
-                }
+                searbar.IsVisible = true;
+                newlist = await MoneyCache.GetAsync<List<NepNews>>(Url);
+                NewsCollection = new ObservableCollection<NepNews>(newlist);
+                listView.ItemsSource = NewsCollection.Reverse<NepNews>();
+                listView.Opacity = 0;
+                await listView.FadeTo(1, 1000, Easing.SpringIn);
             }
             listView.EndRefresh();
 
