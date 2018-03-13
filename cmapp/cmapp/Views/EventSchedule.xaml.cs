@@ -17,7 +17,7 @@ namespace cmapp.Views
 	public partial class EventSchedule : ContentPage
 	{
         ObservableCollection<Notifications> NewsCollection;
-        private const string Url = "http://en.pradesh-5.com/api-auth/events/";
+        private string Url = Constants.ur +"/api-auth/events/";
         List<Notifications> messagelist;
         App app = Application.Current as App;
         public EventSchedule ()

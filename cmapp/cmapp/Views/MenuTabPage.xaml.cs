@@ -22,6 +22,16 @@ namespace cmapp.Views
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             Icon.Icon = "Noticonwhite";
+            if (Constants.English)
+            {
+                Constants.ur = "http://en.pradesh-5.com";
+                Icon2.Text = "EN";
+            }
+            else
+            {
+                Constants.ur = "http://pradesh-5.com";
+                Icon2.Text = "NP";
+            }
             menuList = new List<MasterPageItem>();
 
             var page1 = new MasterPageItem() { Icon = "icons8home24.png", id = 0 };
@@ -58,7 +68,7 @@ namespace cmapp.Views
 
             var tapGestureRecognizer = new TapGestureRecognizer();
             tapGestureRecognizer.Tapped += async (s, e) => {
-                await Navigation.PushAsync(new TwitterViewPage(), true);
+                await Navigation.PushAsync(new KnowCmPage(), true);
             };
 
             stck1.GestureRecognizers.Add(tapGestureRecognizer);
@@ -105,14 +115,7 @@ namespace cmapp.Views
 
             int count = 0;
 
-            if (Constants.English)
-            {
-                Icon2.Text = "EN";
-            }
-            else
-            {
-                Icon2.Text = "NP";
-            }
+
         }
 
     }

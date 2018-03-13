@@ -39,6 +39,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Tweet.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\TweetingViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\YoutubeItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TemplateViews\MessageTemplate.xaml.cs">
       <DependentUpon>MessageTemplate.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -56,6 +57,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)IMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\YoutubeViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\BioPage.xaml.cs">
       <DependentUpon>BioPage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -138,7 +140,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\SplashPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Tweetpage.xaml.cs">
+      <DependentUpon>Tweetpage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\TwitterViewPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\YoutubeViewPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)XFToast.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -287,6 +294,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Tweetpage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

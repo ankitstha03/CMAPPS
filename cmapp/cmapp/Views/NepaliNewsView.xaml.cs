@@ -19,7 +19,7 @@ namespace cmapp.Views
 	public partial class NepaliNewsView : ContentPage
 	{
         ObservableCollection<NepNews> NewsCollection;
-        private const string Url = "http://en.pradesh-5.com/api-auth/news/";
+        private string Url = Constants.ur + "/api-auth/news/";
         List<NepNews> newlist;
         App app = Application.Current as App;
         public NepaliNewsView ()

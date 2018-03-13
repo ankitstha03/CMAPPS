@@ -17,7 +17,7 @@ namespace cmapp.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ContactUs : ContentPage
 	{
-        private const string Url = "http://en.pradesh-5.com/api-auth/messages/";
+        private string Url = Constants.ur+"/api-auth/messages/";
         private HttpClient _client = new HttpClient();
 
         public ContactUs ()

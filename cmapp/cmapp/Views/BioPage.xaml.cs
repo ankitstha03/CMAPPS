@@ -15,7 +15,7 @@ namespace cmapp.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class BioPage : ContentPage
 	{
-        private const string Url = "http://en.pradesh-5.com/api-auth/leader/";
+        private string Url =Constants.ur+ "/api-auth/leader/";
         List<Leader> lead;
         public BioPage ()
 		{

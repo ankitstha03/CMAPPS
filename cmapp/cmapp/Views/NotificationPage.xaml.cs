@@ -20,7 +20,7 @@ namespace cmapp.Views
 	{
         
         ObservableCollection<Notifications> NotiCollection;
-        private const string Url = "http://en.pradesh-5.com/api-auth/notices/";
+        private string Url = Constants.ur + "/api-auth/notices/";
         List<Notifications> notlist;
         App app = Application.Current as App;
 
