@@ -29,6 +29,14 @@ namespace cmapp.Views
 			InitializeComponent ();
             
                 DataGet();
+
+            CrossConnectivity.Current.ConnectivityChanged += async (sender, args) =>
+            {
+                if (args.IsConnected)
+                {
+                    DataGet();
+                }
+            };
         }
 
         private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -47,15 +55,22 @@ namespace cmapp.Views
         {
             if (string.IsNullOrWhiteSpace(Barrel.Current.Get(Url)) && !CrossConnectivity.Current.IsConnected)
             {
-                XFToast.LongMessage("No Previous data or Internet");
+                XFToast.ShortMessage("No Previous data or Internet");
             }
             else
             {
-                notlist = await MoneyCache.GetAsync<List<Notifications>>(Url);
-                NotiCollection = new ObservableCollection<Notifications>(notlist);
-                listView.ItemsSource = NotiCollection.Reverse<Notifications>();
-                listView.Opacity = 0;
-                await listView.FadeTo(1, 1000, Easing.SpringIn);
+                try
+                {
+                    notlist = await MoneyCache.GetAsync<List<Notifications>>(Url);
+                    NotiCollection = new ObservableCollection<Notifications>(notlist);
+                    listView.ItemsSource = NotiCollection.Reverse<Notifications>();
+                    listView.Opacity = 0;
+                    await listView.FadeTo(1, 1000, Easing.SpringIn);
+                }
+                catch(Exception e)
+                {
+                }
+                
             }
                 
             listView.EndRefresh();

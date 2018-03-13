@@ -27,7 +27,7 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </ScrollView>
-            <Button x:Name="send" TextColor="White" HeightRequest="50" VerticalOptions="End" BackgroundColor="#1E88E5" Clicked="Button_Clicked" />
+            <Button x:Name="send" TextColor="White" HeightRequest="50" VerticalOptions="End" Clicked="Button_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

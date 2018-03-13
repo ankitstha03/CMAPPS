@@ -2,6 +2,7 @@
 using MonkeyCache.FileStore;
 using Newtonsoft.Json;
 using Plugin.Connectivity;
+using Plugin.Connectivity.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -18,6 +19,7 @@ namespace cmapp.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MessageView : ContentPage
 	{
+
         ObservableCollection<Message> NewsCollection;
         private const string Url = "http://en.pradesh-5.com/api-auth/messages/";
         List<Message> messagelist;
@@ -27,6 +29,13 @@ namespace cmapp.Views
 			InitializeComponent ();
             
                 DataGet();
+            CrossConnectivity.Current.ConnectivityChanged += async (sender, args) =>
+            {
+                if (args.IsConnected)
+                {
+                    DataGet();
+                }
+            };
             if (Constants.English)
             {
                 send.Text = "Send Suggestion";
@@ -35,6 +44,7 @@ namespace cmapp.Views
             {
                 send.Text = "सुझाव पठाउनुहोस्";
             }
+          
         }
 
         private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -71,20 +81,27 @@ namespace cmapp.Views
         {
             if (string.IsNullOrWhiteSpace(Barrel.Current.Get(Url)) && !CrossConnectivity.Current.IsConnected)
             {
-                XFToast.LongMessage("No Previous data or Internet");
+                XFToast.ShortMessage("No Previous data or Internet");
                 searbar.IsVisible = false;
             }
             else
             {
-                searbar.IsVisible = true;
-                messagelist = await MoneyCache.GetAsync<List<Message>>(Url);
-                NewsCollection = new ObservableCollection<Message>(messagelist);
-                listView.ItemsSource = NewsCollection.Reverse<Message>();
-                listView.Opacity = 0;
-                await listView.FadeTo(1, 1000, Easing.SpringIn);
+                try
+                {
+                    searbar.IsVisible = true;
+                    messagelist = await MoneyCache.GetAsync<List<Message>>(Url);
+                    NewsCollection = new ObservableCollection<Message>(messagelist);
+                    listView.ItemsSource = NewsCollection.Reverse<Message>();
+                    listView.Opacity = 0;
+                    await listView.FadeTo(1, 1000, Easing.SpringIn);
+                }catch(Exception ex)
+                {
+                }
+                
             }
             listView.EndRefresh();
 
         }
+
     }
 }
