@@ -78,7 +78,7 @@
                             VerticalTextAlignment="Center"
                             HorizontalOptions="StartAndExpand"
                             FontSize="14"
-                            Text="{Binding description, StringFormat='{0:35}' , Mode = TwoWay}"
+                            Text="{Binding desc}' , Mode = TwoWay}"
                             TextColor="Black" >
                                 </Label>
 
