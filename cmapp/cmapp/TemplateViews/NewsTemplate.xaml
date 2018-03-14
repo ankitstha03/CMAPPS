@@ -52,7 +52,7 @@
                             VerticalTextAlignment="Center"
                             HorizontalOptions="StartAndExpand"
                             FontSize="14"
-                            Text="{Binding desc , Mode = TwoWay}"
+                            Text="{Binding description , Mode = TwoWay}"
                             TextColor="Black" >
                 </Label>
 
