@@ -70,7 +70,9 @@ namespace cmapp.Views
                     newlist2 = await MoneyCache.GetAsync<List<NepNews>>(Url2);
                     newlist1 = newlist1.Take(3).ToList();
                     newlist2 = newlist2.Take(3).ToList();
-
+  		    foreach(NepNews n in newlist2){
+		    	n.desc=n.description.Take(30)+"...";
+		    }
                     NewsCollection1 = new ObservableCollection<News>(newlist1);
                     NewsCollection2 = new ObservableCollection<NepNews>(newlist2);
 
