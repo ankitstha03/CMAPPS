@@ -85,6 +85,9 @@ namespace cmapp.Views
                 {
                     searbar.IsVisible = true;
                     newlist = await MoneyCache.GetAsync<List<News>>(Url);
+		    foreach(News n in newlist){
+		    	n.desc=n.description.Take(30)+"...";
+		    }
                     NewsCollection = new ObservableCollection<News>(newlist);
                     listView.ItemsSource = NewsCollection.Reverse<News>();
                     listView.Opacity = 0;
