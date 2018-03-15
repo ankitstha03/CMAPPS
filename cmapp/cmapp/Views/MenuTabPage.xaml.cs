@@ -24,12 +24,12 @@ namespace cmapp.Views
             Icon.Icon = "Noticonwhite";
             if (Constants.English)
             {
-                Constants.ur = "http://en.pradesh-5.com";
+                Constants.ur = "http://pradesh-5.com";
                 Icon2.Text = "EN";
             }
             else
             {
-                Constants.ur = "http://pradesh-5.com";
+                Constants.ur = "http://en.pradesh-5.com";
                 Icon2.Text = "NP";
             }
             menuList = new List<MasterPageItem>();

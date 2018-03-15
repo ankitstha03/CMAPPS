@@ -15,9 +15,17 @@ namespace cmapp.Models
         public static bool English = true;
         public static User currentuser;
         public static string ur= "http://en.pradesh-5.com";
-        public static string ScrubHtml(string value)
+        public static string ScrubHtml2(string value)
         {
-            var step1 = Regex.Replace(value, @"<[^>]+>|&nbsp;", "").Trim();
+            var step1 = Regex.Replace(value, @"\\", "").Trim();
+            var step2 = Regex.Replace(step1, @"<iframe[^s]+src\=[^h]", "").Trim();
+            var step3 = Regex.Replace(step2, @"frameborder\=[^>]+></iframe>[^h]", "");
+            return step4;
+        }
+
+public static string ScrubHtml1(string value2)
+        {
+            var step1 = Regex.Replace(value2, @"<[^>]+>|&nbsp;", "").Trim();
             var step2 = Regex.Replace(step1, @"\s{2,}", " ").Trim();
             var step3 = Regex.Replace(step2, @"T\d+\:\d+\:\d+\+05\:45", "").Trim();
             var step4 = Regex.Replace(step3, @"T\d+\:\d+\:\d+Z", "");
