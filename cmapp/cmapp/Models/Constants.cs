@@ -19,7 +19,7 @@ namespace cmapp.Models
         {
             var step1 = Regex.Replace(value, @"\\", "").Trim();
             var step2 = Regex.Replace(step1, @"<iframe[^s]+src\=[^h]", "").Trim();
-            var step3 = Regex.Replace(step2, @"frameborder\=[^>]+></iframe>[^h]", "");
+            var step3 = Regex.Replace(step2, @"[^a-z][^a-z]frameborder\=[^>]+><[^>]+>", "").Trim();
             return step3;
         }
 
