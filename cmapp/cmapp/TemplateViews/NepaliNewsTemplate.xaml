@@ -78,7 +78,7 @@
                             VerticalTextAlignment="Center"
                             HorizontalOptions="StartAndExpand"
                             FontSize="14"
-                            Text="{Binding desc}' , Mode = TwoWay}"
+                            Text="{Binding desc} , Mode = TwoWay}"
                             TextColor="Black" >
                                 </Label>
 

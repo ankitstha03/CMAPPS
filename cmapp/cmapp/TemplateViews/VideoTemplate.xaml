@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cmapp.TemplateViews.VideoTemplate">
+    <Frame IsClippedToBounds="True"
+         CornerRadius = "12"
+         HasShadow="True"
+         BackgroundColor="White" 
+         OutlineColor="Gray">
+        <Frame.Margin>
+            <OnPlatform x:TypeArguments="Thickness"
+                  Android="10" iOS="10"/>
+        </Frame.Margin>
+        <Frame.Padding>
+            <OnPlatform x:TypeArguments="Thickness"
+                  Android="0" iOS="0"/>
+        </Frame.Padding>
+
+        <StackLayout Orientation="Vertical">
+
+
+
+            <StackLayout Orientation="Vertical" Padding="10,5,10,5" HorizontalOptions="Start" >
+                <Label FontAttributes="None"
+                           x:Name="videotitle"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="StartAndExpand"
+                           FontSize="16"
+                           Text="{Binding title , Mode = TwoWay}"
+                           TextColor="Black" >
+                </Label>
+              
+                <WebView 
+                         x:Name="wvPlayer" 
+                    WidthRequest="1000"
+                    HeightRequest="200"
+                    Source ="{Binding link}">
+
+              
+                </WebView>
+
+
+                <!--<StackLayout Orientation="Horizontal" VerticalOptions="Start" >
+                    <Frame CornerRadius = "5"
+                                OutlineColor = "Gray"
+                                Padding = "15, 5, 15, 5"
+                                HorizontalOptions = "Start"
+                                VerticalOptions = "Fill"
+                                BackgroundColor = "Transparent">
+
+
+                        <Label FontAttributes="None"
+                               HorizontalTextAlignment="Start"
+                               VerticalTextAlignment="Start"
+                               HorizontalOptions="StartAndExpand"
+                               FontSize="12"
+                               Text="10 Likes" TextColor="Black">
+
+                        </Label>
+                    </Frame>
+                    <Frame CornerRadius = "5"
+                                OutlineColor = "Gray"
+                                Padding = "15, 5, 15, 5"
+                                HorizontalOptions = "End"
+                                VerticalOptions = "Fill"
+                                BackgroundColor = "Transparent">
+                        <Label FontAttributes="None"
+                               HorizontalTextAlignment="End"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="End"
+                               FontSize="12"
+                               Text="26 Comments" TextColor="Black">
+
+                        </Label>
+                    </Frame>
+                </StackLayout>-->
+
+            </StackLayout>
+
+        </StackLayout>
+
+    </Frame>
+</ContentView>
