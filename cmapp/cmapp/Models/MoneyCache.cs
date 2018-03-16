@@ -26,7 +26,7 @@ namespace cmapp.Models
                     }
                     if (!string.IsNullOrWhiteSpace(json))
                     {
-                        json = Constants.ScrubHtml1(json);
+                        json = Constants.ScrubHtml(json);
                         Barrel.Current.Add(url, json, TimeSpan.FromDays(days));
                     }
 
