@@ -20,10 +20,10 @@ namespace cmapp.Models
             var step1 = Regex.Replace(value, @"\\", "").Trim();
             var step2 = Regex.Replace(step1, @"<iframe[^s]+src\=[^h]", "").Trim();
             var step3 = Regex.Replace(step2, @"frameborder\=[^>]+></iframe>[^h]", "");
-            return step4;
+            return step3;
         }
 
-public static string ScrubHtml1(string value2)
+public static string ScrubHtml(string value2)
         {
             var step1 = Regex.Replace(value2, @"<[^>]+>|&nbsp;", "").Trim();
             var step2 = Regex.Replace(step1, @"\s{2,}", " ").Trim();

@@ -68,6 +68,8 @@ namespace cmapp.Views
                 {
                     newlist1 = await MoneyCache.GetAsync<List<News>>(Url1);
                     newlist2 = await MoneyCache.GetAsync<List<NepNews>>(Url2);
+                    newlist1 = newlist1.Reverse<News>().ToList<News>();
+                    newlist2 = newlist2.Reverse<NepNews>().ToList<NepNews>();
                     newlist1 = newlist1.Take(3).ToList();
                     newlist2 = newlist2.Take(3).ToList();
   		    foreach(NepNews n in newlist2){
@@ -247,7 +249,7 @@ namespace cmapp.Views
 
                         Label desc = new Label
                         {
-                            Text = n2.description,
+                            Text = new String(n2.description.Take(200).ToArray())+"...",
                             FontSize = 16,
                             TextColor = Color.Black
                         };
