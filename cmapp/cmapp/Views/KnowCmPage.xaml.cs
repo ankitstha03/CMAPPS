@@ -19,15 +19,17 @@ namespace cmapp.Views
             this.BarBackgroundColor = Color.Red;
             if (Constants.English)
             {
-                this.Children.Add(new YoutubeViewPage() { Title = "My Say" });
+               
                 this.Children.Add(new Tweetpage() { Title = "Twitter" });
+                this.Children.Add(new VideoView() { Title = "My Say" });
                 this.Children.Add(new BioPage() { Title = "Biography" });
                 Title= "Know CM";
             }
             else
             {
-                this.Children.Add(new YoutubeViewPage() { Title = "मेरो भनाइ" });
+                
                 this.Children.Add(new Tweetpage() { Title = "ट्वितर" });
+                this.Children.Add(new VideoView() { Title = "मेरो भनाइ" });
                 this.Children.Add(new BioPage() { Title = "जीवनी" });
                 Title = "चिन्नुहोस";
             }
