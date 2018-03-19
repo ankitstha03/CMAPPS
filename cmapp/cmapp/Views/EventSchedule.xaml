@@ -19,9 +19,7 @@
     SeparatorVisibility="None">
 
         <ListView.Header>
-            <StackLayout Padding="20,40,0,30">
-                <Label FontSize="30" TextColor="Black" Text="Event Schedule Timeline" />
-            </StackLayout>
+           
         </ListView.Header>
 
         <ListView.ItemTemplate>
@@ -38,12 +36,12 @@
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
 
-                        <Label HorizontalOptions="Center"  FontSize="14"  TextColor="Black" Text="{Binding start_date}" />
+                        <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="14"  TextColor="Black" Text="{Binding start_date}" />
 
                         <Label
               Grid.Column="2"
               Margin="20,0"
-              FontSize="20" TextColor="Black"
+              FontSize="20" VerticalOptions="Center" TextColor="Black"
               Text="{Binding title}" />
 
                         <Label
@@ -55,13 +53,15 @@
 
 
                         <Image Grid.Column="1" Source="Bullet.png" />
-
+                    
                     </Grid>
+                    
                 </ViewCell>
             </DataTemplate>
+            
         </ListView.ItemTemplate>
 
-
+     
 
     </ListView>
 </ContentPage>
