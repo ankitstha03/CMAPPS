@@ -29,7 +29,7 @@ namespace cmapp.Views
 
 			InitializeComponent ();
            
-                if (Constants.English)
+            if (Constants.English)
             {
 
                 Title = "Notices";

@@ -12,19 +12,18 @@
 
                     <StackLayout Orientation="Vertical">
                         <Frame OutlineColor = "Transparent" Padding ="3, 3, 3, 3" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Opacity="0.7" BackgroundColor = "#ffffff">
-                            <Label Text="{Binding name}" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                            <Label Text="{Binding name}" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="24"/>
                         </Frame>
-                        <Image Source="{Binding photo}" Margin="10,0,10,5"  Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
+                        <Image Source="{Binding photo}" Margin="0,0,0,0"  Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
 
 
-                        <StackLayout Orientation="Vertical" Padding="10,5,10,5" HorizontalOptions="Start" >
+                        <StackLayout Orientation="Vertical" Padding="15,15,15,15" HorizontalOptions="Start" >
                             <StackLayout Orientation="Horizontal" Padding="3,3,3,3" VerticalOptions="Start" >
 
-                                <Label FontAttributes="None"
-                                HorizontalTextAlignment="Start"
+                                <Label   HorizontalTextAlignment="Start"
                                 VerticalTextAlignment="Center"
                                 HorizontalOptions="StartAndExpand"
-                                FontSize="16"
+                                FontSize="18"
                                        FontAttributes="Bold"
                                 Text="Designation"
                                 TextColor="Black" >
@@ -34,7 +33,7 @@
                                 HorizontalTextAlignment="Start"
                                 VerticalTextAlignment="Center"
                                 HorizontalOptions="StartAndExpand"
-                                FontSize="16"
+                                FontSize="18"
                                 x:Name="desig"
                                 TextColor="Black" >
                                 </Label>
@@ -43,11 +42,10 @@
                             </StackLayout>
                             <StackLayout Orientation="Horizontal" Padding="3,3,3,3" VerticalOptions="Start" >
 
-                                <Label FontAttributes="None"
-                                HorizontalTextAlignment="Start"
+                                <Label  HorizontalTextAlignment="Start"
                                 VerticalTextAlignment="Center"
                                 HorizontalOptions="StartAndExpand"
-                                FontSize="16"
+                                FontSize="18"
                                        FontAttributes="Bold"
                                 Text="Date of birth"
                                 TextColor="Black" >
@@ -57,8 +55,8 @@
                                 HorizontalTextAlignment="Start"
                                 VerticalTextAlignment="Center"
                                 HorizontalOptions="StartAndExpand"
-                                FontSize="16"
-                                Text="dob"
+                                FontSize="18"
+                                Text="{Binding dob}"
                                 TextColor="Black" >
                                 </Label>
 
@@ -66,11 +64,10 @@
                             </StackLayout>
                             <StackLayout Orientation="Horizontal" Padding="3,3,3,3" VerticalOptions="Start" >
 
-                                <Label FontAttributes="None"
-                                HorizontalTextAlignment="Start"
+                                <Label HorizontalTextAlignment="Start"
                                 VerticalTextAlignment="Center"
                                 HorizontalOptions="StartAndExpand"
-                                FontSize="16"
+                                FontSize="18"
                                        FontAttributes="Bold"
                                 Text="Education"
                                 TextColor="Black" >
@@ -80,8 +77,8 @@
                                 HorizontalTextAlignment="Start"
                                 VerticalTextAlignment="Center"
                                 HorizontalOptions="StartAndExpand"
-                                FontSize="16"
-                                Text="education"
+                                FontSize="18"
+                                Text="{Binding education}"
                                 TextColor="Black" >
                                 </Label>
 
@@ -92,9 +89,7 @@
                                 HorizontalTextAlignment="Start"
                                 VerticalTextAlignment="Center"
                                 HorizontalOptions="StartAndExpand"
-                                FontSize="16"
-                                LineBreakMode="WordWrap"
-                                   XAlign="Center"
+                                FontSize="18"
                                 Text="{Binding description}"
                                 TextColor="Black" >
                             </Label>

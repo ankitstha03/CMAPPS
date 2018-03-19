@@ -4,21 +4,39 @@
              x:Class="cmapp.Views.MessageDetailPage">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
-               
+            <StackLayout Padding="15,15,15,15" HorizontalOptions="StartAndExpand">
 
-                    <StackLayout Orientation="Vertical">
+
+                <StackLayout  Orientation="Vertical" HorizontalOptions="StartAndExpand">
                         <!--<Frame OutlineColor = "Transparent" Padding ="3, 3, 3, 3" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Opacity="0.7" BackgroundColor = "#ffffff">
                             <Label x:Name="Msgsource"  TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
                         </Frame>-->
 
 
-                        <StackLayout Orientation="Vertical" Padding="10,5,10,5" HorizontalOptions="Start" >
+                        <StackLayout Orientation="Vertical" Padding="10,5,10,5" HorizontalOptions="StartAndExpand" >
+                        <Frame CornerRadius = "5"
+                                OutlineColor = "Gray"
+                                Padding = "15, 5, 15, 5"
+                                HorizontalOptions = "End"
+                                VerticalOptions = "Fill"
+                                BackgroundColor = "Transparent">
+
+
                             <Label FontAttributes="None"
-                           HorizontalTextAlignment="Start"
+                               HorizontalTextAlignment="Start"
+                               VerticalTextAlignment="Start"
+                               HorizontalOptions="StartAndExpand"
+                               FontSize="12"
+                               Text="{Binding status}" TextColor="Black">
+                            </Label>
+
+                        </Frame>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
+
+                            <Label HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="16"
+                           FontSize="18"
                                    FontAttributes="Bold"
                                    
                            Text="Sent by:"
@@ -28,16 +46,18 @@
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="16"
+                           FontSize="18"
                            Text="{Binding full_name , Mode = TwoWay}"
                            TextColor="Black" >
                             </Label>
-                            <Label FontAttributes="None"
-                           HorizontalTextAlignment="Start"
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
+
+                            <Label HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
                                    FontAttributes="Bold"
-                           FontSize="16"
+                           FontSize="18"
                            Text="Email"
                            TextColor="Black" >
                             </Label>
@@ -45,15 +65,17 @@
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="16"
+                           FontSize="18"
                            Text="{Binding email , Mode = TwoWay}"
                            TextColor="Gray" >
                             </Label>
-                            <Label FontAttributes="None"
-                           HorizontalTextAlignment="Start"
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
+
+                            <Label HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="16"
+                           FontSize="18"
                                    FontAttributes="Bold"
                                    
                            Text="Contact no.:"
@@ -63,16 +85,17 @@
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="16"
+                           FontSize="18"
                            Text="{Binding contact_no , Mode = TwoWay}"
                            TextColor="Gray" >
                             </Label>
-
-                            <Label FontAttributes="None"
+                        </StackLayout>
+                            
+                        <Label 
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="16"
+                           FontSize="18"
                                    FontAttributes="Bold"
                                    
                            Text="Subject:"
@@ -82,47 +105,28 @@
                             HorizontalTextAlignment="Start"
                             VerticalTextAlignment="Center"
                             HorizontalOptions="StartAndExpand"
-                            FontSize="16"
+                            FontSize="18"
                             Text="{Binding subject , Mode = TwoWay}"
                             TextColor="Black" >
                             </Label>
-                            <Label FontAttributes="None"
+                            <Label 
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="16"
+                           FontSize="18"
                                    FontAttributes="Bold"
-                           Text="Message"
+                           Text="Message:"
                            TextColor="Black" >
                             </Label>
                             <Label FontAttributes="None"
                             HorizontalTextAlignment="Start"
                             VerticalTextAlignment="Center"
                             HorizontalOptions="StartAndExpand"
-                            FontSize="16"
+                            FontSize="18"
                             Text="{Binding body , Mode = TwoWay}"
                             TextColor="Black" >
                             </Label>
 
-                            <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
-                                <Frame CornerRadius = "5"
-                                OutlineColor = "Gray"
-                                Padding = "15, 5, 15, 5"
-                                HorizontalOptions = "Start"
-                                VerticalOptions = "Fill"
-                                BackgroundColor = "Transparent">
-
-
-                                    <Label FontAttributes="None"
-                               HorizontalTextAlignment="Start"
-                               VerticalTextAlignment="Start"
-                               HorizontalOptions="StartAndExpand"
-                               FontSize="12"
-                               Text="{Binding status}" TextColor="Black">
-                                    </Label>
-
-                                </Frame>
-                            </StackLayout>
 
                         </StackLayout>
 

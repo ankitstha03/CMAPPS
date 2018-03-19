@@ -18,7 +18,7 @@ namespace cmapp.Views
 		{
 			InitializeComponent ();
             BindingContext =news;
-            Title = new string(news.title.Take(15).ToArray()) + "...";
+            Title = new string(news.title.Take(40).ToArray()) + "...";
         }
 
     }

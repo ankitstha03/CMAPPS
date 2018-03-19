@@ -143,14 +143,15 @@ namespace cmapp.Views
                         Label title = new Label
                         {
                             Text = n.title,
-                            FontSize = 16,
+                            FontSize = 18,
+                            FontAttributes=FontAttributes.Bold,
                             TextColor = Color.Black
                         };
 
                         Label desc = new Label
                         {
                             Text = n.description,
-                            FontSize = 16,
+                            FontSize = 18,
                             TextColor = Color.Black
                         };
 
@@ -241,14 +242,15 @@ namespace cmapp.Views
                         Label title = new Label
                         {
                             Text = n2.title,
-                            FontSize = 16,
+                            FontSize = 18,
+                            FontAttributes = FontAttributes.Bold,
                             TextColor = Color.Black
                         };
 
                         Label desc = new Label
                         {
                             Text = new String(n2.description.Take(200).ToArray())+"...",
-                            FontSize = 16,
+                            FontSize = 18,
                             TextColor = Color.Black
                         };
 

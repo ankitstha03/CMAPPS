@@ -19,15 +19,14 @@
             <AbsoluteLayout>
                 <Image Source="{Binding title_image}"  AbsoluteLayout.LayoutBounds="0,0,1,220" Aspect="AspectFill" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional"/>
                 <Frame CornerRadius = "5" OutlineColor = "Transparent" Padding ="3, 3, 3, 3" AbsoluteLayout.LayoutBounds="1.05,10,0.35,21" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" Opacity="0.7" BackgroundColor = "#ffffff">
-                    <Label Text="Local news"  TextColor="Black" HorizontalTextAlignment="Start" VerticalOptions="Center" FontSize="16"/>
+                    <Label Text="Local news"  TextColor="Black" HorizontalTextAlignment="Start" VerticalOptions="Center" FontSize="14"/>
                 </Frame>
             </AbsoluteLayout>
 
                 <StackLayout>
 
                             <StackLayout Orientation="Vertical" Padding="10,5,10,5" HorizontalOptions="Start" >
-                                <Label FontAttributes="None"
-                           x:Name="newstitle"
+                                <Label  x:Name="newstitle"
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
@@ -40,8 +39,7 @@
                                     
 
 
-                                        <Label FontAttributes="None"
-                               HorizontalTextAlignment="Start"
+                                        <Label   HorizontalTextAlignment="Start"
                                VerticalTextAlignment="Start"
                                HorizontalOptions="StartAndExpand"
                                FontSize="12"
@@ -73,7 +71,7 @@
                             HorizontalTextAlignment="Start"
                             VerticalTextAlignment="Center"
                             HorizontalOptions="StartAndExpand"
-                            FontSize="16"
+                            FontSize="18"
                             Text="{Binding desc}"
                             TextColor="Black" >
                                 </Label>

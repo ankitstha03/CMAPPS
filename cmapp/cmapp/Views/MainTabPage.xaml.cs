@@ -17,25 +17,32 @@ namespace cmapp.Views
         public MainTabPage (int id)
         {
             InitializeComponent();
-            if (Constants.English)
+            try
             {
-                Title = "Shankar Pokhrel";
-                this.Children.Add(new HomeView() { Title="Home"});
-                this.Children.Add(new NewsTabPage() { Title = "News" });
-                this.Children.Add(new EventSchedule() { Title = "Schedule" });
-                this.Children.Add(new MessageView() { Title = "Suggestions" });
+                if (Constants.English)
+                {
+                    Title = "Shankar Pokhrel";
+                    this.Children.Add(new HomeView() { Title = "Home" });
+                    this.Children.Add(new NewsTabPage() { Title = "News" });
+                    this.Children.Add(new EventSchedule() { Title = "Schedule" });
+                    this.Children.Add(new MessageView() { Title = "Suggestions" });
+                    this.Children.Add(new Ptalk() { Title = "Prosperity Talks" });
+                }
+                else
+                {
+                    Title = "शंकर पोख्रेल";
+                    this.Children.Add(new HomeView() { Title = "प्रमुख" });
+                    this.Children.Add(new NewsTabPage() { Title = "समाचार" });
+                    this.Children.Add(new EventSchedule() { Title = "तालिका" });
+                    this.Children.Add(new MessageView() { Title = "सुझाव" });
+                    this.Children.Add(new Ptalk() { Title = "समृद्धि संबाद" });
+                }
 
+                CurrentPage = Children[id];
             }
-            else
+            catch(Exception ex)
             {
-                Title = "शंकर पोख्रेल";
-                this.Children.Add(new HomeView() { Title= "प्रमुख" });
-                this.Children.Add(new NewsTabPage() { Title = "समाचार" });
-                this.Children.Add(new EventSchedule() { Title = "तालिका" });
-                this.Children.Add(new MessageView() { Title = "सुझाव" });
             }
-
-            CurrentPage = Children[id];
         }
 
         protected override bool OnBackButtonPressed()

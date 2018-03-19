@@ -17,7 +17,7 @@ namespace cmapp.Views
 		{
 			InitializeComponent ();
             BindingContext = notific;
-            Title = new string(notific.title.Take(15).ToArray()) + "...";
+            Title = new string(notific.title.Take(40).ToArray()) + "...";
         }
 	}
 }

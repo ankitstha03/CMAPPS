@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using cmapp.Models;
+using System.Collections.ObjectModel;
+using System.Net.Http;
+using Newtonsoft.Json;
+using Plugin.Connectivity;
+using MonkeyCache.FileStore;
 
 namespace cmapp.Views
 {
@@ -19,16 +25,7 @@ namespace cmapp.Views
         public TalkPage()
         {
             InitializeComponent();
-            if (Constants.English)
-            {
-
-                Title = "Notices";
-            }
-            else
-            {
-
-                Title = " सुचना";
-            }
+            
             DataGet();
 
             CrossConnectivity.Current.ConnectivityChanged += async (sender, args) =>
@@ -40,6 +37,18 @@ namespace cmapp.Views
             };
         }
 
+        private void Onchange(object sender, TextChangedEventArgs e)
+        {
+            if (!String.IsNullOrWhiteSpace(e.NewTextValue))
+            {
+                listView.ItemsSource = NotiCollection.Where(c => c.title.StartsWith(e.NewTextValue));
+            }
+            else
+            {
+                NotiCollection = new ObservableCollection<Notifications>(notlist);
+                listView.ItemsSource = NotiCollection.Reverse<Notifications>();
+            }
+        }
         private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem == null)
@@ -63,6 +72,10 @@ namespace cmapp.Views
                 try
                 {
                     notlist = await MoneyCache.GetAsync<List<Notifications>>(Url);
+                    foreach (Notifications n in notlist)
+                    {
+                        n.desc = new String(n.description.Take(200).ToArray()) + "...";
+                    }
                     NotiCollection = new ObservableCollection<Notifications>(notlist);
                     listView.ItemsSource = NotiCollection.Reverse<Notifications>();
                     listView.Opacity = 0;

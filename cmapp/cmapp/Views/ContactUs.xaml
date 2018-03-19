@@ -33,31 +33,31 @@
                         
                         <Grid Grid.Row="1">
                         
-                            <Entry x:Name="enUser"  HorizontalOptions="Fill"  FontSize="16"/>
+                            <Entry x:Name="enUser"  HorizontalOptions="Fill"  FontSize="18"/>
                         </Grid>
 
 
 
                         <Grid Grid.Row="2">
 
-                            <Entry x:Name="enEmail"  HorizontalOptions="Fill"  FontSize="16"/>
+                            <Entry x:Name="enEmail"  HorizontalOptions="Fill"  FontSize="18"/>
                         </Grid>
 
 
                         <Grid Grid.Row="3">
 
-                                <Entry x:Name="enPhone" Keyboard="Numeric" HorizontalOptions="Fill"   FontSize="16"/>
+                                <Entry x:Name="enPhone" Keyboard="Numeric" HorizontalOptions="Fill"   FontSize="18"/>
                         </Grid>
                         
                         <Grid Grid.Row="4">
 
-                            <Entry x:Name="enSub" HorizontalOptions="Fill"   FontSize="16"/>
+                            <Entry x:Name="enSub" HorizontalOptions="Fill"   FontSize="18"/>
                         </Grid>
 
 
                         <Grid Grid.Row="5">
 
-                                <Entry x:Name="enDesc" HorizontalOptions="Fill"   FontSize="16"/>
+                                <Entry x:Name="enDesc" HorizontalOptions="Fill"   FontSize="18"/>
                         </Grid>
 
                         </Grid>

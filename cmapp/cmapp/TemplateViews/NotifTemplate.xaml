@@ -21,26 +21,19 @@
                   Android="5" iOS="5"/>
         </Frame.Padding>
 
-                <StackLayout Padding="5" Orientation="Horizontal" VerticalOptions="Start" >
-            <StackLayout Orientation="Vertical" HorizontalOptions="Start" >
-                        <Label FontAttributes="None"
+        <StackLayout Padding="5" Orientation="Vertical" VerticalOptions="Start" >
+            <Image Source="{Binding title_image}"  Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="Start"/>
+
+            <Label FontAttributes="Bold"
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="20"
+                           FontSize="24"
                            Text="{Binding title , Mode = TwoWay}" 
                            TextColor="Black" >
                         </Label>
-                <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
-                    <Frame CornerRadius = "5"
-                                OutlineColor = "Gray"
-                                Padding = "15, 5, 15, 5"
-                                HorizontalOptions = "Start"
-                                VerticalOptions = "Fill"
-                                BackgroundColor = "Transparent">
-
-
-                        <Label FontAttributes="None"
+                   
+                        <Label FontAttributes="Italic"
                                HorizontalTextAlignment="Start"
                                VerticalTextAlignment="Start"
                                HorizontalOptions="StartAndExpand"
@@ -48,26 +41,16 @@
                                Text="{Binding start_date}" TextColor="Black">
 
                         </Label>
-                    </Frame>
-                    <Frame CornerRadius = "5"
-                                OutlineColor = "Gray"
-                                Padding = "15, 5, 15, 5"
-                                HorizontalOptions = "End"
-                                VerticalOptions = "Fill"
-                                BackgroundColor = "Transparent">
-                        <Label FontAttributes="None"
-                               HorizontalTextAlignment="End"
-                               VerticalTextAlignment="Center"
-                               HorizontalOptions="End"
-                               FontSize="12"
-                               Text="{Binding location}" TextColor="Black">
+                    
+                <Label FontAttributes="None"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="StartAndExpand"
+                           FontSize="18"
+                           Text="{Binding description , Mode = TwoWay}" 
+                           TextColor="Black" >
+                </Label>
 
-                        </Label>
-                    </Frame>
-                </StackLayout>
-
-            
-            </StackLayout>
         </StackLayout>
     </Frame>
 </ContentView>

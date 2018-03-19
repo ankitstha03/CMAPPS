@@ -17,7 +17,7 @@ namespace cmapp.Views
 		public NewsDetailPage (News news)
 		{
 			InitializeComponent ();
-            Title = new string(news.title.Take(15).ToArray()) + "...";
+            Title = new string(news.title.Take(40).ToArray()) + "...";
             var browser = new WebView
             {
                 Source = news.url

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cmapp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,15 +19,13 @@ namespace cmapp.Views
             this.BarBackgroundColor = Color.Red;
             if (Constants.English)
             {
-                this.Children.Add(new TalkPage() { Title = "My Say" });
+                this.Children.Add(new TalkPage() { Title = "Article" });
                 this.Children.Add(new VideoView() { Title = "Video" });
-                Title = "Prosperity Talks";
             }
             else
             {
-                this.Children.Add(new TalkPage() { Title = "मेरो भनाइ" });
+                this.Children.Add(new TalkPage() { Title = "लिखित" });
                 this.Children.Add(new VideoView() { Title = "भिडियो " });
-                Title = "समृद्धि";
             }
         }
     }

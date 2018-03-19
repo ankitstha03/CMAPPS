@@ -16,11 +16,11 @@
         </Frame.Padding>
 
             <StackLayout Orientation="Vertical" Padding="10,5,10,5" HorizontalOptions="Start" >
-                <Label FontAttributes="None"
+                <Label FontAttributes="Bold"
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="16"
+                           FontSize="24"
                            Text="{Binding subject , Mode = TwoWay}"
                            TextColor="Black" >
                 </Label>
@@ -43,7 +43,7 @@
 
             </Frame>
             <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
-                    <Label FontAttributes="None"
+                    <Label FontAttributes="Bold"
                             HorizontalTextAlignment="Start"
                             VerticalTextAlignment="Center"
                             HorizontalOptions="StartAndExpand"

@@ -26,8 +26,7 @@
 
 
             <StackLayout Orientation="Vertical" Padding="10,5,10,5" HorizontalOptions="Start" >
-                <Label FontAttributes="None"
-                           x:Name="newstitle"
+                <Label   x:Name="newstitle"
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
@@ -51,7 +50,7 @@
                             HorizontalTextAlignment="Start"
                             VerticalTextAlignment="Center"
                             HorizontalOptions="StartAndExpand"
-                            FontSize="16"
+                            FontSize="18"
                             Text="{Binding description , Mode = TwoWay}"
                             TextColor="Black" >
                 </Label>

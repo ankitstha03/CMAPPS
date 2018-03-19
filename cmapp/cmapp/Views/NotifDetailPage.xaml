@@ -4,26 +4,25 @@
              x:Class="cmapp.Views.NotifDetailPage">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
+            <StackLayout >
                
 
                     <StackLayout Orientation="Vertical">
-                    <Label FontAttributes="Bold"
+                    <Label Margin="5,5,5,5" FontAttributes="Bold"
                            x:Name="newstitle"
-                           HorizontalTextAlignment="Start"
+                           HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="20"
+                           FontSize="24"
                            Text="{Binding title , Mode = TwoWay}"
                            TextColor="Black" >
                     </Label>
                     
-                        <Image Source="{Binding title_image}" Margin="10,0,10,5"  Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
+                        <Image Source="{Binding title_image}"  Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
 
 
-                        <StackLayout Orientation="Vertical" Padding="10,5,10,5" HorizontalOptions="Start" >
+                    <StackLayout Orientation="Vertical" Padding="15,15,15,15" HorizontalOptions="Start" >
                            
-                            <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
 
 
                                     <Label FontAttributes="Italic"
@@ -40,11 +39,10 @@
                             HorizontalTextAlignment="Start"
                             VerticalTextAlignment="Center"
                             HorizontalOptions="StartAndExpand"
-                            FontSize="16"
+                            FontSize="18"
                             Text="{Binding description , Mode = TwoWay}"
                             TextColor="Black" >
                             </Label>
-
                             
 
                         </StackLayout>
@@ -53,7 +51,6 @@
 
                 </StackLayout>
 
-            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

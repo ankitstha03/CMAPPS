@@ -57,20 +57,27 @@ namespace cmapp.Views
             {
                 try
                 {
-                    var msg = new Message { full_name = enUser.Text, email = enEmail.Text, contact_no = enPhone.Text, subject = enSub.Text, body = enDesc.Text, status = "Sent" };
-                    var content = JsonConvert.SerializeObject(msg);
-                    var response = await _client.PostAsync(Url, new StringContent(content, Encoding.UTF8, "application/json"));
+                    if (enUser.Text != null && enUser.Text != "" && enEmail.Text != null && enEmail.Text != "" && enPhone.Text != null && enPhone.Text != "" && enSub.Text != null && enSub.Text != "" && enDesc.Text != null && enDesc.Text != "") {
+                        var msg = new Message { full_name = enUser.Text, email = enEmail.Text, contact_no = enPhone.Text, subject = enSub.Text, body = enDesc.Text, status = "Sent" };
+                        var content = JsonConvert.SerializeObject(msg);
+                        var response = await _client.PostAsync(Url, new StringContent(content, Encoding.UTF8, "application/json"));
 
-                    if ((int)response.StatusCode >= 200 && (int)response.StatusCode <= 299)
-                    {
-                        XFToast.ShortMessage("Message Sent");
-                        await Navigation.PopAsync(true);
+                        if ((int)response.StatusCode >= 200 && (int)response.StatusCode <= 299)
+                        {
+                            XFToast.ShortMessage("Message Sent");
+                            await Navigation.PopAsync(true);
+                        }
+                        else
+                        {
+                            XFToast.ShortMessage("Please enter a valid email address");
+                        }
                     }
                     else
                     {
                         XFToast.ShortMessage("Please fill all the fields");
                     }
-                }catch(Exception ex)
+                }
+                catch(Exception ex)
                 {
                     XFToast.ShortMessage("Internet cut-off while sending");
                 }

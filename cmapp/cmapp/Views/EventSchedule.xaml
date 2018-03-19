@@ -10,7 +10,7 @@
     <ContentPage.BindingContext>
         <viewModel:Notifications/>
     </ContentPage.BindingContext>
-    <ListView
+    <ListView Margin="15,15,15,15"
     x:Name="timelineListView"
     ItemSelected="timelineListView_ItemTapped"
         IsPullToRefreshEnabled="True"
