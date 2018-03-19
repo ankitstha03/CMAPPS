@@ -12,7 +12,7 @@
                            x:Name="newstitle"
                            HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"
-                           HorizontalOptions="StartAndExpand"
+                           HorizontalOptions="FillAndExpand"
                            FontSize="24"
                            Text="{Binding title , Mode = TwoWay}"
                            TextColor="Black" >

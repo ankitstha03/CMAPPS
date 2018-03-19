@@ -35,22 +35,27 @@ namespace cmapp.Views
         public HomeView ()
 		{
 			InitializeComponent ();
-		
 
-            
+
+            try
+            {
                 DataGet();
 
-	CrossConnectivity.Current.ConnectivityChanged += async (sender, args) =>
+                CrossConnectivity.Current.ConnectivityChanged += async (sender, args) =>
+                        {
+                            if (args.IsConnected)
+                            {
+                                DataGet();
+                            }
+
+                        };
+                //view.Margin = new Thickness(-200, 0, 200, 0);
+                //view.TranslateTo(200, 0, 1000, Easing.SpringIn);
+
+            }catch(Exception ex)
             {
-                if (args.IsConnected)
-                {
-                    DataGet();
-                }
-            };
-            //view.Margin = new Thickness(-200, 0, 200, 0);
-            //view.TranslateTo(200, 0, 1000, Easing.SpringIn);
 
-
+            }
         }
 
 

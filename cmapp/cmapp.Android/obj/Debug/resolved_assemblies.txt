@@ -4,6 +4,7 @@ D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\ImageCircle.Forms.Plugin
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\ImageCircle.Forms.Plugin.Android.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Java.Interop.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\LinqToTwitter.netstandard.dll
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Microsoft.CSharp.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\MonkeyCache.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\MonkeyCache.FileStore.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Mono.Android.dll

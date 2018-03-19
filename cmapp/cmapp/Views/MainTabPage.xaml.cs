@@ -26,7 +26,7 @@ namespace cmapp.Views
                     this.Children.Add(new NewsTabPage() { Title = "News" });
                     this.Children.Add(new EventSchedule() { Title = "Schedule" });
                     this.Children.Add(new MessageView() { Title = "Suggestions" });
-                    this.Children.Add(new Ptalk() { Title = "Prosperity Talks" });
+                    this.Children.Add(new TalkPage() { Title = "Prosperity Talks" });
                 }
                 else
                 {
@@ -35,7 +35,7 @@ namespace cmapp.Views
                     this.Children.Add(new NewsTabPage() { Title = "समाचार" });
                     this.Children.Add(new EventSchedule() { Title = "तालिका" });
                     this.Children.Add(new MessageView() { Title = "सुझाव" });
-                    this.Children.Add(new Ptalk() { Title = "समृद्धि संबाद" });
+                    this.Children.Add(new TalkPage() { Title = "समृद्धि संबाद" });
                 }
 
                 CurrentPage = Children[id];

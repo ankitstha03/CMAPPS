@@ -13,7 +13,7 @@
                         </Frame>-->
 
 
-                        <StackLayout Orientation="Vertical" Padding="10,5,10,5" HorizontalOptions="StartAndExpand" >
+                        <StackLayout Orientation="Vertical" Padding="10,5,10,5" HorizontalOptions="FillAndExpand" >
                         <Frame CornerRadius = "5"
                                 OutlineColor = "Gray"
                                 Padding = "15, 5, 15, 5"
@@ -23,7 +23,7 @@
 
 
                             <Label FontAttributes="None"
-                               HorizontalTextAlignment="Start"
+                               HorizontalTextAlignment="End"
                                VerticalTextAlignment="Start"
                                HorizontalOptions="StartAndExpand"
                                FontSize="12"

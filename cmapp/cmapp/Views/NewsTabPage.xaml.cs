@@ -16,16 +16,22 @@ namespace cmapp.Views
         public NewsTabPage ()
         {
             InitializeComponent();
-            this.BarBackgroundColor = Color.Red;
-            if (Constants.English)
+            try
             {
-                this.Children.Add(new NepaliNewsView() { Title = "Local" });
-                this.Children.Add(new NewsView("http://en.pradesh-5.com/api-auth/press-news/") { Title = "Media" });
-            }
-            else
+                this.BarBackgroundColor = Color.Red;
+                if (Constants.English)
+                {
+                    this.Children.Add(new NepaliNewsView() { Title = "Local" });
+                    this.Children.Add(new NewsView("http://en.pradesh-5.com/api-auth/press-news/") { Title = "Media" });
+                }
+                else
+                {
+                    this.Children.Add(new NepaliNewsView() { Title = "स्थानिय" });
+                    this.Children.Add(new NewsView("http://pradesh-5.com/api-auth/press-news/") { Title = "मिडिया" });
+                }
+            }catch(Exception ex)
             {
-                this.Children.Add(new NepaliNewsView() { Title = "स्थानिय" });
-                this.Children.Add(new NewsView("http://pradesh-5.com/api-auth/press-news/") { Title = "मिडिया" });
+
             }
             
         }

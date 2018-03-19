@@ -28,7 +28,7 @@ public static string ScrubHtml(string value2)
             var step1 = Regex.Replace(value2, @"<[^>]+>|&nbsp;", "").Trim();
             var step2 = Regex.Replace(step1, @"\s{2,}", " ").Trim();
             var step3 = Regex.Replace(step2, @"T\d+\:\d+\:\d+\+05\:45", "").Trim();
-            var step4 = Regex.Replace(step3, @"T\d+\:\d+\:\d+Z", "");
+            var step4 = Regex.Replace(step3, @"T\d+\:\d+\:\d+Z", "").Trim();
             return step4;
         }
     }
