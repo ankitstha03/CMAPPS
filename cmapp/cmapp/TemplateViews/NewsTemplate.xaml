@@ -4,7 +4,6 @@
              x:Class="cmapp.TemplateViews.NewsTemplate">
 
         <Frame IsClippedToBounds="True"
-         CornerRadius = "12"
          HasShadow="True"
          BackgroundColor="White" 
          OutlineColor="Gray">
@@ -32,7 +31,8 @@
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="16"
+                           FontSize="20"
+                            FontAttributes="Bold"
                            Text="{Binding title , Mode = TwoWay}"
                            TextColor="Black" >
                 </Label>
@@ -51,7 +51,7 @@
                             HorizontalTextAlignment="Start"
                             VerticalTextAlignment="Center"
                             HorizontalOptions="StartAndExpand"
-                            FontSize="14"
+                            FontSize="16"
                             Text="{Binding description , Mode = TwoWay}"
                             TextColor="Black" >
                 </Label>

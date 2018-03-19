@@ -26,9 +26,20 @@ namespace cmapp.Views
 
         public NotificationPage ()
 		{
+
 			InitializeComponent ();
-            
-                DataGet();
+           
+                if (Constants.English)
+            {
+
+                Title = "Notices";
+            }
+            else
+            {
+
+                Title = " सुचना";
+            }
+            DataGet();
 
             CrossConnectivity.Current.ConnectivityChanged += async (sender, args) =>
             {

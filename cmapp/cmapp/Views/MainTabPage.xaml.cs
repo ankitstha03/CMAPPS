@@ -31,7 +31,7 @@ namespace cmapp.Views
                 Title = "शंकर पोख्रेल";
                 this.Children.Add(new HomeView() { Title= "प्रमुख" });
                 this.Children.Add(new NewsTabPage() { Title = "समाचार" });
-                this.Children.Add(new EventSchedule() { Title = "तलिका" });
+                this.Children.Add(new EventSchedule() { Title = "तालिका" });
                 this.Children.Add(new MessageView() { Title = "सुझाव" });
             }
 

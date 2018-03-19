@@ -84,7 +84,6 @@ namespace cmapp.Views
                         Frame fram = new Frame
                         {
                             IsClippedToBounds = true,
-                            CornerRadius = 12,
                             HasShadow = true,
                             BackgroundColor = Color.White,
                             OutlineColor = Color.Gray,
@@ -184,7 +183,6 @@ namespace cmapp.Views
                         Frame fram2 = new Frame
                         {
                             IsClippedToBounds = true,
-                            CornerRadius = 12,
                             HasShadow = true,
                             BackgroundColor = Color.White,
                             OutlineColor = Color.Gray,

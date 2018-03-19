@@ -31,7 +31,7 @@ namespace cmapp.Views
                 enEmail.Placeholder = "Your Email";
                 enPhone.Placeholder = "Your Phone Number";
                 enSub.Placeholder = "Subject";
-                enDesc.Placeholder = "Body";
+                enDesc.Placeholder = "Message";
                 btnmessage.Text = "Send Suggestion";
             }
             else
@@ -42,7 +42,7 @@ namespace cmapp.Views
                 enEmail.Placeholder = "हजुरको इमेल";
                 enPhone.Placeholder = "हजुरको फोन नम्बर";
                 enSub.Placeholder = "विषय";
-                enDesc.Placeholder = "विश्लेशन";
+                enDesc.Placeholder = "सन्देश";
                 btnmessage.Text = "सुझाव पठाउनुहोस्";
             }
         }

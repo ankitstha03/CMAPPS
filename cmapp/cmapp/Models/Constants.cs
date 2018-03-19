@@ -12,9 +12,9 @@ namespace cmapp.Models
 {
     class Constants
     {
-        public static bool English = true;
+        public static bool English = false;
         public static User currentuser;
-        public static string ur= "http://en.pradesh-5.com";
+        public static string ur= "http://pradesh-5.com";
         public static string ScrubHtml2(string value)
         {
             var step1 = Regex.Replace(value, @"\\", "").Trim();

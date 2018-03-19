@@ -5,19 +5,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Frame IsClippedToBounds="True"
-         CornerRadius = "12"
-         HasShadow="True"
-         BackgroundColor="White" 
-         OutlineColor="Gray">
-                    <Frame.Margin>
-                        <OnPlatform x:TypeArguments="Thickness"
-                  Android="10" iOS="10"/>
-                    </Frame.Margin>
-                    <Frame.Padding>
-                        <OnPlatform x:TypeArguments="Thickness"
-                  Android="0" iOS="0"/>
-                    </Frame.Padding>
+               
 
                     <StackLayout Orientation="Vertical">
                         <!--<Frame OutlineColor = "Transparent" Padding ="3, 3, 3, 3" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Opacity="0.7" BackgroundColor = "#ffffff">
@@ -30,7 +18,9 @@
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="12"
+                           FontSize="16"
+                                   FontAttributes="Bold"
+                                   
                            Text="Sent by:"
                            TextColor="Black" >
                             </Label>
@@ -46,7 +36,8 @@
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="12"
+                                   FontAttributes="Bold"
+                           FontSize="16"
                            Text="Email"
                            TextColor="Black" >
                             </Label>
@@ -54,7 +45,7 @@
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="10"
+                           FontSize="16"
                            Text="{Binding email , Mode = TwoWay}"
                            TextColor="Gray" >
                             </Label>
@@ -62,7 +53,9 @@
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="12"
+                           FontSize="16"
+                                   FontAttributes="Bold"
+                                   
                            Text="Contact no.:"
                            TextColor="Black" >
                             </Label>
@@ -70,7 +63,7 @@
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="10"
+                           FontSize="16"
                            Text="{Binding contact_no , Mode = TwoWay}"
                            TextColor="Gray" >
                             </Label>
@@ -79,7 +72,9 @@
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="12"
+                           FontSize="16"
+                                   FontAttributes="Bold"
+                                   
                            Text="Subject:"
                            TextColor="Black" >
                             </Label>
@@ -87,7 +82,7 @@
                             HorizontalTextAlignment="Start"
                             VerticalTextAlignment="Center"
                             HorizontalOptions="StartAndExpand"
-                            FontSize="14"
+                            FontSize="16"
                             Text="{Binding subject , Mode = TwoWay}"
                             TextColor="Black" >
                             </Label>
@@ -95,15 +90,16 @@
                            HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
                            HorizontalOptions="StartAndExpand"
-                           FontSize="12"
-                           Text="Body"
+                           FontSize="16"
+                                   FontAttributes="Bold"
+                           Text="Message"
                            TextColor="Black" >
                             </Label>
                             <Label FontAttributes="None"
                             HorizontalTextAlignment="Start"
                             VerticalTextAlignment="Center"
                             HorizontalOptions="StartAndExpand"
-                            FontSize="14"
+                            FontSize="16"
                             Text="{Binding body , Mode = TwoWay}"
                             TextColor="Black" >
                             </Label>
@@ -132,7 +128,6 @@
 
                     </StackLayout>
 
-                </Frame>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

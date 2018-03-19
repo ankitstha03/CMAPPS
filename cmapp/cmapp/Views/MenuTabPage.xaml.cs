@@ -24,13 +24,13 @@ namespace cmapp.Views
             Icon.Icon = "Noticonwhite";
             if (Constants.English)
             {
-                Constants.ur = "http://pradesh-5.com";
-                Icon2.Text = "EN";
+                Constants.ur = "http://en.pradesh-5.com";
+                Icon2.Text = "NP";
             }
             else
             {
-                Constants.ur = "http://en.pradesh-5.com";
-                Icon2.Text = "NP";
+                Constants.ur = "http://pradesh-5.com";
+                Icon2.Text = "EN";
             }
             menuList = new List<MasterPageItem>();
 
@@ -54,7 +54,7 @@ namespace cmapp.Views
                 usname.Text = "शंकर पोख्रेल";
                 page1.Title = "प्रमुख";
                 page2.Title = "समाचार";
-                page3.Title = "तलिका";
+                page3.Title = "तालिका";
                 page4.Title = "सन्देश";
                 page5.Title = "चिन्नुहोस";
             }
