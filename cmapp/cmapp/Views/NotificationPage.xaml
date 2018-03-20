@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="cmapp.Views.NotificationPage"
              xmlns:view="clr-namespace:cmapp.TemplateViews"
-             xmlns:viewModel="clr-namespace:cmapp.Models">
+             xmlns:viewModel="clr-namespace:cmapp.Models"
+             BackgroundColor="White">
 
     <ContentPage.BindingContext>
         <viewModel:NotificationView/>

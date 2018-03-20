@@ -4,7 +4,7 @@
              x:Class="cmapp.Views.NepaliNewsView"
              xmlns:view="clr-namespace:cmapp.TemplateViews"
              xmlns:viewModel="clr-namespace:cmapp.Models"
-             Title="Nepali">
+             BackgroundColor="White">
     <ContentPage.BindingContext>
         <viewModel:NepNews/>
     </ContentPage.BindingContext>

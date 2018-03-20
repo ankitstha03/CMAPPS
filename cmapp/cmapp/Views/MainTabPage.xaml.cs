@@ -23,20 +23,27 @@ namespace cmapp.Views
                 {
                     Title = "Shankar Pokhrel";
                     this.Children.Add(new HomeView() { Title = "Home" });
-                    this.Children.Add(new NewsTabPage() { Title = "News" });
+                    this.Children.Add(new NepaliNewsView() { Title = "Local News" });
+                    this.Children.Add(new NewsView("http://en.pradesh-5.com/api-auth/press-news/") { Title = "Press News" });
                     this.Children.Add(new EventSchedule() { Title = "Schedule" });
                     this.Children.Add(new MessageView() { Title = "Suggestions" });
-                    this.Children.Add(new TalkPage() { Title = "Prosperity Talks" });
+                    this.Children.Add(new TalkPage() { Title = "Article Prosperity Talks" });
+                    this.Children.Add(new VideoView() { Title = "Video Prosperity Talks" });
+
                 }
                 else
                 {
                     Title = "शंकर पोख्रेल";
                     this.Children.Add(new HomeView() { Title = "प्रमुख" });
-                    this.Children.Add(new NewsTabPage() { Title = "समाचार" });
+                    this.Children.Add(new NepaliNewsView() { Title = "स्थानिय समाचार" });
+                    this.Children.Add(new NewsView("http://pradesh-5.com/api-auth/press-news/") { Title = "संचार समाचार" });
                     this.Children.Add(new EventSchedule() { Title = "तालिका" });
                     this.Children.Add(new MessageView() { Title = "सुझाव" });
-                    this.Children.Add(new TalkPage() { Title = "समृद्धि संबाद" });
+                    this.Children.Add(new TalkPage() { Title = "लिखित समृद्धि संबाद" });
+                    this.Children.Add(new VideoView() { Title = "भिडियो समृद्धि संबाद" });
+
                 }
+
 
                 CurrentPage = Children[id];
             }

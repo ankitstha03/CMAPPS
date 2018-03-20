@@ -4,7 +4,7 @@
              x:Class="cmapp.Views.VideoView"
              xmlns:view="clr-namespace:cmapp.TemplateViews"
              xmlns:viewModel="clr-namespace:cmapp.Models"
-             Title="Local">
+             BackgroundColor="White">
     <ContentPage.BindingContext>
         <viewModel:Video/>
     </ContentPage.BindingContext>
