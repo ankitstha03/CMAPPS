@@ -22,25 +22,21 @@ namespace cmapp.Views
                 if (Constants.English)
                 {
                     Title = "Shankar Pokhrel";
-                    this.Children.Add(new HomeView() { Title = "Home" });
-                    this.Children.Add(new NepaliNewsView() { Title = "Local News" });
-                    this.Children.Add(new NewsView("http://en.pradesh-5.com/api-auth/press-news/") { Title = "Press News" });
-                    this.Children.Add(new EventSchedule() { Title = "Schedule" });
-                    this.Children.Add(new MessageView() { Title = "Suggestions" });
-                    this.Children.Add(new TalkPage() { Title = "Article Prosperity Talks" });
-                    this.Children.Add(new VideoView() { Title = "Video Prosperity Talks" });
+                    this.Children.Add(new NavigationPage(new HomeView() { Title = "Home" }) { Title = "Home" });
+                    this.Children.Add(new NavigationPage(new NewsTabPage() { Title = "Local News" }) { Title = "Local News" });
+                    this.Children.Add(new NavigationPage(new EventSchedule() { Title = "Schedule" }) { Title = "Schedule" });
+                    this.Children.Add(new NavigationPage(new MessageView() { Title = "Suggestions" }) { Title = "Suggestions" });
+                    this.Children.Add(new NavigationPage(new Ptalk() { Title = "Article Prosperity Talks" }) { Title = "Article Prosperity Talks" });
 
                 }
                 else
                 {
                     Title = "शंकर पोख्रेल";
-                    this.Children.Add(new HomeView() { Title = "प्रमुख" });
-                    this.Children.Add(new NepaliNewsView() { Title = "स्थानिय समाचार" });
-                    this.Children.Add(new NewsView("http://pradesh-5.com/api-auth/press-news/") { Title = "संचार समाचार" });
-                    this.Children.Add(new EventSchedule() { Title = "तालिका" });
-                    this.Children.Add(new MessageView() { Title = "सुझाव" });
-                    this.Children.Add(new TalkPage() { Title = "लिखित समृद्धि संबाद" });
-                    this.Children.Add(new VideoView() { Title = "भिडियो समृद्धि संबाद" });
+                    this.Children.Add(new NavigationPage(new HomeView() { Title = "प्रमुख" }) { Title = "प्रमुख" });
+                    this.Children.Add(new NavigationPage(new NewsTabPage() { Title = "स्थानिय समाचार" }) { Title = "स्थानिय समाचार" });
+                    this.Children.Add(new NavigationPage(new EventSchedule() { Title = "तालिका" }) { Title = "तालिका" });
+                    this.Children.Add(new NavigationPage(new MessageView() { Title = "सुझाव" }) { Title = "सुझाव" });
+                    this.Children.Add(new NavigationPage(new Ptalk() { Title = "लिखित समृद्धि संबाद" }) { Title = "लिखित समृद्धि संबाद" });
 
                 }
 

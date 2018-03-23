@@ -80,7 +80,7 @@ namespace cmapp.Views
                     // Setting our list to be ItemSource for ListView in MainPage.xaml
                     navigationDrawerList.ItemsSource = menuList;
                     // Initial navigation, this can be used for our home page
-                    Detail = new NavigationPage(new MainTabPage(0));
+                    Detail = new MainTabPage(0);
 
                     this.BindingContext = Constants.currentuser;
                 }
@@ -108,7 +108,7 @@ namespace cmapp.Views
                 }
                 else
                 {
-                    Detail = new NavigationPage(new MainTabPage(item.id));
+                    Detail =new MainTabPage(item.id);
                 }
                 IsPresented = false;
                 navigationDrawerList.SelectedItem = null;
