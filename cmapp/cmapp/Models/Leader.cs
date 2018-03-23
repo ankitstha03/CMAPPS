@@ -12,7 +12,6 @@ namespace cmapp.Models
         public string dob { get; set; }
         public string birth_place { get; set; }
         public string education { get; set; }
-        public string quotation { get; set; }
         public string description { get; set; }
     }
 }

@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 using System.Threading.Tasks;
 using Firebase.Iid;
+using Plugin.HtmlLabel.Android;
 
 namespace cmapp.Droid
 {
@@ -20,7 +21,7 @@ namespace cmapp.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-
+            HtmlLabelRenderer.Initialize();
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
 
