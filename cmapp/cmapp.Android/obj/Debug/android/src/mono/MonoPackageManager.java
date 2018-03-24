@@ -108,6 +108,7 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "cmapp.Android.dll" comes first in this list. */
 		"cmapp.Android.dll",
 		"FormsViewGroup.dll",
+		"HtmlAgilityPack.dll",
 		"ImageCircle.Forms.Plugin.Abstractions.dll",
 		"ImageCircle.Forms.Plugin.Android.dll",
 		"LinqToTwitter.netstandard.dll",
@@ -118,6 +119,8 @@ class MonoPackageManager_Resources {
 		"Plugin.Connectivity.dll",
 		"Plugin.FirebasePushNotification.Abstractions.dll",
 		"Plugin.FirebasePushNotification.dll",
+		"Plugin.HtmlLabel.Android.dll",
+		"Plugin.HtmlLabel.dll",
 		"PushNotification.Plugin.Abstractions.dll",
 		"PushNotification.Plugin.dll",
 		"Refractored.XamForms.PullToRefresh.dll",

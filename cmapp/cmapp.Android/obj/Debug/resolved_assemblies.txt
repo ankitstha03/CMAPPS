@@ -1,5 +1,6 @@
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\cmapp.Android.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\FormsViewGroup.dll
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\HtmlAgilityPack.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\ImageCircle.Forms.Plugin.Abstractions.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\ImageCircle.Forms.Plugin.Android.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Java.Interop.dll
@@ -14,6 +15,8 @@ D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Plugin.Connectivity.Abst
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Plugin.Connectivity.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Plugin.FirebasePushNotification.Abstractions.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Plugin.FirebasePushNotification.dll
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Plugin.HtmlLabel.Android.dll
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Plugin.HtmlLabel.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\PushNotification.Plugin.Abstractions.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\PushNotification.Plugin.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Refractored.XamForms.PullToRefresh.dll
@@ -68,13 +71,6 @@ D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Xamarin.GooglePlayServic
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.ComponentModel.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Xml.ReaderWriter.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Reflection.dll
-D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Threading.dll
-D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Collections.Concurrent.dll
-D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Diagnostics.Debug.dll
-D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Linq.dll
-D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Runtime.InteropServices.dll
-D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Runtime.Extensions.dll
-D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Reflection.Extensions.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\netstandard.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Data.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Numerics.dll
@@ -92,6 +88,14 @@ D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Security.Cryptogr
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Security.SecureString.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Web.Services.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Xml.XPath.XDocument.dll
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Threading.dll
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Collections.Concurrent.dll
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Diagnostics.Debug.dll
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Linq.dll
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Runtime.InteropServices.dll
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Runtime.Extensions.dll
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Reflection.Extensions.dll
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.IO.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Resources.ResourceManager.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.ObjectModel.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Diagnostics.Tools.dll
@@ -99,6 +103,5 @@ D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Globalization.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Linq.Expressions.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Runtime.InteropServices.WindowsRuntime.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.ServiceModel.Internals.dll
-D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.IO.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Dynamic.Runtime.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\System.Text.RegularExpressions.dll

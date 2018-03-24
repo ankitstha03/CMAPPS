@@ -25,9 +25,13 @@ namespace cmapp.Models
 
 public static string ScrubHtml(string value2)
         {
-            var step1 = Regex.Replace(value2, @"<[^>]+>|&nbsp;", "").Trim();
-            var step2 = Regex.Replace(step1, @"\s{2,}", " ").Trim();
-            var step3 = Regex.Replace(step2, @"T\d+\:\d+\:\d+\+05\:45", "").Trim();
+            var step2 = Regex.Replace(value2, @"\*", "\n *").Trim();
+            var steps = Regex.Replace(step2, @"<b><", "<").Trim();
+            var stepss = Regex.Replace(steps, @"<br[^>]+>", "\n").Trim();
+            var steps2 = Regex.Replace(stepss, @"<b>", "\n\n >>").Trim();
+            var stepp = Regex.Replace(steps2, @"&nsbp;", "\t").Trim();
+            var step1 = Regex.Replace(stepp, @"<[^>]+>|&nbsp;", "").Trim();
+            var step3 = Regex.Replace(step1, @"T\d+\:\d+\:\d+\+05\:45", "").Trim();
             var step4 = Regex.Replace(step3, @"T\d+\:\d+\:\d+Z", "").Trim();
             return step4;
         }

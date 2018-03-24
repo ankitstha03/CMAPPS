@@ -62,3 +62,6 @@ System.Collections.Concurrent
 System.ComponentModel
 System.Runtime.InteropServices.WindowsRuntime
 System.Reflection.Extensions
+HtmlAgilityPack
+Plugin.HtmlLabel.Android
+Plugin.HtmlLabel
