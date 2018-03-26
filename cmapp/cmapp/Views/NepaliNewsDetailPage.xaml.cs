@@ -20,7 +20,7 @@ namespace cmapp.Views
             BindingContext =news;
             Title = new string(news.title.Take(40).ToArray()) + "...";
             string temp;
-            if (news.title_image != "" && news.title_image != null)
+            if (news.title_image == "" || news.title_image == null)
             {
                 temp = "<html><body style=\"width:100%;\"><h1 style=\"text-align:center;\"> " + news.title + "</h1><br><p>" + news.date + "</p><br><p style=\"text-align:justify!important;\">" + news.description + "</p></body></html> ";
 

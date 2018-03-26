@@ -19,7 +19,7 @@ namespace cmapp.Views
             BindingContext = notific;
             Title = new string(notific.title.Take(40).ToArray()) + "...";
             string temp;
-            if (notific.title_image != "" && notific.title_image != null)
+            if (notific.title_image == "" || notific.title_image == null)
             {
                 temp = "<html><body style=\"width:100%;\"><h1 style=\"text-align:center;\"> " + notific.title + "</h1><br><p>" + notific.start_date + "</p><br><p style=\"text-align:justify!important;\">" + notific.description + "</p></body></html> ";
 
