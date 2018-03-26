@@ -31,7 +31,9 @@ namespace cmapp.Models
 
         public static string ScrubHtml3(string value2)
         {
-            var step3 = Regex.Replace(value2, @"T\d+\:\d+\:\d+\+05\:45", "").Trim();
+            string asd = "<p style=\\\"text-align:justify;\\\"";
+            var step2 = Regex.Replace(value2, @"<p", asd);
+            var step3 = Regex.Replace(step2, @"T\d+\:\d+\:\d+\+05\:45", "").Trim();
             var step4 = Regex.Replace(step3, @"T\d+\:\d+\:\d+Z", "").Trim();
             return step4;
         }
