@@ -42,7 +42,9 @@ namespace cmapp.Views
             try
             {
                 lead = await MoneyCache.GetAsync<List<Leader>>(Url);
-                BindingContext = lead.First<Leader>();
+                Leader asd = lead.First<Leader>();
+                asd.description = Constants.ScrubHtml(asd.description);
+                BindingContext = asd;
                 desig.SetBinding(Label.TextProperty, "designate.name");
                 await view.FadeTo(1, 1000, Easing.SpringIn);
             }

@@ -251,10 +251,11 @@ namespace cmapp.Views
                             FontAttributes = FontAttributes.Bold,
                             TextColor = Color.Black
                         };
+                        n2.desc = Constants.ScrubHtml(n2.description);
 
                         Label desc = new Label
                         {
-                            Text = new String(n2.description.Take(200).ToArray())+"...",
+                            Text = new String(n2.desc.Take(200).ToArray())+"...",
                             FontSize = 18,
                             TextColor = Color.Black
                         };
@@ -275,6 +276,7 @@ namespace cmapp.Views
                         fram2.GestureRecognizers.Add(tapGestureRecognizer2);
                         sls.Children.Add(fram2);
                     }
+                    activi.IsRunning = false;
                     view.Content = sls;
                     view.Opacity = 0;
                     await view.FadeTo(1, 1000, Easing.SpringIn);

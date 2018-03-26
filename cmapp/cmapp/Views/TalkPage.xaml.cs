@@ -74,7 +74,8 @@ namespace cmapp.Views
                     notlist = await MoneyCache.GetAsync<List<Notifications>>(Url);
                     foreach (Notifications n in notlist)
                     {
-                        n.desc = new String(n.description.Take(200).ToArray()) + "...";
+                        n.desc = Constants.ScrubHtml(n.description);
+                        n.desc = new String(n.desc.Take(200).ToArray()) + "...";
                     }
                     NotiCollection = new ObservableCollection<Notifications>(notlist);
                     listView.ItemsSource = NotiCollection.Reverse<Notifications>();

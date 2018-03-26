@@ -23,15 +23,15 @@ namespace cmapp.Models
             return step3;
         }
 
-public static string ScrubHtml(string value2)
+        public static string ScrubHtml(string value2)
         {
-            var step2 = Regex.Replace(value2, @"\*", "\n *").Trim();
-            var steps = Regex.Replace(step2, @"<b><", "<").Trim();
-            var stepss = Regex.Replace(steps, @"<br[^>]+>", "\n").Trim();
-            var steps2 = Regex.Replace(stepss, @"<b>", "\n\n >>").Trim();
-            var stepp = Regex.Replace(steps2, @"&nsbp;", "\t").Trim();
-            var step1 = Regex.Replace(stepp, @"<[^>]+>|&nbsp;", "").Trim();
-            var step3 = Regex.Replace(step1, @"T\d+\:\d+\:\d+\+05\:45", "").Trim();
+            var step1 = Regex.Replace(value2, @"<[^>]+>|&nbsp;", "").Trim();
+            return step1;
+        }
+
+        public static string ScrubHtml3(string value2)
+        {
+            var step3 = Regex.Replace(value2, @"T\d+\:\d+\:\d+\+05\:45", "").Trim();
             var step4 = Regex.Replace(step3, @"T\d+\:\d+\:\d+Z", "").Trim();
             return step4;
         }

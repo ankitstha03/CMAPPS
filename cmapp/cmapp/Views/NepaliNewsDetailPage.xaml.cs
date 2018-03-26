@@ -19,6 +19,12 @@ namespace cmapp.Views
 			InitializeComponent ();
             BindingContext =news;
             Title = new string(news.title.Take(40).ToArray()) + "...";
+            string temp= "<html><body><h1 style=\"text-align:center;\"> "+news.title+ "</h1><br><img style=\"size:cover;\" src=\"" + news.title_image+"\"><br><p>" +news.date+"</p><br><p style=\"text-align:justify!important;\">"+news.description+"</p></body></html> ";
+            var browser = new WebView();
+            var htmlSource = new HtmlWebViewSource();
+            htmlSource.Html = temp;
+            browser.Source = htmlSource;
+            Content = browser;
         }
 
     }

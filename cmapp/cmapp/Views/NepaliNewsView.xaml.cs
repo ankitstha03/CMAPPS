@@ -75,7 +75,8 @@ namespace cmapp.Views
                     newlist = await MoneyCache.GetAsync<List<NepNews>>(Url);
 		            foreach(NepNews n in newlist)
                     {
-		    	        n.desc= new String(n.description.Take(200).ToArray()) + "...";
+                        n.desc = Constants.ScrubHtml(n.description);
+		    	        n.desc= new String(n.desc.Take(200).ToArray()) + "...";
                     }
                     NewsCollection = new ObservableCollection<NepNews>(newlist);
                     listView.ItemsSource = NewsCollection.Reverse<NepNews>();
