@@ -168,6 +168,9 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icons8news24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icons8talk96.png" />
+  </ItemGroup>
   <Import Project="..\cmapp\cmapp.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
