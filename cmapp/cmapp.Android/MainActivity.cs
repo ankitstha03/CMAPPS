@@ -33,6 +33,7 @@ namespace cmapp.Droid
                 var instantId = FirebaseInstanceId.Instance;
                 instantId.DeleteInstanceId();
                 Android.Util.Log.Debug("TAG", "{0} {1}", instantId.Token, instantId.GetToken(GetString(Resource.String.gcm_defaultSenderId), Firebase.Messaging.FirebaseMessaging.InstanceIdScope));
+                Firebase.Messaging.FirebaseMessaging.Instance.SubscribeToTopic("ALL");
             });
         }
     }
