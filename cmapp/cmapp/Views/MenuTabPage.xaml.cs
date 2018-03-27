@@ -59,13 +59,13 @@ namespace cmapp.Views
                     }
                     else
                     {
-                        usname.Text = "à¤¶à¤‚à¤•à¤° à¤ªà¥‹à¤–à¥à¤°à¥‡à¤²";
-                        page1.Title = "à¤ªà¥à¤°à¤®à¥à¤–";
-                        page2.Title = "à¤¸à¤®à¤¾à¤šà¤¾à¤°";
-                        page3.Title = "à¤¤à¤¾à¤²à¤¿à¤•à¤¾";
-                        page4.Title = "à¤¸à¤¨à¥à¤¦à¥‡à¤¶";
-                        page5.Title = "à¤¸à¤®à¥ƒà¤¦à¥à¤§à¤¿ à¤¸à¤‚à¤¬à¤¾à¤¦";
-                        page6.Title = "à¤šà¤¿à¤¨à¥à¤¨à¥à¤¹à¥‹à¤¸";
+                        usname.Text = "शंकर पोख्रेल";
+                        page1.Title = "प्रमुख";
+                        page2.Title = "समाचार";
+                        page3.Title = "तालिका";
+                        page4.Title = "सन्देश";
+                        page5.Title = "समृद्धि संबाद";
+                        page6.Title = "चिन्नुहोस";
                        
 
                     }
@@ -144,3 +144,4 @@ namespace cmapp.Views
 
     }
 }
+
