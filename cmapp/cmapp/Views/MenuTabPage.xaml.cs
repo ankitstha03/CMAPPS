@@ -1,4 +1,4 @@
-﻿using cmapp.Models;
+using cmapp.Models;
 using cmapp.Views;
 using Plugin.Connectivity;
 using System;
@@ -42,8 +42,10 @@ namespace cmapp.Views
                     var page2 = new MasterPageItem() { Icon = "icons8news24.png", id = 1 };
                     var page3 = new MasterPageItem() { Icon = "icons8calendar24.png", id = 2 };
                     var page4 = new MasterPageItem() { Icon = "icons8chat24.png", id = 3 };
-                    var page5 = new MasterPageItem() { Icon = "icons8administratormale48.png", id = 4 };
-
+                    var page5 = new MasterPageItem() { Icon = "icons8talk96.png", id = 4 };
+                    var page6 = new MasterPageItem() { Icon = "icons8administratormale48.png", id = 5 };
+                   
+                   
                     if (Constants.English)
                     {
                         usname.Text = "Shankar Pokhrel";
@@ -51,16 +53,21 @@ namespace cmapp.Views
                         page2.Title = "News";
                         page3.Title = "Schedule";
                         page4.Title = "Message";
-                        page5.Title = "Know CM";
+                        page5.Title = "Prosperity Talks";
+                        page6.Title = "Know CM";
+                      
                     }
                     else
                     {
-                        usname.Text = "शंकर पोख्रेल";
-                        page1.Title = "प्रमुख";
-                        page2.Title = "समाचार";
-                        page3.Title = "तालिका";
-                        page4.Title = "सन्देश";
-                        page5.Title = "चिन्नुहोस";
+                        usname.Text = "à¤¶à¤‚à¤•à¤° à¤ªà¥‹à¤–à¥à¤°à¥‡à¤²";
+                        page1.Title = "à¤ªà¥à¤°à¤®à¥à¤–";
+                        page2.Title = "à¤¸à¤®à¤¾à¤šà¤¾à¤°";
+                        page3.Title = "à¤¤à¤¾à¤²à¤¿à¤•à¤¾";
+                        page4.Title = "à¤¸à¤¨à¥à¤¦à¥‡à¤¶";
+                        page5.Title = "à¤¸à¤®à¥ƒà¤¦à¥à¤§à¤¿ à¤¸à¤‚à¤¬à¤¾à¤¦";
+                        page6.Title = "à¤šà¤¿à¤¨à¥à¤¨à¥à¤¹à¥‹à¤¸";
+                       
+
                     }
 
                     menuList.Add(page1);
@@ -68,7 +75,7 @@ namespace cmapp.Views
                     menuList.Add(page3);
                     menuList.Add(page4);
                     menuList.Add(page5);
-
+                    menuList.Add(page6);
 
                     var tapGestureRecognizer = new TapGestureRecognizer();
                     tapGestureRecognizer.Tapped += async (s, e) =>
@@ -102,7 +109,7 @@ namespace cmapp.Views
                     return;
 
                 var item = (MasterPageItem)e.SelectedItem;
-                if (item.id == 4)
+                if (item.id == 5)
                 {
                     Navigation.PushAsync(new KnowCmPage());
                 }
@@ -137,4 +144,3 @@ namespace cmapp.Views
 
     }
 }
-
