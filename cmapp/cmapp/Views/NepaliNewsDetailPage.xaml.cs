@@ -22,17 +22,19 @@ namespace cmapp.Views
             string temp;
             if (news.title_image == "" || news.title_image == null)
             {
-                temp = "<html><body style=\"width:100%;\"><h1 style=\"text-align:center;\"> " + news.title + "</h1><br><p>" + news.date + "</p><br><p style=\"text-align:justify!important;\">" + news.description + "</p></body></html> ";
+                temp = "<html><body style=\"width:95%;\"><h1 style=\"text-align:center;\"> " + news.title + "</h1><br><p>" + news.date + "</p><br><p style=\"text-align:justify!important;\">" + news.description + "</p></body></html> ";
 
             }
             else
             {
-                temp = "<html><body style=\"width:100%;\"><h1 style=\"text-align:center;\"> " + news.title + "</h1><br><img style=\"width:100%; object-fit:contain;\" src=\"" + news.title_image + "\"><br><p>" + news.date + "</p><br><p style=\"text-align:justify!important;\">" + news.description + "</p></body></html> ";
+                temp = "<html><body style=\"width:95%;\"><h1 style=\"text-align:center;\"> " + news.title + "</h1><br><img style=\"width:100%; object-fit:contain;\" src=\"" + news.title_image + "\"><br><p>" + news.date + "</p><br><p style=\"text-align:justify!important;\">" + news.description + "</p></body></html> ";
             }
             var browser = new WebView();
             var htmlSource = new HtmlWebViewSource();
             htmlSource.Html = temp;
             browser.Source = htmlSource;
+            browser.Margin = new Thickness(5);
+            browser.HorizontalOptions = LayoutOptions.Center;
             Content = browser;
         }
 
