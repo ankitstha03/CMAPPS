@@ -52,7 +52,7 @@
                            TextColor="Black" >
                             </Label>
                         </StackLayout>
-                        <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
+                        <!--<StackLayout Orientation="Horizontal" VerticalOptions="Start" >
 
                             <Label HorizontalTextAlignment="Start"
                            VerticalTextAlignment="Center"
@@ -90,7 +90,7 @@
                            Text="{Binding contact_no , Mode = TwoWay}"
                            TextColor="Gray" >
                             </Label>
-                        </StackLayout>
+                        </StackLayout>-->
                             
                         <Label 
                            HorizontalTextAlignment="Start"
