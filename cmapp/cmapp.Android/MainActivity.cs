@@ -25,7 +25,7 @@ namespace cmapp.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
 
-            if (!GetString(Resource.String.google_app_id).Equals("1:958413425957:android:8056ae34f2d8a115"))
+            if (!GetString(Resource.String.google_app_id).Equals("1:958413425957:android:9a8a980336148c8c"))
                 throw new System.Exception("Invalid Json File");
 
             Task.Run(() =>

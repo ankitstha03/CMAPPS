@@ -17,10 +17,10 @@ namespace cmapp.Droid
 {
     [Service]
     [IntentFilter(new[] { "com.google.firebase.INSTANCE_ID_EVENT" })]
-    class MyFirebaseIdService:FirebaseInstanceIdService
+    class MyFirebaseIdService : FirebaseInstanceIdService
     {
         const string TAG = "MyFirebaseIIDService";
-        private string myUrl = Constants.ur + "/api-auth/messages/";
+        private string myUrl = Constants.ur + "/api-auth/reg_id/" + FirebaseInstanceId.Instance.Token;
         public override void OnTokenRefresh()
         {
 
@@ -30,12 +30,12 @@ namespace cmapp.Droid
             Android.Util.Log.Debug(TAG, "Refreshed token: " + refreshedToken); ;
             SendRegistrationToServerAsync(refreshedToken);
         }
-          async System.Threading.Tasks.Task SendRegistrationToServerAsync(string token)
-           {
-               HttpClient oHttpClient = new HttpClient();
-               string sContentType = "application/json";
-               var json = JsonConvert.SerializeObject(token);
-               HttpResponseMessage request = await oHttpClient.PostAsync(myUrl, new StringContent(json, Encoding.UTF8,sContentType));
-           }
+        async System.Threading.Tasks.Task SendRegistrationToServerAsync(string token)
+        {
+            HttpClient oHttpClient = new HttpClient();
+            string sContentType = "application/json";
+            var json = JsonConvert.SerializeObject(token);
+            HttpResponseMessage request = await oHttpClient.PostAsync(myUrl, new StringContent(json, Encoding.UTF8, sContentType));
+        }
     }
 }
