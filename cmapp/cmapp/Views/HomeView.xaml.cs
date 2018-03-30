@@ -102,43 +102,19 @@ namespace cmapp.Views
                             Orientation = StackOrientation.Vertical
                         };
 
-                        var abs = new AbsoluteLayout
-                        {
-                        };
+
 
                         var imag = new Image
                         {
                             Source = n.images,
-                            Aspect = Aspect.AspectFill
+                            Aspect = Aspect.AspectFill,
+                            HorizontalOptions=LayoutOptions.FillAndExpand,
+                            VerticalOptions=LayoutOptions.Start
                         };
-                        AbsoluteLayout.SetLayoutBounds(imag, new Rectangle(0, 0, 1, 220));
-                        AbsoluteLayout.SetLayoutFlags(imag, AbsoluteLayoutFlags.XProportional);
-                        AbsoluteLayout.SetLayoutFlags(imag, AbsoluteLayoutFlags.WidthProportional);
-                        Frame framer = new Frame
-                        {
-                            IsClippedToBounds = true,
-                            CornerRadius = 5,
-                            HasShadow = true,
-                            BackgroundColor = Color.White,
-                            OutlineColor = Color.Transparent,
-                            Padding = new Thickness(3, 3, 3, 3),
-                            Opacity = 0.7
-                        };
-                        AbsoluteLayout.SetLayoutBounds(framer, new Rectangle(1.05, 10, 0.35, 21));
-                        AbsoluteLayout.SetLayoutFlags(framer, AbsoluteLayoutFlags.XProportional);
-                        AbsoluteLayout.SetLayoutFlags(framer, AbsoluteLayoutFlags.WidthProportional);
-                        Label lbl = new Label
-                        {
-                            Text = "Press news",
-                            TextColor = Color.Black,
-                            FontSize = 14
-                        };
-                        framer.Content = lbl;
+                    
+                       
 
-                        abs.Children.Add(imag);
-                        abs.Children.Add(framer);
-
-                        slsins.Children.Add(abs);
+                        slsins.Children.Add(imag);
 
                         var slslb = new StackLayout
                         {
@@ -201,43 +177,16 @@ namespace cmapp.Views
                             Orientation = StackOrientation.Vertical
                         };
 
-                        var abs = new AbsoluteLayout
-                        {
-                        };
 
                         var imag = new Image
                         {
                             Source = n2.title_image,
-                            Aspect = Aspect.AspectFill
+                            Aspect = Aspect.AspectFill,
+                            HorizontalOptions=LayoutOptions.FillAndExpand,
+                            VerticalOptions=LayoutOptions.Start
                         };
-                        AbsoluteLayout.SetLayoutBounds(imag, new Rectangle(0, 0, 1, 220));
-                        AbsoluteLayout.SetLayoutFlags(imag, AbsoluteLayoutFlags.XProportional);
-                        AbsoluteLayout.SetLayoutFlags(imag, AbsoluteLayoutFlags.WidthProportional);
-                        Frame framer = new Frame
-                        {
-                            IsClippedToBounds = true,
-                            CornerRadius = 5,
-                            HasShadow = true,
-                            BackgroundColor = Color.White,
-                            OutlineColor = Color.Transparent,
-                            Padding = new Thickness(3, 3, 3, 3),
-                            Opacity = 0.7
-                        };
-                        AbsoluteLayout.SetLayoutBounds(framer, new Rectangle(1.05, 10, 0.35, 21));
-                        AbsoluteLayout.SetLayoutFlags(framer, AbsoluteLayoutFlags.XProportional);
-                        AbsoluteLayout.SetLayoutFlags(framer, AbsoluteLayoutFlags.WidthProportional);
-                        Label lbl = new Label
-                        {
-                            Text = "Local news",
-                            TextColor = Color.Black,
-                            FontSize = 14
-                        };
-                        framer.Content = lbl;
 
-                        abs.Children.Add(imag);
-                        abs.Children.Add(framer);
-
-                        slsins.Children.Add(abs);
+                        slsins.Children.Add(imag);
 
                         var slslb = new StackLayout
                         {
