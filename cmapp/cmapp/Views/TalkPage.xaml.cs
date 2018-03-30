@@ -41,12 +41,12 @@ namespace cmapp.Views
         {
             if (!String.IsNullOrWhiteSpace(e.NewTextValue))
             {
-                listView.ItemsSource = NotiCollection.Where(c => c.title.StartsWith(e.NewTextValue));
+                listView.ItemsSource = NotiCollection.Where(c => c.title.ToLower().Contains(e.NewTextValue.ToLower()));
             }
             else
             {
                 NotiCollection = new ObservableCollection<Notifications>(notlist);
-                listView.ItemsSource = NotiCollection.Reverse<Notifications>();
+                listView.ItemsSource = NotiCollection;
             }
         }
         private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -78,7 +78,7 @@ namespace cmapp.Views
                         n.desc = new String(n.desc.Take(200).ToArray()) + "...";
                     }
                     NotiCollection = new ObservableCollection<Notifications>(notlist);
-                    listView.ItemsSource = NotiCollection.Reverse<Notifications>();
+                    listView.ItemsSource = NotiCollection;
                     listView.Opacity = 0;
                     await listView.FadeTo(1, 1000, Easing.SpringIn);
                 }

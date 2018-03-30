@@ -43,12 +43,12 @@ namespace cmapp.Views
         {
             if (!String.IsNullOrWhiteSpace(e.NewTextValue))
             {
-                listView.ItemsSource = NewsCollection.Where(c => c.title.StartsWith(e.NewTextValue));
+                listView.ItemsSource = NewsCollection.Where(c => c.title.ToLower().Contains(e.NewTextValue.ToLower()));
             }
             else
             {
                 NewsCollection = new ObservableCollection<Video>(videolist);
-                listView.ItemsSource = NewsCollection.Reverse<Video>();
+                listView.ItemsSource = NewsCollection;
             }
         }
         private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -81,7 +81,7 @@ namespace cmapp.Views
                         n.link = Constants.ScrubHtml2(n.link);
                     }
                     NewsCollection = new ObservableCollection<Video>(videolist);
-                    listView.ItemsSource = NewsCollection.Reverse<Video>();
+                    listView.ItemsSource = NewsCollection;
                     listView.Opacity = 0;
                     await listView.FadeTo(1, 1000, Easing.SpringIn);
 

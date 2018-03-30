@@ -71,10 +71,11 @@ namespace cmapp.Views
             {
                 try
                 {
+                    sls.Children.Clear();
                     newlist1 = await MoneyCache.GetAsync<List<News>>(Url1);
                     newlist2 = await MoneyCache.GetAsync<List<NepNews>>(Url2);
-                    newlist1 = newlist1.Reverse<News>().ToList<News>();
-                    newlist2 = newlist2.Reverse<NepNews>().ToList<NepNews>();
+                    activi.IsRunning = false;
+                    activi.IsVisible = false;
                     newlist1 = newlist1.Take(3).ToList();
                     newlist2 = newlist2.Take(3).ToList();
   		    foreach(NepNews n in newlist2){
@@ -276,7 +277,6 @@ namespace cmapp.Views
                         fram2.GestureRecognizers.Add(tapGestureRecognizer2);
                         sls.Children.Add(fram2);
                     }
-                    activi.IsRunning = false;
                     view.Content = sls;
                     view.Opacity = 0;
                     await view.FadeTo(1, 1000, Easing.SpringIn);

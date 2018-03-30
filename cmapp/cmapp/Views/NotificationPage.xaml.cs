@@ -74,7 +74,7 @@ namespace cmapp.Views
                 {
                     notlist = await MoneyCache.GetAsync<List<Notifications>>(Url);
                     NotiCollection = new ObservableCollection<Notifications>(notlist);
-                    listView.ItemsSource = NotiCollection.Reverse<Notifications>();
+                    listView.ItemsSource = NotiCollection;
                     listView.Opacity = 0;
                     await listView.FadeTo(1, 1000, Easing.SpringIn);
                 }

@@ -35,7 +35,7 @@ namespace cmapp.Views
             };
             var labelFormatted = new Label();
             var fs = new FormattedString();
-            fs.Spans.Add(new Span { Text = "Shankhar", ForegroundColor = Color.White, FontSize = 30, FontAttributes = FontAttributes.Bold });
+            fs.Spans.Add(new Span { Text = "Shankar", ForegroundColor = Color.White, FontSize = 30, FontAttributes = FontAttributes.Bold });
             fs.Spans.Add(new Span { Text = "Pokhrel ", ForegroundColor = Color.White, FontSize = 30, FontAttributes = FontAttributes.None });
             labelFormatted.FormattedText = fs;
 

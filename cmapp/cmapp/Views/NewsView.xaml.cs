@@ -61,12 +61,12 @@ namespace cmapp.Views
 
                 if (!String.IsNullOrWhiteSpace(e.NewTextValue))
             {
-                listView.ItemsSource = NewsCollection.Where(c => c.title.StartsWith(e.NewTextValue));
+                listView.ItemsSource = NewsCollection.Where(c => c.title.ToLower().Contains(e.NewTextValue.ToLower()));
             }
             else
             {
                 NewsCollection = new ObservableCollection<News>(newlist);
-                listView.ItemsSource = NewsCollection.Reverse<News>();
+                listView.ItemsSource = NewsCollection;
             }
         }
 
@@ -86,7 +86,7 @@ namespace cmapp.Views
                     searbar.IsVisible = true;
                     newlist = await MoneyCache.GetAsync<List<News>>(Url);
                     NewsCollection = new ObservableCollection<News>(newlist);
-                    listView.ItemsSource = NewsCollection.Reverse<News>();
+                    listView.ItemsSource = NewsCollection;
                     listView.Opacity = 0;
                     await listView.FadeTo(1, 1000, Easing.SpringIn);
                 }catch(Exception ex)

@@ -1,7 +1,5 @@
 D:\CmAppli\cmapp\cmapp.Android\bin\Debug\cmapp.Android.dll
 D:\CmAppli\cmapp\cmapp.Android\bin\Debug\cmapp.Android.pdb
-D:\CmAppli\cmapp\cmapp.Android\bin\Debug\com.companyname.cmapp.apk
-D:\CmAppli\cmapp\cmapp.Android\bin\Debug\com.companyname.cmapp-Signed.apk
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Android.csprojResolveAssemblyReference.cache
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
@@ -42,7 +40,6 @@ D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.Views.KnowCmPage.xaml.g.cs
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Droid.Views.HomeView.xaml.g.cs
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Android.dll
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\cmapp.Android.pdb
-D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\bin\com.companyname.cmapp.apk
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\res\drawable\icon.png
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\res\drawable-hdpi\icon.png
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\res\drawable-xhdpi\icon.png
@@ -90,6 +87,10 @@ D:\CmAppli\cmapp\cmapp.Android\obj\Debug\res\drawable\icons8home24.png
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\res\drawable\icons8news24.png
 D:\CmAppli\cmapp\cmapp.Android\bin\Debug\Plugin.HtmlLabel.Android.dll.mdb
 D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\assets\Plugin.HtmlLabel.Android.dll.mdb
+D:\CmAppli\cmapp\cmapp.Android\bin\Debug\com.shankarpokhrel.cmapp.apk
+D:\CmAppli\cmapp\cmapp.Android\bin\Debug\com.shankarpokhrel.cmapp-Signed.apk
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\android\bin\com.shankarpokhrel.cmapp.apk
+D:\CmAppli\cmapp\cmapp.Android\obj\Debug\res\drawable\icons8talk96.png
 D:\CmAppli\cmapp\cmapp.Android\bin\Debug\cmapp.Android.dll
 bin\Debug\FormsViewGroup.dll.mdb
 bin\Debug\ImageCircle.Forms.Plugin.Android.dll.mdb

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.cmapp" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0.1" package="com.shankarpokhrel.cmapp" android:installLocation="auto">
   <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="26" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <permission android:name="com.companyname.cmapp.permission.C2D_MESSAGE" />
+  <permission android:name="com.shankarpokhrel.cmapp.permission.C2D_MESSAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -42,7 +42,7 @@
     <service android:exported="false" android:name="pushnotification.plugin.PushNotificationGcmListener">
       <intent-filter>
         <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-        <category android:name="com.companyname.cmapp" />
+        <category android:name="com.shankarpokhrel.cmapp" />
       </intent-filter>
     </service>
     <service android:exported="false" android:name="md563bb5d7cd114ceda82ec85fb57ce3637.PushNotificationInstanceIDListenerService">
@@ -55,20 +55,20 @@
     <receiver android:exported="true" android:permission="com.google.android.c2dm.permission.SEND" android:name="md563bb5d7cd114ceda82ec85fb57ce3637.PushNotificationsReceiver">
       <intent-filter>
         <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-        <category android:name="com.companyname.cmapp" />
+        <category android:name="com.shankarpokhrel.cmapp" />
       </intent-filter>
     </receiver>
-    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.companyname.cmapp.mono.MonoRuntimeProvider.__mono_init__" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.shankarpokhrel.cmapp.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->
     <receiver android:name="mono.android.Seppuku">
       <intent-filter>
         <action android:name="mono.android.intent.action.SEPPUKU" />
-        <category android:name="mono.android.intent.category.SEPPUKU.com.companyname.cmapp" />
+        <category android:name="mono.android.intent.category.SEPPUKU.com.shankarpokhrel.cmapp" />
       </intent-filter>
     </receiver>
     <meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT" />
     <meta-data android:name="android.support.VERSION" android:value="26.1.0" />
-    <provider android:authorities="com.companyname.cmapp.firebaseinitprovider" android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:initOrder="100" />
+    <provider android:authorities="com.shankarpokhrel.cmapp.firebaseinitprovider" android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:initOrder="100" />
     <!-- FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true" -->
     <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="true">

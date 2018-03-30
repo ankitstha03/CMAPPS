@@ -17,12 +17,7 @@
         </Frame.Padding>
 
         <StackLayout Orientation="Vertical">
-            <AbsoluteLayout>
-                <Image x:Name="Newsimage"  AbsoluteLayout.LayoutBounds="0,0,1,220" Aspect="AspectFill" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional"/>
-                <Frame CornerRadius = "5" OutlineColor = "Transparent" Padding ="3, 3, 3, 3" AbsoluteLayout.LayoutBounds="1.05,10,0.35,21" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" Opacity="0.7" BackgroundColor = "#ffffff">
-                    <Label Text="Press news"  TextColor="Black" HorizontalTextAlignment="Start" VerticalOptions="Center" FontSize="14"/>
-                </Frame>
-            </AbsoluteLayout>
+                <Image x:Name="Newsimage" HorizontalOptions="FillAndExpand" VerticalOptions="Start"  Aspect="AspectFill" />
 
 
             <StackLayout Orientation="Vertical" Padding="10,5,10,5" HorizontalOptions="Start" >

@@ -18,7 +18,6 @@
 
             </SearchBar>
 
-            <ScrollView x:Name="view" VerticalOptions="FillAndExpand">
                 <ListView x:Name="listView" SeparatorVisibility="None" VerticalOptions="FillAndExpand" IsPullToRefreshEnabled="True" Refreshing="DataGet" ItemSelected="listView_ItemSelected" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}"  HasUnevenRows="True" >
 
                     <ListView.ItemTemplate>
@@ -29,7 +28,6 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

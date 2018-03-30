@@ -32,26 +32,7 @@
                             </Label>
 
                         </Frame>
-                        <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
-
-                            <Label HorizontalTextAlignment="Start"
-                           VerticalTextAlignment="Center"
-                           HorizontalOptions="StartAndExpand"
-                           FontSize="18"
-                                   FontAttributes="Bold"
-                                   
-                           Text="Sent by:"
-                           TextColor="Black" >
-                            </Label>
-                            <Label FontAttributes="None"
-                           HorizontalTextAlignment="Start"
-                           VerticalTextAlignment="Center"
-                           HorizontalOptions="StartAndExpand"
-                           FontSize="18"
-                           Text="{Binding full_name , Mode = TwoWay}"
-                           TextColor="Black" >
-                            </Label>
-                        </StackLayout>
+                        
                         <!--<StackLayout Orientation="Horizontal" VerticalOptions="Start" >
 
                             <Label HorizontalTextAlignment="Start"
