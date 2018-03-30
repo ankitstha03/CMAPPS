@@ -134,7 +134,8 @@ namespace cmapp.Views
             try
             {
                 Constants.English = !Constants.English;
-                Application.Current.MainPage = new NavigationPage(new MenuTabPage());
+                Navigation.InsertPageBefore(new MenuTabPage(), this);
+                Navigation.RemovePage(this);
             }catch(Exception ex)
             {
 
