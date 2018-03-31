@@ -36,7 +36,7 @@
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
 
-                        <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="14"  TextColor="Black" Text="{Binding start_date}" />
+                        <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="14"  TextColor="Black" Text="{Binding temp, StringFormat='{}{0:ddd, MMM dd, yyyy}'}" />
 
                         <Label
               Grid.Column="2"

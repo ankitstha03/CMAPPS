@@ -46,7 +46,12 @@ namespace cmapp.Views
                 try
                 {
                     messagelist = await MoneyCache.GetAsync<List<Notifications>>(Url);
+                    foreach (Notifications n in messagelist)
+                    {
+                        n.temp = DateTime.Parse(n.start_date);
+                    }
                     NewsCollection = new ObservableCollection<Notifications>(messagelist);
+                    
                     timelineListView.ItemsSource = NewsCollection;
                     timelineListView.Opacity = 0;
                     await timelineListView.FadeTo(1, 1000, Easing.SpringIn);

@@ -14,5 +14,6 @@ namespace cmapp.Models
         public string end_date { get; set; }
         public string location { get; set; }
         public string title_image { get; set; }
+        public DateTime temp { get; set; }
     }
 }
